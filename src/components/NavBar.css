@@ -1,0 +1,21 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 120px;
+
+    height: 72px;
+}
+
+.navbar .navbar__logo {
+    color: #FF4C8C;
+}
+
+.navbar .navbar__tabs {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+
+    color: white;
+}
