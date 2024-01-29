@@ -1,0 +1,50 @@
+.highlightcard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    height: 720px;
+    width: 80%;
+    color: white; 
+
+    h3 {
+        font-size: 20px;
+        color: #E684A7;
+    }
+
+    p {
+        font-size: 18px;
+    }
+}
+
+.highlightcard.right {
+    flex-direction: row-reverse;
+}
+
+.highlightcard .highlightcard__content {
+    width: 50%;
+}
+
+
+.highlightcard .highlightcard__image {
+    width: 50%;
+}
+
+.highlightcard .highlightcard__image > div {
+
+    animation: imageScroll 1s linear both;
+    animation-play-state: paused;
+    /* Value of the variable: start at 0 and moving towards 1 */
+    animation-delay: calc(var(--scroll-highlight-card) * -1s);
+}
+
+@keyframes imageScroll {
+    from {
+        transform: translate(0, -180px);
+    }
+    
+    to {
+        transform: translate(0, 180px);
+    }
+}
