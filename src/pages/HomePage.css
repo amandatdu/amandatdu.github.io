@@ -5,3 +5,19 @@
     align-items: center;
     justify-content: center;
 }
+
+.homepage__banner {
+    text-align: center;
+    margin-block: 128px;
+}
+
+.homepage__banner__footer {
+    display: grid;
+    grid-template-columns: 1fr repeat(3, 16px) 1fr;
+    align-items: center;
+    gap: 32px;
+}
+
+.homepage__divider {
+    margin-block: 64px
+}

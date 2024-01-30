@@ -30,8 +30,12 @@ export const HighlightCard = ({ textPlacement }) => {
     return (
         <div ref={ref} className={`highlightcard ${placementProp}`}>
             <div className="highlightcard__content">
-                <h3>Product design internship - 2022</h3>
-                <h1>Made filling taxes more delightful</h1>
+                <h3 className="subheading secondary">
+                    Product design internship - 2022
+                </h3>
+                <h1>
+                    Made filling taxes more <em>delightful</em>
+                </h1>
                 <p>
                     I redesigned <strong>TurboTax Canada's</strong> onboarding
                     experience. Want to read about how I reduced 78% of user

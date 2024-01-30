@@ -4,35 +4,19 @@
     justify-content: space-around;
     align-items: center;
 
+    width: 100%;
     height: 720px;
-    width: 80%;
-    color: white; 
-
-    h3 {
-        font-size: 20px;
-        color: #E684A7;
-    }
-
-    p {
-        font-size: 18px;
-    }
 }
 
 .highlightcard.right {
     flex-direction: row-reverse;
 }
 
-.highlightcard .highlightcard__content {
-    width: 50%;
+.highlightcard__content {
+    width: 456px;
 }
 
-
-.highlightcard .highlightcard__image {
-    width: 50%;
-}
-
-.highlightcard .highlightcard__image > div {
-
+.highlightcard__image > div {
     animation: imageScroll 1s linear both;
     animation-play-state: paused;
     /* Value of the variable: start at 0 and moving towards 1 */
