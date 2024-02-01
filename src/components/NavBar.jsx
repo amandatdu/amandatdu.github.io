@@ -23,7 +23,7 @@ export const NavBar = () => {
     return (
         <nav className="navbar">
             <div className="navbar__logo">
-                <p className="accent">atdu &#x2765;</p>
+                <p className="subtitle">atdu &#x2765;</p>
             </div>
             <div className="navbar__tabs">
                 {TABS.map((tab) => (

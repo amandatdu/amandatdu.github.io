@@ -6,17 +6,17 @@ export const HomePage = () => {
     return (
         <div className="homepage">
             <div className="homepage__banner">
-                <h3 className="secondary">hi hello! thank you for visiting!</h3>
+                <h3 className="subtitle">hi hello! thank you for visiting!</h3>
                 <h1 className="display">
                     Amanda Du is a product designer <br /> all about designing
                     experiences <br /> that make people happy
                 </h1>
                 <div className="homepage__banner__footer">
-                    <h4 className="secondary">
+                    <h4 className="subtitle">
                         Previously @ Intuit, Purolator, & LCBO
                     </h4>
                     <StarIcon /> <StarIcon /> <StarIcon />
-                    <h4 className="secondary">
+                    <h4 className="subtitle">
                         Currently ... freelance designing!
                     </h4>
                 </div>

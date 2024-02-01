@@ -30,7 +30,7 @@ export const HighlightCard = ({ textPlacement }) => {
     return (
         <div ref={ref} className={`highlightcard ${placementProp}`}>
             <div className="highlightcard__content">
-                <h3 className="subheading secondary">
+                <h3 className="subheading subtitle">
                     Product design internship - 2022
                 </h3>
                 <h1>
