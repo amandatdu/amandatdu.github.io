@@ -1,15 +1,18 @@
-import { NavBar } from "./components/NavBar";
+import { NavBar, ROUTES } from "./components/NavBar";
 import { HomePage } from "./pages/HomePage";
 import "./App.css";
 import "./styles.css";
+import { Route, Routes } from "react-router-dom";
+import { MorePage } from "./pages/MorePage";
 
 function App() {
     return (
         <div className="app">
             <NavBar />
-            <div className="app__body">
-                <HomePage />
-            </div>
+            <Routes>
+                <Route path={ROUTES.work} element={<HomePage />} />
+                <Route path={ROUTES.more} element={<MorePage />} />
+            </Routes>
         </div>
     );
 }

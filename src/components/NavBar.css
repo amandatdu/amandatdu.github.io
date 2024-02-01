@@ -8,14 +8,18 @@
     height: 72px;
 }
 
-.navbar .navbar__logo {
+.navbar__logo {
     color: #FF4C8C;
 }
 
-.navbar .navbar__tabs {
+.navbar__tabs {
     display: flex;
     flex-direction: row;
     gap: 32px;
 
     color: white;
+}
+
+.navbar__tabs__tab {
+    color: var(--color-body);
 }

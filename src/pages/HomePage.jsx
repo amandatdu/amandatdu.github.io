@@ -6,7 +6,7 @@ export const HomePage = () => {
     return (
         <div className="homepage">
             <div className="homepage__banner">
-                <h3 className="secondary">hi hello! thank you visiting!</h3>
+                <h3 className="secondary">hi hello! thank you for visiting!</h3>
                 <h1 className="display">
                     Amanda Du is a product designer <br /> all about designing
                     experiences <br /> that make people happy

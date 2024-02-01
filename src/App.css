@@ -10,13 +10,6 @@
   }
 }
 
-.app__body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 @keyframes app__logo__spin {
   from {
     transform: rotate(0deg);
