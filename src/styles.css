@@ -3,6 +3,7 @@ body {
     --light-mode-bg: #FFFAFB;
     --dark-mode-bg: #202020;
     --masato-blue: #5656FF;
+    --little-bro-blue: #6262FF;
     --syo-pink: #FF6EA2;
     --brownie-brown: #533030;
     --just-white: #FFFFFF;
@@ -15,30 +16,33 @@ body {
     --lcbo-173F35: #173F35;
 
     --color-background: var(--dark-mode-bg);
-    --color-title: var(--just-white);
-    --color-subtitle: var(--syo-pink);
-    --color-body: var(--just-white);
+    --blueberry-swirl: var(--just-white);
+    --acai-bowl: var(--salt-and-pepper);
+    --strawberry: var(--syo-pink);
+    --vanilla-chocolate: var(--just-white);
 
-    color: var(--color-title);
+    color: var(--blueberry-swirl);
     background: var(--color-background);
 
-    .accent {
-        color: var(--color-accent);
+    .color__blueberry-swirl {
+        color: var(--blueberry-swirl);
     }
-
-    .title {
-        color: var(--color-title);
+    .color__acai-bowl {
+        color: var(--acai-bowl);
     }
-    
-    .subtitle {
-        color: var(--color-subtitle);
+    .color__strawberry {
+        color: var(--strawberry);
+    }
+    .color__vanilla-chocolate {
+        color: var(--vanilla-chocolate);
     }
 }
 
 body.light-theme {
     --color-background: var(--light-mode-bg);
-    --color-title: var(--masato-blue);
-    --color-body: var(--brownie-brown);
+    --blueberry-swirl: var(--masato-blue);
+    --acai-bowl: var(--little-bro-blue);
+    --vanilla-chocolate: var(--brownie-brown);
 }
 
 /* FONTS */
@@ -48,36 +52,64 @@ body.light-theme {
 
 h1 {
     font-size: 40px;
+    font-weight: 400;
     line-height: 1.3;
-    color: var(--color-title);
+    color: var(--blueberry-swirl);
+
+    i {
+        font-family: 'Crimson Pro';
+        font-size: 44px;
+        font-weight: 300;
+    }
 }
 
 h1.display {
     font-size: 50px;
+    font-weight: 400;
     line-height: 1.4;
-    color: var(--color-title);
+    color: var(--blueberry-swirl);
+
+    i {
+        font-size: 54px;
+        font-weight: 600;
+    }
 }
 
 h2 {
     font-size: 30px;
+    font-weight: 400;
     line-height: 1.3;
 }
 
 h3 {
     font-size: 20px;
+    font-weight: 400;
     line-height: 1.3;
+
+    i {
+        font-family: 'Crimson Pro';
+    }
+    
+    b.bold {
+        font-weight: 700;
+    }
+}
+
+h3.medium {
+    font-weight: 500;
+
 }
 
 h3.subheading {
-    font-size: 24;
+    font-size: 24px;
     font-weight: 500;
     font-style: italic;
-    --color-subtitle: var(--syo-pink);
+    --strawberry: var(--syo-pink);
 }
 
 p {
     font-family: "Inter"; 
     font-size: 18px;
     line-height: 1.5;
-    color: var(--color-body)
+    color: var(--vanilla-chocolate)
 }

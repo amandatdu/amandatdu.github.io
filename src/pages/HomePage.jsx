@@ -6,19 +6,26 @@ export const HomePage = () => {
     return (
         <div className="homepage">
             <div className="homepage__banner">
-                <h3 className="subtitle">hi hello! thank you for visiting!</h3>
-                <h1 className="display">
-                    Amanda Du is a product designer <br /> all about designing
-                    experiences <br /> that make people happy
+                <h3 className="color__vanilla-chocolate">
+                    hi hello! thank you for visiting!
+                </h3>
+                <h1 className="display color__acai-bowl">
+                    <i className="color__blueberry-swirl">Amanda Du</i> is a
+                    <i className="color__blueberry-swirl"> product designer </i>
+                    <br /> all about designing experiences <br /> that make
+                    people happy
                 </h1>
                 <div className="homepage__banner__footer">
-                    <h4 className="subtitle">
-                        Previously @ Intuit, Purolator, & LCBO
-                    </h4>
+                    <h3 className="medium color__strawberry">
+                        <b>Previously:</b> @ Intuit, Purolator, & LCBO
+                    </h3>
                     <StarIcon /> <StarIcon /> <StarIcon />
-                    <h4 className="subtitle">
-                        Currently ... freelance designing!
-                    </h4>
+                    <h3
+                        className="medium color__strawberry"
+                        style={{ justifySelf: "start" }}
+                    >
+                        <b className="bold">Currently:</b> freelance designing!
+                    </h3>
                 </div>
             </div>
             <div className="homepage__divider">

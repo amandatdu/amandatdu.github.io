@@ -30,16 +30,16 @@ export const HighlightCard = ({ textPlacement }) => {
     return (
         <div ref={ref} className={`highlightcard ${placementProp}`}>
             <div className="highlightcard__content">
-                <h3 className="subheading subtitle">
+                <h3 className="subheading color__strawberry">
                     Product design internship - 2022
                 </h3>
                 <h1>
-                    Made filling taxes more <em>delightful</em>
+                    Made filling taxes more <i>delightful</i>
                 </h1>
                 <p>
-                    I redesigned <strong>TurboTax Canada's</strong> onboarding
-                    experience. Want to read about how I reduced 78% of user
-                    decisions and still gave them a confident experience?
+                    I redesigned <b>TurboTax Canada's</b> onboarding experience.
+                    Want to read about how I reduced 78% of user decisions and
+                    still gave them a confident experience?
                 </p>
             </div>
             <div className="highlightcard__image">
