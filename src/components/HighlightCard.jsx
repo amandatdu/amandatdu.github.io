@@ -2,7 +2,13 @@ import { useEffect, useRef } from "react";
 import "./HighlightCard.css";
 import { clamp } from "../utils/helper";
 
-export const HighlightCard = ({ textPlacement }) => {
+export const HighlightCard = ({
+    subtitle,
+    title,
+    body,
+    textPlacement,
+    image,
+}) => {
     const placementProp = textPlacement ?? "left";
     const ref = useRef(undefined);
 
@@ -30,27 +36,11 @@ export const HighlightCard = ({ textPlacement }) => {
     return (
         <div ref={ref} className={`highlightcard ${placementProp}`}>
             <div className="highlightcard__content">
-                <h3 className="subheading color__strawberry">
-                    Product design internship - 2022
-                </h3>
-                <h1>
-                    Made filling taxes more <i>delightful</i>
-                </h1>
-                <p>
-                    I redesigned <b>TurboTax Canada's</b> onboarding experience.
-                    Want to read about how I reduced 78% of user decisions and
-                    still gave them a confident experience?
-                </p>
+                <h3 className="h3--subheading color__strawberry">{subtitle}</h3>
+                <h1>{title}</h1>
+                <p>{body}</p>
             </div>
-            <div className="highlightcard__image">
-                <div
-                    style={{
-                        background: "red",
-                        width: "200px",
-                        height: "360px",
-                    }}
-                ></div>
-            </div>
+            <div className="highlightcard__image">{image}</div>
         </div>
     );
 };

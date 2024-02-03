@@ -1,8 +1,8 @@
 .highlightcard {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
     align-items: center;
+    gap: 48px;
 
     width: 100%;
     height: 720px;
@@ -14,6 +14,21 @@
 
 .highlightcard__content {
     width: 456px;
+    padding-left: 136px;
+    padding-right: 0;
+}
+
+.highlightcard.right  .highlightcard__content {
+    padding-left: 0;
+    padding-right: 136px;
+}
+
+.highlightcard__image {
+    position: relative;
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
 }
 
 .highlightcard__image > div {

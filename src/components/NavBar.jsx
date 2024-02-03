@@ -17,7 +17,7 @@ export const NavBar = () => {
     ];
 
     const onClick = () => {
-        document.body.classList.toggle("light-theme");
+        document.body.classList.toggle("lightTheme");
     };
 
     return (
