@@ -1,0 +1,39 @@
+.footer {
+    display: grid;
+    grid-template:
+    "title title" max-content
+    "message contact" max-content
+    "credits credits" max-content
+    / 1fr 1fr;
+
+    gap: 16px;
+    padding: 26px 120px;
+}
+
+.footer__title {
+    grid-area: title;
+
+    letter-spacing: 0.13em;
+}
+
+.footer__message {
+    grid-area: message;
+
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.footer__contact {
+    grid-area: contact;
+    justify-self: center;
+
+    font-size: 16px;
+}
+
+
+.footer__credits {
+    grid-area: credits;
+    justify-self: center;
+
+    font-size: 12px;
+}

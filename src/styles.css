@@ -24,16 +24,16 @@ body {
     color: var(--blueberry-swirl);
     background: var(--color-background);
 
-    .color__blueberry-swirl {
+    .color--blueberry-swirl {
         color: var(--blueberry-swirl);
     }
-    .color__acai-bowl {
+    .color--acai-bowl {
         color: var(--acai-bowl);
     }
-    .color__strawberry {
+    .color--strawberry {
         color: var(--strawberry);
     }
-    .color__vanilla-chocolate {
+    .color--vanilla-chocolate {
         color: var(--vanilla-chocolate);
     }
 }

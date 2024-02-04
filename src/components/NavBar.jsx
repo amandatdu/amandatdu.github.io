@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./NavBar.css";
 
 export const ROUTES = {
@@ -20,16 +20,22 @@ export const NavBar = () => {
         document.body.classList.toggle("lightTheme");
     };
 
+    const location = useLocation();
+
     return (
         <nav className="navbar">
-            <div className="navbar__logo">
-                <p className="color__strawberry">atdu &#x2765;</p>
-            </div>
+            <Link to={ROUTES.work} className="navbar__logo">
+                <p className="color--strawberry">atdu &#x2765;</p>
+            </Link>
             <div className="navbar__tabs">
                 {TABS.map((tab) => (
                     <Link
                         key={tab.name}
-                        className="navbar__tabs__tab"
+                        className={`navbar__tabs__tab ${
+                            location.pathname === tab.route
+                                ? "navbar__tabs__tab--selected"
+                                : ""
+                        }`}
                         to={tab.route}
                     >
                         {tab.name}

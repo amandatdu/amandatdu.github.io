@@ -17,23 +17,23 @@ export const HomePage = () => {
         <div className="homepage">
             <div className="homepage__banner">
                 <HeartSVG id="banner" />
-                <h3 className="color__vanilla-chocolate">
+                <h3 className="color--vanilla-chocolate">
                     hi hello! thank you for visiting!
                 </h3>
-                <h1 className="h1--display color__acai-bowl">
-                    <i className="color__blueberry-swirl">Amanda Du</i> is a
-                    <i className="color__blueberry-swirl"> product designer </i>
+                <h1 className="h1--display color--acai-bowl">
+                    <i className="color--blueberry-swirl">Amanda Du</i> is a
+                    <i className="color--blueberry-swirl"> product designer </i>
                     <br /> all about designing experiences <br /> that make
                     people happy
                 </h1>
             </div>
             <div className="homepage__banner__footer">
-                <h3 className="h3--medium color__strawberry">
+                <h3 className="h3--medium color--strawberry">
                     <b>Previously:</b> @ Intuit, Purolator, & LCBO
                 </h3>
                 <StarBlock />
                 <h3
-                    className="h3--medium color__strawberry"
+                    className="h3--medium color--strawberry"
                     style={{ justifySelf: "start" }}
                 >
                     <b className="bold">Currently:</b> freelance designing!

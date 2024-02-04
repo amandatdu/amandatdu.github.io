@@ -5,11 +5,11 @@ export const MorePage = () => {
     return (
         <div className="morePage">
             <div className="morePage__banner">
-                <h1 className="h1--display color__acai-bowl">
-                    <i className="color__blueberry-swirl">product designer</i>{" "}
+                <h1 className="h1--display color--acai-bowl">
+                    <i className="color--blueberry-swirl">product designer</i>{" "}
                     by day
                     <br />
-                    <i className="color__blueberry-swirl">doodler</i> by night
+                    <i className="color--blueberry-swirl">doodler</i> by night
                 </h1>
                 <p>
                     here's a collection of graphics, illustrations, and <br />

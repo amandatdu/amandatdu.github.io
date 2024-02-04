@@ -36,7 +36,7 @@ export const HighlightCard = ({
     return (
         <div ref={ref} className={`highlightcard ${placementProp}`}>
             <div className="highlightcard__content">
-                <h3 className="h3--subheading color__strawberry">{subtitle}</h3>
+                <h3 className="h3--subheading color--strawberry">{subtitle}</h3>
                 <h1>{title}</h1>
                 <p>{body}</p>
             </div>

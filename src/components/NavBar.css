@@ -3,23 +3,32 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-inline: 120px;
+    padding-inline: 120px;
 
     height: 72px;
 }
 
 .navbar__logo {
     color: #FF4C8C;
+    text-decoration: none;
 }
 
 .navbar__tabs {
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: 32px;
-
-    color: white;
 }
 
 .navbar__tabs__tab {
     color: var(--vanilla-chocolate);
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.navbar__tabs__tab--selected {
+    font-family: 'Crimson Pro';
+    font-weight: 700;
+    font-style: italic;
+    font-size: 20px;
 }

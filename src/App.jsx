@@ -4,6 +4,7 @@ import "./App.css";
 import "./styles.css";
 import { Route, Routes } from "react-router-dom";
 import { MorePage } from "./pages/MorePage";
+import { Footer } from "./components/Footer";
 
 function App() {
     return (
@@ -13,6 +14,7 @@ function App() {
                 <Route path={ROUTES.work} element={<HomePage />} />
                 <Route path={ROUTES.more} element={<MorePage />} />
             </Routes>
+            <Footer />
         </div>
     );
 }
