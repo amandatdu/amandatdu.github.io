@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import "./HighlightCard.css";
 import { clamp } from "../utils/helper";
+import { ArrowIcon } from "../assets/ArrowIcon";
 
 export const HighlightCard = ({
     subtitle,
@@ -37,7 +38,10 @@ export const HighlightCard = ({
         <div ref={ref} className={`highlightcard ${placementProp}`}>
             <div className="highlightcard__content">
                 <h3 className="h3--subheading color--strawberry">{subtitle}</h3>
-                <h1>{title}</h1>
+                <h1>
+                    {title}&nbsp;
+                    <ArrowIcon />
+                </h1>
                 <p>{body}</p>
             </div>
             <div className="highlightcard__image">{image}</div>

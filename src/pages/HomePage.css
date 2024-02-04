@@ -20,5 +20,8 @@
 }
 
 .homepage__divider {
-    margin-block: 64px
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-block: 64px;
 }

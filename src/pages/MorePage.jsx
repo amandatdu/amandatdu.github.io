@@ -34,6 +34,11 @@ export const MorePage = () => {
                 description="digital arts was one of the coolest things I've learned."
             />
             <ProjectSummary name="me" description="last but not least <3" />
+            <h2 className="morePage__footer">
+                graphic design is my passion so there
+                <br />
+                is more to come &lt;3
+            </h2>
         </div>
     );
 };

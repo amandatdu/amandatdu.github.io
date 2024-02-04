@@ -2,6 +2,7 @@ import { HighlightCard } from "../components/HighlightCard";
 import "./HomePage.css";
 import { HeartSVG } from "../assets/HeartSVG";
 import { StarBlock } from "../components/StarBlock";
+import { ArrowIcon } from "../assets/ArrowIcon";
 
 export const HomePage = () => {
     const fallbackImage = (
@@ -41,6 +42,7 @@ export const HomePage = () => {
             </div>
             <div className="homepage__divider">
                 <h2>Lately I have...</h2>
+                <ArrowIcon direction="down" />
             </div>
             <HighlightCard
                 subtitle="Product design internship – 2022"
