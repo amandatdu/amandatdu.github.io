@@ -1,4 +1,4 @@
-.homepage {
+.morePage {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -6,19 +6,16 @@
     justify-content: center;
 }
 
-.homepage__banner {
+.morePage__banner {
     position: relative;
     text-align: center;
     margin-block: 128px;
+
+    h1 {
+        text-shadow: 2px 4px 30px rgba(255, 255, 255, 0.4);
+    }
 }
 
-.homepage__banner__footer {
-    display: grid;
-    grid-template-columns: 1fr max-content 1fr;
-    align-items: center;
-    gap: 32px;
-}
-
-.homepage__divider {
+.morePage__divider {
     margin-block: 64px
 }

@@ -1,7 +1,7 @@
 import { HighlightCard } from "../components/HighlightCard";
-import { StarIcon } from "../assets/StarIcon";
 import "./HomePage.css";
 import { HeartSVG } from "../assets/HeartSVG";
+import { StarBlock } from "../components/StarBlock";
 
 export const HomePage = () => {
     const fallbackImage = (
@@ -31,7 +31,7 @@ export const HomePage = () => {
                 <h3 className="h3--medium color__strawberry">
                     <b>Previously:</b> @ Intuit, Purolator, & LCBO
                 </h3>
-                <StarIcon /> <StarIcon /> <StarIcon />
+                <StarBlock />
                 <h3
                     className="h3--medium color__strawberry"
                     style={{ justifySelf: "start" }}

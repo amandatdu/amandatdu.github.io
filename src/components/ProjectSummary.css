@@ -1,0 +1,15 @@
+
+.projectSummary {
+    justify-content: center;
+    text-align: center;
+}
+
+.projectSummary__title {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.projectSummary__description {
+    max-width: 548px;
+}
