@@ -1,4 +1,6 @@
 .footer {
+    position: relative;
+    overflow: clip;
     display: grid;
     grid-template:
     "title title" max-content
@@ -7,7 +9,7 @@
     / 1fr 1fr;
 
     gap: 16px;
-    padding: 26px 120px;
+    padding: 72px 120px 24px;
 }
 
 .footer__title {

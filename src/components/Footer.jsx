@@ -1,3 +1,4 @@
+import { HeartSVG } from "../assets/HeartSVG";
 import "./Footer.css";
 
 export const Footer = () => {
@@ -19,6 +20,14 @@ export const Footer = () => {
             <p className="footer__credits">
                 Made with &lt;3 by Amanda - special s/o to selina ;u;
             </p>
+            <HeartSVG
+                className="pinkToFade"
+                style={{
+                    left: "auto",
+                    margin: 0,
+                    height: "405px",
+                }}
+            />
         </div>
     );
 };
