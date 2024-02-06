@@ -88,7 +88,11 @@ export const HomePage = () => {
                 textPlacement="right"
                 image={
                     <>
-                        <img src="/home/macbook-pro.png" alt="Macbook Pro" />
+                        <img
+                            src="/home/macbook-pro.png"
+                            alt="Macbook Pro"
+                            style={{ marginLeft: "-65%" }}
+                        />
                         <HeartSVG
                             id="tpc"
                             className="greenToBlue"
