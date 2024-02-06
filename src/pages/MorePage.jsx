@@ -26,7 +26,7 @@ export const MorePage = () => {
                         2020 show."
             />
             <img
-                src="/FC-graphic-x2.png"
+                src="/more/FC-graphic-x2.png"
                 alt="Fashion for Change banner"
                 className="morePage__fcGraphic"
             />
@@ -39,7 +39,7 @@ export const MorePage = () => {
                     alignment="start"
                 />
                 <img
-                    src="/Starterhacks-graphic-x1.png"
+                    src="/more/Starterhacks-graphic-x1.png"
                     alt="Starterhacks graphic"
                     className="morePage__starterhacks__graphic"
                 />
@@ -50,22 +50,22 @@ export const MorePage = () => {
             />
             <div className="morePage__gallery">
                 <ImageCaption
-                    src="/we-can-still-do-it.png"
+                    src="/more/we-can-still-do-it.png"
                     alt="We can still do it poster"
                     caption="feminist poster pack"
                 />
                 <ImageCaption
-                    src="/feminist-fist.png"
+                    src="/more/feminist-fist.png"
                     alt="Feminist fist poster"
                     caption="feminist poster pack"
                 />
                 <ImageCaption
-                    src="/long-exposure.png"
+                    src="/more/long-exposure.png"
                     alt="Long exposure photography"
                     caption="long exposure photography"
                 />
                 <ImageCaption
-                    src="/86-respect.png"
+                    src="/more/86-respect.png"
                     alt="Poster for car loving friend"
                     caption="poster for car loving friend"
                 />
@@ -73,12 +73,12 @@ export const MorePage = () => {
             <ProjectSummary name="me" description="last but not least <3" />
             <div className="morePage__gallery">
                 <ImageCaption
-                    src="/summertime-sadness.png"
+                    src="/more/summertime-sadness.png"
                     alt="Summertime sadness"
                     caption="'summertime sadness'"
                 />
                 <ImageCaption
-                    src="/animation.png"
+                    src="/more/animation.png"
                     alt="Hand drawn animation"
                     caption="my first hand drawn animation"
                 />

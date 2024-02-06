@@ -62,7 +62,7 @@ export const HomePage = () => {
                 }
                 image={
                     <>
-                        {fallbackImage}
+                        <img src="/home/iphone.png" alt="iPhone" />
                         <HeartSVG
                             id="turbotax"
                             className="blueToPink"
@@ -88,7 +88,7 @@ export const HomePage = () => {
                 textPlacement="right"
                 image={
                     <>
-                        {fallbackImage}
+                        <img src="/home/macbook-pro.png" alt="Macbook Pro" />
                         <HeartSVG
                             id="tpc"
                             className="greenToBlue"
