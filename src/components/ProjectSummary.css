@@ -1,7 +1,10 @@
 
 .projectSummary {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    text-align: center;
+
+    padding-block: 32px;
 }
 
 .projectSummary__title {
@@ -11,5 +14,5 @@
 }
 
 .projectSummary__description {
-    max-width: 548px;
+    max-width: 544px;
 }

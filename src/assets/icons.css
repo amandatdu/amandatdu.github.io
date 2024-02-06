@@ -4,12 +4,6 @@
     --icon-graident-high: #F97DDF;
 }
 
-.starIcon.lightTheme {
-    --icon-gradient-low: #FF000F;
-    --icon-gradient-mid: #DE14FF;
-    --icon-graident-high: #FF00C8;
-}
-
 .heartSVG {
     position: absolute;
     z-index: -1;
@@ -21,33 +15,60 @@
 
     --icon-gradient-low: #ED4B85;
     --icon-gradient-high: #FF88A4;
+
+    &.blueToPink {
+        --icon-gradient-low: #5656FF;
+        --icon-gradient-high: rgba(255, 86, 228, 0.17);
+    }
+
+    &.greenToBlue {
+        --icon-gradient-low: rgba(36, 217, 7, 0.77);
+        --icon-gradient-high: rgba(7, 196, 217, 0.38);
+    }
+
+    &.magentaToFade {
+        --icon-gradient-low: rgba(213, 7, 217, 0.77);
+        --icon-gradient-high: rgba(217, 7, 183, 0);
+    }
+
+    &.pinkToFade {
+        --icon-gradient-low: rgba(230, 132, 167, 0.65);
+        --icon-gradient-high: rgba(246, 202, 213, 0.63);
+    }
 }
 
-.heartSVG.lightTheme {
-    position: absolute;
-    z-index: -1;
+.lightTheme {
+    .starIcon {
+        --icon-gradient-low: #FF000F;
+        --icon-gradient-mid: #DE14FF;
+        --icon-graident-high: #FF00C8;
+    }
 
-    --icon-gradient-low: #E684A7;
-    --icon-gradient-high: #F6CAD5;
+    .heartSVG {
+        position: absolute;
+        z-index: -1;
+
+        --icon-gradient-low: #E684A7;
+        --icon-gradient-high: #F6CAD5;
+
+        &.blueToPink {
+            --icon-gradient-low: #5656FF;
+            --icon-gradient-high: rgba(255, 86, 228, 0.17);
+        }
+
+        &.greenToBlue {
+            --icon-gradient-low: rgba(36, 217, 7, 0.77);
+            --icon-gradient-high: rgba(7, 196, 217, 0.38);
+        }
+
+        &.magentaToFade {
+            --icon-gradient-low: rgba(213, 7, 217, 0.77);
+            --icon-gradient-high: rgba(217, 7, 183, 0);
+        }
+
+        &.pinkToFade {
+            --icon-gradient-low: rgba(230, 132, 167, 0.65);
+            --icon-gradient-high: rgba(246, 202, 213, 0.63);
+        }
+    }
 }
-
-.heartSVG.blueToPink, .heartSVG.blueToPink.lightTheme {
-    --icon-gradient-low: #5656FF;
-    --icon-gradient-high: rgba(255, 86, 228, 0.17);
-}
-
-.heartSVG.greenToBlue, .heartSVG.greenToBlue.lightTheme {
-    --icon-gradient-low: rgba(36, 217, 7, 0.77);
-    --icon-gradient-high: rgba(7, 196, 217, 0.38);
-}
-
-.heartSVG.magentaToFade, .heartSVG.magentaToFade.lightTheme {
-    --icon-gradient-low: rgba(213, 7, 217, 0.77);
-    --icon-gradient-high: rgba(217, 7, 183, 0);
-}
-
-.heartSVG.pinkToFade, .heartSVG.pinkToFade.lightTheme {
-    --icon-gradient-low: rgba(230, 132, 167, 0.65);
-    --icon-gradient-high: rgba(246, 202, 213, 0.63);
-}
-

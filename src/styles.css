@@ -21,6 +21,8 @@ body {
     --strawberry: var(--syo-pink);
     --vanilla-chocolate: var(--just-white);
 
+    --spacing--margin: 120px;
+
     color: var(--blueberry-swirl);
     background: var(--color-background);
 

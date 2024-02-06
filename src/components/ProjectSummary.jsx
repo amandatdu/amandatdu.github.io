@@ -3,8 +3,17 @@ import "./ProjectSummary.css";
 
 export const ProjectSummary = ({ name, description, alignment = "center" }) => {
     return (
-        <div className="projectSummary" style={{ justifyContent: alignment }}>
-            <div className="projectSummary__title">
+        <div
+            className="projectSummary"
+            style={{
+                alignItems: alignment,
+                textAlign: alignment,
+            }}
+        >
+            <div
+                className="projectSummary__title"
+                style={{ justifyContent: alignment, textAlign: alignment }}
+            >
                 {alignment !== "start" && <StarBlock />}
                 <h1>
                     For

@@ -14,13 +14,13 @@
 
 .highlightcard__content {
     width: 456px;
-    padding-left: 136px;
+    padding-left: var(--spacing--margin);
     padding-right: 0;
 }
 
 .highlightcard.right  .highlightcard__content {
     padding-left: 0;
-    padding-right: 136px;
+    padding-right: var(--spacing--margin);
 }
 
 .highlightcard__image {
