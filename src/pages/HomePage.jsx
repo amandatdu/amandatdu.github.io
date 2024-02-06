@@ -3,6 +3,7 @@ import "./HomePage.css";
 import { HeartSVG } from "../assets/HeartSVG";
 import { StarBlock } from "../components/StarBlock";
 import { ArrowIcon } from "../assets/ArrowIcon";
+import { StarBanner } from "../components/StarBanner";
 
 export const HomePage = () => {
     const fallbackImage = (
@@ -17,6 +18,7 @@ export const HomePage = () => {
     return (
         <div className="homepage">
             <div className="homepage__banner">
+                <StarBanner />
                 <HeartSVG id="banner" />
                 <h3 className="color--vanilla-chocolate">
                     hi hello! thank you for visiting!

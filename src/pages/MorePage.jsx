@@ -1,11 +1,13 @@
 import { ImageCaption } from "../components/ImageCaption";
 import { ProjectSummary } from "../components/ProjectSummary";
+import { StarBanner } from "../components/StarBanner";
 import "./MorePage.css";
 
 export const MorePage = () => {
     return (
         <div className="morePage">
             <div className="morePage__banner">
+                <StarBanner />
                 <h1 className="h1--display color--acai-bowl">
                     <i className="color--blueberry-swirl">product designer</i>{" "}
                     by day

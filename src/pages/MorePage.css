@@ -8,8 +8,12 @@
 
 .morePage__banner {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: var(--page-banner-height);
+    width: 100%;
     text-align: center;
-    margin-block: 128px;
 
     h1 {
         text-shadow: 2px 4px 30px rgba(255, 255, 255, 0.4);

@@ -8,8 +8,12 @@
 
 .homepage__banner {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: var(--page-banner-height);
+    width: 100%;
     text-align: center;
-    margin-block: 128px;
 }
 
 .homepage__banner__footer {

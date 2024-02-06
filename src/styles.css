@@ -21,8 +21,6 @@ body {
     --strawberry: var(--syo-pink);
     --vanilla-chocolate: var(--just-white);
 
-    --spacing--margin: 120px;
-
     color: var(--blueberry-swirl);
     background: var(--color-background);
 
@@ -38,6 +36,11 @@ body {
     .color--vanilla-chocolate {
         color: var(--vanilla-chocolate);
     }
+
+    /* Spacing */
+    --spacing--margin: 120px;
+
+    --page-banner-height: 576px;
 }
 
 body.lightTheme {

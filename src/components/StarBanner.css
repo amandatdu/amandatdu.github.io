@@ -1,0 +1,19 @@
+.starBanner {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+
+    animation: backgroundZoom 20s ease-in-out both infinite alternate;
+}
+
+@keyframes backgroundZoom {
+    from {
+        transform: scale(1);
+    }
+    
+    to {
+        transform: scale(1.25);
+    }
+}
+

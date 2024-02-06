@@ -37,6 +37,12 @@
     }
 }
 
+.sparkleIcon {
+    position: absolute;
+
+    fill: url(#sparkleIcon-dark-theme);
+}
+
 .lightTheme {
     .starIcon {
         --icon-gradient-low: #FF000F;
@@ -70,5 +76,9 @@
             --icon-gradient-low: rgba(230, 132, 167, 0.65);
             --icon-gradient-high: rgba(246, 202, 213, 0.63);
         }
+    }
+    
+    .sparkleIcon {
+        fill: url(#sparkleIcon-light-theme);
     }
 }
