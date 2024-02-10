@@ -41,6 +41,11 @@ body {
     --spacing--margin: 120px;
 
     --page-banner-height: 576px;
+
+    /* Animation */
+    --theme-transition-duration: 0.25s;
+    transition-property: color, background;
+    transition-duration: var(--theme-transition-duration);
 }
 
 body.lightTheme {

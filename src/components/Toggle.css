@@ -1,0 +1,53 @@
+.toggle {
+    --toggle-height: 32px;
+    --toggle-width: 64px;
+    --icon-size: 24px;
+    --icon-gap: calc(var(--toggle-height) - var(--icon-size));
+    width: var(--toggle-width);
+    height: var(--toggle-height);
+    border-radius: var(--toggle-height);
+    
+    position: relative;
+    background: #949090;
+    box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.1);
+
+    .icon {
+        width: var(--icon-size);
+        height: var(--icon-size);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        
+        left: var(--icon-gap);
+        transition-duration: calc(var(--theme-transition-duration) / 2);
+    }
+
+    .heart {
+        opacity: 0;
+        transition-property: opacity, left;
+    }
+
+    .star {
+        opacity: 1;
+        transition-property: opacity, left;
+    }
+}
+
+.lightTheme {
+    .toggle {
+        background: #FAE1E9;
+
+        .icon {
+            left: calc(var(--toggle-width) - var(--icon-gap) - var(--icon-size));
+        }
+
+        .heart {
+            opacity: 1;
+        }
+
+        .star {
+            opacity: 0;
+        }
+    }
+}

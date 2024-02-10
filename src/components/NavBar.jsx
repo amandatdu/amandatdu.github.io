@@ -1,4 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
+import { Toggle } from "./Toggle";
 import "./NavBar.css";
 
 export const ROUTES = {
@@ -42,7 +43,7 @@ export const NavBar = () => {
                         {tab.name}
                     </Link>
                 ))}
-                <button onClick={onClick}> Toggle </button>
+                <Toggle onChange={onClick} />
             </div>
         </nav>
     );
