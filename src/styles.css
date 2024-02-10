@@ -20,6 +20,7 @@ body {
     --acai-bowl: var(--salt-and-pepper);
     --strawberry: var(--syo-pink);
     --vanilla-chocolate: var(--just-white);
+    --vanilla-strawberry: var(--just-white);
 
     color: var(--blueberry-swirl);
     background: var(--color-background);
@@ -53,6 +54,7 @@ body.lightTheme {
     --blueberry-swirl: var(--masato-blue);
     --acai-bowl: var(--little-bro-blue);
     --vanilla-chocolate: var(--brownie-brown);
+    --vanilla-strawberry: var(--syo-pink);
 }
 
 /* FONTS */

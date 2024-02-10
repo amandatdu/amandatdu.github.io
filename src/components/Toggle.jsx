@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { restartAnimations } from "../utils/helper";
 import "./Toggle.css";
 
 const Star = () => (
@@ -35,17 +36,59 @@ const Heart = () => (
 
 export const Toggle = ({ onChange }) => {
     const [isOn, setIsOn] = useState(false);
+    const ref = useRef();
 
     const onClick = () => {
         setIsOn(!isOn);
-
         onChange();
+        if (ref.current) {
+            restartAnimations(ref.current);
+        }
     };
 
+    const verticalLineHorizontalOffset = isOn
+        ? "calc(var(--toggle-width) - var(--icon-size) / 2 - var(--icon-gap) - var(--long-line-width) / 2)"
+        : "calc(var(--icon-size) / 2 + var(--icon-gap) - var(--long-line-width) / 2)";
+
+    const horizontalLineHorizontalOffset =
+        "var(--toggle-width) - var(--icon-size) - 2 * var(--icon-gap)";
+
     return (
-        <div className="toggle" onClick={onClick}>
+        <div ref={ref} className="toggle" onClick={onClick}>
             <Star />
             <Heart />
+            <div
+                className="long horizontal"
+                style={{
+                    ...(isOn && {
+                        transform: `translateX(calc(${horizontalLineHorizontalOffset}))`,
+                    }),
+                    animationName: "lineleft",
+                }}
+            />
+            <div
+                className="long horizontal"
+                style={{
+                    ...(!isOn && {
+                        transform: `translateX(calc(-1 * (${horizontalLineHorizontalOffset})))`,
+                    }),
+                    animationName: "lineright",
+                }}
+            />
+            <div
+                className="long vertical"
+                style={{
+                    transform: `translateX(${verticalLineHorizontalOffset})`,
+                    animationName: "lineup",
+                }}
+            />
+            <div
+                className="long vertical"
+                style={{
+                    transform: `translateY(var(--toggle-height)) translateX(${verticalLineHorizontalOffset})`,
+                    animationName: "linedown",
+                }}
+            />
         </div>
     );
 };
