@@ -11,9 +11,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: var(--page-banner-height);
+    min-height: var(--page-banner-height);
     width: 100%;
     text-align: center;
+    
+    > * {
+        padding-inline: var(--spacing--margin)
+    }
 }
 
 .homepage__banner__footer {

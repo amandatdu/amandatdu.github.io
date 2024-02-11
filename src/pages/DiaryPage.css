@@ -12,7 +12,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    height: var(--page-banner-height);
+    min-height: var(--page-banner-height);
     width: 100%;
     gap: 64px;
 
