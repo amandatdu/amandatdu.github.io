@@ -7,7 +7,7 @@ export const ROUTES = {
     more: "/more",
     diary: "/diary",
     resume: "/resume",
-    intuit: "/work/intuit"
+    intuit: "/work/intuit",
 };
 
 export const NavBar = () => {
@@ -26,9 +26,12 @@ export const NavBar = () => {
 
     return (
         <nav className="navbar">
-            <Link to={ROUTES.work} className="navbar__logo">
-                <p className="color--strawberry">atdu &#x2765;</p>
-            </Link>
+            <div className="navbar__home">
+                <Toggle onChange={onClick} />
+                {/* <Link to={ROUTES.work} className="navbar__logo">
+                    <p className="color--strawberry">atdu &#x2765;</p>
+                </Link> */}
+            </div>
             <div className="navbar__tabs">
                 {TABS.map((tab) => (
                     <Link
@@ -43,7 +46,6 @@ export const NavBar = () => {
                         {tab.name}
                     </Link>
                 ))}
-                <Toggle onChange={onClick} />
             </div>
         </nav>
     );
