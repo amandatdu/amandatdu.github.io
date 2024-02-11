@@ -36,6 +36,9 @@ export const HighlightCard = ({
 
     return (
         <div ref={ref} className={`highlightcard ${placementProp}`}>
+            {placementProp === "right" && (
+                <div className="highlightcard__image">{image}</div>
+            )}
             <div className="highlightcard__content">
                 <h3 className="h3--subheading color--strawberry">{subtitle}</h3>
                 <h1>
@@ -44,7 +47,9 @@ export const HighlightCard = ({
                 </h1>
                 <p>{body}</p>
             </div>
-            <div className="highlightcard__image">{image}</div>
+            {placementProp === "left" && (
+                <div className="highlightcard__image">{image}</div>
+            )}
         </div>
     );
 };

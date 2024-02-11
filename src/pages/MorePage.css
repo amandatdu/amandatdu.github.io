@@ -8,14 +8,53 @@
 
 .morePage__banner {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: var(--page-banner-height);
+    width: 100%;
     text-align: center;
-    margin-block: 128px;
 
     h1 {
         text-shadow: 2px 4px 30px rgba(255, 255, 255, 0.4);
     }
 }
 
+.lightTheme {
+    .morePage__banner {
+        h1 {
+            text-shadow: 2px 4px 30px rgba(86, 86, 255, 0.4);
+        }
+    }
+}
+
 .morePage__footer {
     text-align: center;
+}
+
+.morePage__fcGraphic {
+    width: 100%;
+    margin-block: 32px;
+}
+
+.morePage__starterhacks {
+    display: flex;
+    flex-direction: row;
+    margin: 32px var(--spacing--margin);
+    gap: 32px;
+}
+
+.morePage__starterhacks__graphic {
+    margin-block: 32px;
+    width: 576px;
+}
+
+.morePage__gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 60px;
+
+    width: calc(100% - 2 * var(--spacing--margin));
 }

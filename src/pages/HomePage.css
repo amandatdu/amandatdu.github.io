@@ -8,8 +8,12 @@
 
 .homepage__banner {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: var(--page-banner-height);
+    width: 100%;
     text-align: center;
-    margin-block: 128px;
 }
 
 .homepage__banner__footer {
@@ -24,4 +28,18 @@
     flex-direction: column;
     align-items: center;
     margin-block: 64px;
+
+    svg {
+        animation: arrowPulse .5s infinite alternate ease-in-out;
+    }
+}
+
+@keyframes arrowPulse {
+    from {
+        transform: rotate(90deg) translateX(0);
+    }
+    
+    to {
+        transform: rotate(90deg) translateX(25%);
+    }
 }

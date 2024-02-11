@@ -3,6 +3,7 @@ import "./HomePage.css";
 import { HeartSVG } from "../assets/HeartSVG";
 import { StarBlock } from "../components/StarBlock";
 import { ArrowIcon } from "../assets/ArrowIcon";
+import { StarBanner } from "../components/StarBanner";
 
 export const HomePage = () => {
     const fallbackImage = (
@@ -17,6 +18,7 @@ export const HomePage = () => {
     return (
         <div className="homepage">
             <div className="homepage__banner">
+                <StarBanner />
                 <HeartSVG id="banner" />
                 <h3 className="color--vanilla-chocolate">
                     hi hello! thank you for visiting!
@@ -60,7 +62,7 @@ export const HomePage = () => {
                 }
                 image={
                     <>
-                        {fallbackImage}
+                        <img src="/home/iphone.png" alt="iPhone" />
                         <HeartSVG
                             id="turbotax"
                             className="blueToPink"
@@ -86,7 +88,11 @@ export const HomePage = () => {
                 textPlacement="right"
                 image={
                     <>
-                        {fallbackImage}
+                        <img
+                            src="/home/macbook-pro.png"
+                            alt="Macbook Pro"
+                            style={{ marginLeft: "-65%" }}
+                        />
                         <HeartSVG
                             id="tpc"
                             className="greenToBlue"
