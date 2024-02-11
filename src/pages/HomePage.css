@@ -23,6 +23,16 @@
     gap: 32px;
 }
 
+@media only screen and (max-width: 1125px) {
+    .homepage__banner__footer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 4px;
+    }
+}
+
 .homepage__divider {
     display: flex;
     flex-direction: column;

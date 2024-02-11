@@ -124,3 +124,16 @@ p, .p {
     line-height: 1.5;
     color: var(--vanilla-chocolate)
 }
+
+
+@media only screen and (max-width: 1096px) {
+    body {
+        --spacing--margin: 64px;
+    }
+}
+
+@media only screen and (max-width: 708px) {
+    body {
+        --spacing--margin: 24px;
+    }
+}

@@ -58,3 +58,13 @@
 
     width: calc(100% - 2 * var(--spacing--margin));
 }
+
+@media only screen and (max-width: 1096px) {
+    .morePage__starterhacks {
+        flex-wrap: wrap;
+    }
+
+    .morePage__starterhacks__graphic {
+        width: 100%;
+    }
+}
