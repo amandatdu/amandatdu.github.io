@@ -1,0 +1,33 @@
+
+.caseStudy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 89px;
+}
+
+.caseContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 89px;
+    text-align: left;
+    max-width: 835px;
+}
+
+.caseImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% - 2 * 120px);
+}
+
+.caseIntro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 89px;
+    text-align: left;
+    max-width: 835px;
+}

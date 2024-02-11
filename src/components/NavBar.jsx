@@ -2,10 +2,11 @@ import { Link, useLocation } from "react-router-dom";
 import "./NavBar.css";
 
 export const ROUTES = {
-    work: "/",
+    work: "/work",
     more: "/more",
     diary: "/diary",
     resume: "/resume",
+    intuit: "/work/intuit"
 };
 
 export const NavBar = () => {

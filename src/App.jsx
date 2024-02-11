@@ -2,8 +2,9 @@ import { NavBar, ROUTES } from "./components/NavBar";
 import { HomePage } from "./pages/HomePage";
 import "./App.css";
 import "./styles.css";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import { MorePage } from "./pages/MorePage";
+import { IntuitPage } from "./pages/IntuitPage";
 import { Footer } from "./components/Footer";
 
 function App() {
@@ -13,6 +14,8 @@ function App() {
             <Routes>
                 <Route path={ROUTES.work} element={<HomePage />} />
                 <Route path={ROUTES.more} element={<MorePage />} />
+                <Route path={ROUTES.intuit} element={<IntuitPage />} />
+                <Route path="*" element={<Navigate to={ROUTES.work} replace/>} />
             </Routes>
             <Footer />
         </div>
