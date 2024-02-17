@@ -4,17 +4,50 @@ import { HeartSVG } from "../assets/HeartSVG";
 import { StarBlock } from "../components/StarBlock";
 import { ArrowIcon } from "../assets/ArrowIcon";
 import { StarBanner } from "../components/StarBanner";
+import { useCallback, useRef } from "react";
+import { clamp, useAnimationFrame } from "../utils/helper";
 
 export const HomePage = () => {
-    const fallbackImage = (
-        <div
-            style={{
-                background: "red",
-                width: "200px",
-                height: "360px",
-            }}
-        />
+    const refLength = 4;
+    const wrapperRefs = useRef(Array(refLength));
+    const imageRefs = useRef(Array(refLength));
+
+    const setRefHelper = useCallback(
+        (ref, index) => (el) => {
+            if (el) {
+                ref.current[index] = el;
+            }
+        },
+        []
     );
+
+    const scrollHandler = useCallback((ref, imageRef) => {
+        if (ref) {
+            const scale =
+                clamp(
+                    window.innerHeight -
+                        ref.getBoundingClientRect()?.top -
+                        ref.scrollHeight / 2,
+                    0,
+                    window.innerHeight
+                ) / window.innerHeight; // animation should move for the full length of the page's visible height;
+            const percentage = 100 * scale - 50;
+
+            if (imageRef) {
+                imageRef.style.setProperty(
+                    "transform",
+                    `translate3d(0, ${(percentage / 100) * 192}px, 0)`
+                );
+            }
+        }
+    }, []);
+
+    useAnimationFrame(() => {
+        for (let i = 0; i < 4; i++) {
+            scrollHandler(wrapperRefs.current[i], imageRefs.current[i]);
+        }
+    });
+
     return (
         <div className="homepage">
             <div className="homepage__banner">
@@ -60,16 +93,19 @@ export const HomePage = () => {
                         decisions and still gave them a confident experience?
                     </>
                 }
-                image={
-                    <>
-                        <img src="/home/iphone.png" alt="iPhone" />
+                imageData={{
+                    src: "/home/iphone.png",
+                    alt: "iPhone",
+                    background: (
                         <HeartSVG
                             id="turbotax"
                             className="blueToPink"
                             style={{ left: "50px" }}
                         />
-                    </>
-                }
+                    ),
+                }}
+                wrapperRef={setRefHelper(wrapperRefs, 0)}
+                contentRef={setRefHelper(imageRefs, 0)}
             />
             <HighlightCard
                 subtitle="Product designer for NPO – 2021"
@@ -86,20 +122,22 @@ export const HomePage = () => {
                     </>
                 }
                 textPlacement="right"
-                image={
-                    <>
-                        <img
-                            src="/home/macbook-pro.png"
-                            alt="Macbook Pro"
-                            style={{ marginLeft: "-65%" }}
-                        />
+                imageData={{
+                    src: "/home/macbook-pro.png",
+                    alt: "Macbook Pro",
+                    background: (
                         <HeartSVG
                             id="tpc"
                             className="greenToBlue"
                             style={{ left: "50px" }}
                         />
-                    </>
-                }
+                    ),
+                    style: {
+                        marginRight: "50%",
+                    },
+                }}
+                wrapperRef={setRefHelper(wrapperRefs, 1)}
+                contentRef={setRefHelper(imageRefs, 1)}
             />
             <HighlightCard
                 subtitle="UX/UI Designer Co-op – 2021"
@@ -116,29 +154,34 @@ export const HomePage = () => {
                         feedback.
                     </>
                 }
-                image={
-                    <>
-                        {fallbackImage}
-                        <HeartSVG
-                            id="lcbo"
-                            className="greenToBlue"
-                            style={{
-                                right: "-50%",
-                                bottom: "-25%",
-                                width: "248px",
-                            }}
-                        />
-                        <HeartSVG
-                            id="lcbo"
-                            className="greenToBlue"
-                            style={{
-                                left: "-50%",
-                                top: "-50%",
-                                width: "248px",
-                            }}
-                        />
-                    </>
-                }
+                imageData={{
+                    src: "/home/iphone.png",
+                    alt: "iPhone",
+                    background: (
+                        <>
+                            <HeartSVG
+                                id="lcbo"
+                                className="greenToBlue"
+                                style={{
+                                    right: "-50%",
+                                    bottom: "-25%",
+                                    width: "248px",
+                                }}
+                            />
+                            <HeartSVG
+                                id="lcbo"
+                                className="greenToBlue"
+                                style={{
+                                    left: "-50%",
+                                    top: "-50%",
+                                    width: "248px",
+                                }}
+                            />
+                        </>
+                    ),
+                }}
+                wrapperRef={setRefHelper(wrapperRefs, 2)}
+                contentRef={setRefHelper(imageRefs, 2)}
             />
             <HighlightCard
                 subtitle="Product designer for NPO – 2021"
@@ -159,16 +202,22 @@ export const HomePage = () => {
                     </>
                 }
                 textPlacement="right"
-                image={
-                    <>
-                        {fallbackImage}
+                imageData={{
+                    src: "/home/macbook-pro.png",
+                    alt: "Macbook Pro",
+                    background: (
                         <HeartSVG
                             id="mom"
                             className="magentaToFade"
                             style={{ left: "-35%" }}
                         />
-                    </>
-                }
+                    ),
+                    style: {
+                        marginRight: "50%",
+                    },
+                }}
+                wrapperRef={setRefHelper(wrapperRefs, 3)}
+                contentRef={setRefHelper(imageRefs, 3)}
             />
         </div>
     );

@@ -1,6 +1,6 @@
 .highlightcard {
     width: 100%;
-    height: 720px;
+    height: 880px;
 
     display: grid;
     grid-template-columns: repeat(2, minmax(576px, 1fr));
@@ -25,25 +25,11 @@
     justify-content: center;
 }
 
-.highlightcard__image > img, .highlightcard__image > div {
-    animation: imageScroll 1s linear both;
-    animation-play-state: paused;
-    /* Value of the variable: start at 0 and moving towards 1 */
-    animation-delay: calc(var(--scroll-highlight-card) * -1s);
-}
-
-@keyframes imageScroll {
-    from {
-        transform: translate(0, -96px);
-    }
-    
-    to {
-        transform: translate(0, 96px);
-    }
+.highlightcard__image > img {
+    will-change: transform;
 }
 
 @media only screen and (max-width: 1096px) {
-    /* tablets and desktop */
     .highlightcard {
         grid-template-columns: minmax(64px, 1fr) 1fr;
         align-items: center;
