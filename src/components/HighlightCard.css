@@ -6,6 +6,16 @@
     grid-template-columns: repeat(2, minmax(576px, 1fr));
     align-items: center;
     justify-items: center;
+
+    a {
+        text-decoration: none;
+        color: var(--blueberry-swirl);
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: var(--acai-bowl)
+    }
 }
 
 .highlightcard__content {

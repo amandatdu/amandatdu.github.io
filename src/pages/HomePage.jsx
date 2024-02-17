@@ -1,11 +1,12 @@
-import { HighlightCard } from "../components/HighlightCard";
-import "./HomePage.css";
-import { HeartSVG } from "../assets/HeartSVG";
-import { StarBlock } from "../components/StarBlock";
-import { ArrowIcon } from "../assets/ArrowIcon";
-import { StarBanner } from "../components/StarBanner";
 import { useCallback, useRef } from "react";
+import { ArrowIcon } from "../assets/ArrowIcon";
+import { HeartSVG } from "../assets/HeartSVG";
+import { HighlightCard } from "../components/HighlightCard";
+import { ROUTES } from "../components/NavBar";
+import { StarBanner } from "../components/StarBanner";
+import { StarBlock } from "../components/StarBlock";
 import { clamp, useAnimationFrame } from "../utils/helper";
+import "./HomePage.css";
 
 export const HomePage = () => {
     const refLength = 4;
@@ -33,7 +34,11 @@ export const HomePage = () => {
                 ) / window.innerHeight; // animation should move for the full length of the page's visible height;
             const percentage = 100 * scale - 50;
 
-            if (imageRef) {
+            if (
+                imageRef &&
+                // No need to update the translation if the screen hasn't scrolled
+                !imageRef.style.transform.includes((percentage / 100) * 192)
+            ) {
                 imageRef.style.setProperty(
                     "transform",
                     `translate3d(0, ${(percentage / 100) * 192}px, 0)`
@@ -93,6 +98,7 @@ export const HomePage = () => {
                         decisions and still gave them a confident experience?
                     </>
                 }
+                link={ROUTES.intuit}
                 imageData={{
                     src: "/home/iphone.png",
                     alt: "iPhone",

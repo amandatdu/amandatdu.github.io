@@ -1,5 +1,6 @@
-import "./HighlightCard.css";
+import { Link } from "react-router-dom";
 import { ArrowIcon } from "../assets/ArrowIcon";
+import "./HighlightCard.css";
 
 export const HighlightCard = ({
     wrapperRef,
@@ -9,6 +10,7 @@ export const HighlightCard = ({
     body,
     textPlacement,
     imageData,
+    link,
 }) => {
     const { src, alt, background, style } = imageData;
     const placementProp = textPlacement ?? "left";
@@ -23,10 +25,12 @@ export const HighlightCard = ({
             )}
             <div className="highlightcard__content">
                 <h3 className="h3--subheading color--strawberry">{subtitle}</h3>
-                <h1>
-                    {title}&nbsp;
-                    <ArrowIcon />
-                </h1>
+                <Link to={link}>
+                    <h1>
+                        {title}&nbsp;
+                        <ArrowIcon />
+                    </h1>
+                </Link>
                 <p>{body}</p>
             </div>
             {placementProp === "left" && (
