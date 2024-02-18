@@ -1,10 +1,37 @@
 import { Link } from "react-router-dom";
 import { ArrowIcon } from "../assets/ArrowIcon";
 import "./HighlightCard.css";
+import { Parallax, useParallaxController } from "react-scroll-parallax";
+import { useEffect, useRef, useState } from "react";
+
+function Image(props) {
+    const parallaxController = useParallaxController();
+
+    // updates cached values after image dimensions have loaded
+    const handleLoad = () => parallaxController.update();
+
+    return (
+        <img
+            src={props.src}
+            onLoad={handleLoad}
+            alt={props.alt}
+            style={props.style}
+        />
+    );
+}
+
+const ParallaxImage = ({ src, alt, style, deltaY, targetElement }) => (
+    <Parallax
+        speed={20}
+        translateY={[deltaY, -deltaY]}
+        targetElement={targetElement}
+        easing={[0.5, 0.25, 0.5, 0.75]}
+    >
+        <Image src={src} alt={alt} style={style} />
+    </Parallax>
+);
 
 export const HighlightCard = ({
-    wrapperRef,
-    contentRef,
     subtitle,
     title,
     body,
@@ -15,14 +42,28 @@ export const HighlightCard = ({
     const { src, alt, background, style } = imageData;
     const placementProp = textPlacement ?? "left";
 
+    const ref = useRef();
+    const [targetElement, setElement] = useState(null);
+    useEffect(() => {
+        setElement(ref.current);
+    }, []);
+
+    const imageElement = (
+        <div ref={ref} className="highlightcard__image">
+            <ParallaxImage
+                src={src}
+                alt={alt}
+                style={style}
+                deltaY={25}
+                targetElement={targetElement}
+            />
+            {background}
+        </div>
+    );
+
     return (
-        <div ref={wrapperRef} className={`highlightcard ${placementProp}`}>
-            {placementProp === "right" && (
-                <div className="highlightcard__image">
-                    <img ref={contentRef} src={src} alt={alt} style={style} />
-                    {background}
-                </div>
-            )}
+        <div className={`highlightcard ${placementProp}`}>
+            {placementProp === "right" && imageElement}
             <div className="highlightcard__content">
                 <h3 className="h3--subheading color--strawberry">{subtitle}</h3>
                 <Link to={link}>
@@ -33,12 +74,7 @@ export const HighlightCard = ({
                 </Link>
                 <p>{body}</p>
             </div>
-            {placementProp === "left" && (
-                <div className="highlightcard__image">
-                    <img ref={contentRef} src={src} alt={alt} style={style} />
-                    {background}
-                </div>
-            )}
+            {placementProp === "left" && imageElement}
         </div>
     );
 };

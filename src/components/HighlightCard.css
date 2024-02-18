@@ -1,6 +1,6 @@
 .highlightcard {
     width: 100%;
-    height: 880px;
+    height: 1200px;
 
     display: grid;
     grid-template-columns: repeat(2, minmax(576px, 1fr));
