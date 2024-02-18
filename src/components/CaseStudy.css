@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    gap: 89px;
+    gap: 88px;
 }
 
 .caseContent {
@@ -20,7 +20,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: calc(100% - 2 * 120px);
+  width: calc(100% - 2 * var(--spacing--margin));
+
+  &.full {
+    width: 100%;
+  }
+
+  img, video {
+    width: 100%;
+  }
 }
 
 .caseIntro {
@@ -30,4 +38,23 @@
     gap: 89px;
     text-align: left;
     max-width: 835px;
+}
+
+.caseContext {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.videoBorder {
+  border: 1px var(--masato-blue) solid;
+  border-radius: 12px;
+  overflow: clip;
+}
+
+.buttonStyle{
+  padding: 10px 24px;
+  color: var(---just-white) solid;
 }
