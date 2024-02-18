@@ -12,6 +12,7 @@ export const HomePage = () => {
     const refLength = 4;
     const wrapperRefs = useRef(Array(refLength));
     const imageRefs = useRef(Array(refLength));
+    const prevRefs = useRef(Array(refLength).fill(0));
 
     const setRefHelper = useCallback(
         (ref, index) => (el) => {
@@ -22,36 +23,63 @@ export const HomePage = () => {
         []
     );
 
-    const scrollHandler = useCallback((ref, imageRef) => {
-        if (ref) {
-            const scale =
-                clamp(
-                    window.innerHeight -
-                        ref.getBoundingClientRect()?.top -
-                        ref.scrollHeight / 2,
-                    0,
-                    window.innerHeight
-                ) / window.innerHeight; // animation should move for the full length of the page's visible height;
-            const percentage = 100 * scale - 50;
+    // returns a value in [-1, 1] normalized to the image being in the center of the screen
+    const computeScrollPercent = (ref) => {
+        const scale =
+            clamp(
+                window.innerHeight -
+                    ref.getBoundingClientRect()?.top -
+                    ref.scrollHeight / 2,
+                0,
+                window.innerHeight
+            ) / window.innerHeight; // animation should move for the full length of the page's visible height;
+        return 100 * scale - 50;
+    };
 
-            if (
-                imageRef &&
-                // No need to update the translation if the screen hasn't scrolled
-                !imageRef.style.transform.includes((percentage / 100) * 192)
-            ) {
-                imageRef.style.setProperty(
-                    "transform",
-                    `translate3d(0, ${(percentage / 100) * 192}px, 0)`
-                );
+    const applyParallaxEffect = useCallback(
+        (imageRef, percentage, setPrevPercentRef) => {
+            setPrevPercentRef(percentage);
+            imageRef.style.setProperty(
+                "transform",
+                `translate3d(0, ${(percentage / 100) * 300}px, 0)`
+            );
+        },
+        []
+    );
+
+    const handleParallax = useCallback(
+        (ref, imageRef, prevPercentRef, setPrevPercentRef) => {
+            if (!ref || !imageRef) {
+                return;
             }
-        }
-    }, []);
+            const percentage = computeScrollPercent(ref);
+            // No need to update the translation if the screen hasn't scrolled
+            if (prevPercentRef !== percentage) {
+                applyParallaxEffect(imageRef, percentage, setPrevPercentRef);
+            }
+        },
+        [applyParallaxEffect]
+    );
 
-    useAnimationFrame(() => {
+    const scrollHandler = useCallback(() => {
         for (let i = 0; i < 4; i++) {
-            scrollHandler(wrapperRefs.current[i], imageRefs.current[i]);
+            handleParallax(
+                wrapperRefs.current[i],
+                imageRefs.current[i],
+                prevRefs.current[i],
+                (percent) => {
+                    prevRefs.current[i] = percent;
+                }
+            );
         }
-    });
+    }, [handleParallax]);
+    useAnimationFrame(scrollHandler);
+
+    // useEffect(() => {
+    //     window.addEventListener("scroll", scrollHandler);
+
+    //     return () => window.removeEventListener("scroll", scrollHandler);
+    // }, [scrollHandler]);
 
     return (
         <div className="homepage">
