@@ -6,6 +6,7 @@ body {
     --little-bro-blue: #6262FF;
     --syo-pink: #FF6EA2;
     --brownie-brown: #533030;
+    --hot-chocolate-brown: #533030;
     --just-white: #FFFFFF;
     --salt-and-pepper: #D7D7D7;
     --light-intuit-blue: #577ECD;
@@ -20,6 +21,7 @@ body {
     --acai-bowl: var(--salt-and-pepper);
     --strawberry: var(--syo-pink);
     --vanilla-chocolate: var(--just-white);
+    --marshallow-cinnamon: var(var(--salt-and-pepper));
     --vanilla-strawberry: var(--just-white);
 
     color: var(--blueberry-swirl);
@@ -36,6 +38,9 @@ body {
     }
     .color--vanilla-chocolate {
         color: var(--vanilla-chocolate);
+    }
+    .color--marshallow-cinnamon {
+        color: var(--marshallow-cinnamon);
     }
 
     /* Spacing */
@@ -54,6 +59,7 @@ body.lightTheme {
     --blueberry-swirl: var(--masato-blue);
     --acai-bowl: var(--little-bro-blue);
     --vanilla-chocolate: var(--brownie-brown);
+    --marshallow-cinnamon: var(--hot-chocolate-brown);
     --vanilla-strawberry: var(--syo-pink);
 }
 
@@ -107,7 +113,6 @@ h3, .h3 {
 
 h3.h3--medium, .h3--medium {
     font-weight: 500;
-
 }
 
 h3.h3--subheading, .h3--subheading {

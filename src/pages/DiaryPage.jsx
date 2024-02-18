@@ -10,11 +10,11 @@ export const DiaryPage = () => {
     );
     const formatEntry = (name, start, end, title) => (
         <div className="diarypage__resume__entry">
-            <h3 className="color--blueberry-swirl">
+            <h3 className="color--vanilla-chocolate">
                 <b>{name}</b>
             </h3>
-            <h3 className="color--acai-bowl">{title}</h3>
-            <h3 className="color--acai-bowl">
+            <h3 className="color--marshallow-cinnamon">{title}</h3>
+            <h3 className="color--marshallow-cinnamon">
                 {start.toUpperCase()} - {end.toUpperCase()}
             </h3>
         </div>
@@ -25,8 +25,8 @@ export const DiaryPage = () => {
             <div className="diarypage__banner">
                 <StarBanner />
                 <img src="/portrait.png" alt="Amanda Du" />
-                <div className="diarypage__banner__content">
-                    <h1>
+                <div className="diarypage__banner__content color--vanilla-chocolate">
+                    <h1 className="color--blueberry-swirl">
                         <i>hi! nice to meet you! ♡ ⋆｡˚</i>
                     </h1>
                     <h3>
@@ -66,7 +66,7 @@ export const DiaryPage = () => {
                 </h3>
                 <StarBlock />
             </div>
-            <div className="diarypage__resume">
+            <div className="diarypage__resume color--vanilla-chocolate">
                 {formatCategory("education")}
                 {formatEntry("University of Waterloo", "sept 2018", "jun 2023")}
                 <div className="diarypage__resume__description">
@@ -104,7 +104,7 @@ export const DiaryPage = () => {
 
                 <div />
                 {formatEntry(
-                    "Intui",
+                    "Intuit",
                     "jan 2022",
                     "aug 2022",
                     "Product Design Intern"

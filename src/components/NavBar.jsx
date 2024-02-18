@@ -15,7 +15,11 @@ export const NavBar = () => {
         { name: "work!", route: ROUTES.work },
         { name: "& more", route: ROUTES.more },
         { name: "my diary", route: ROUTES.diary },
-        { name: "resume", route: ROUTES.resume },
+        {
+            name: "resume",
+            isExternal: true,
+            route: "https://drive.google.com/file/d/10kwVXjl0VPGhPjpsV3HYjAHHyeruPAtN/view",
+        },
     ];
 
     const onClick = () => {
@@ -28,24 +32,37 @@ export const NavBar = () => {
         <nav className="navbar">
             <div className="navbar__home">
                 <Toggle onChange={onClick} />
-                {/* <Link to={ROUTES.work} className="navbar__logo">
-                    <p className="color--strawberry">atdu &#x2765;</p>
-                </Link> */}
             </div>
             <div className="navbar__tabs">
-                {TABS.map((tab) => (
-                    <Link
-                        key={tab.name}
-                        className={`navbar__tabs__tab ${
-                            location.pathname === tab.route
-                                ? "navbar__tabs__tab--selected"
-                                : ""
-                        }`}
-                        to={tab.route}
-                    >
-                        {tab.name}
-                    </Link>
-                ))}
+                {TABS.map((tab) =>
+                    tab.isExternal ? (
+                        <a
+                            key={tab.name}
+                            className={`navbar__tabs__tab ${
+                                location.pathname === tab.route
+                                    ? "navbar__tabs__tab--selected"
+                                    : ""
+                            }`}
+                            href={tab.route}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            {tab.name}
+                        </a>
+                    ) : (
+                        <Link
+                            key={tab.name}
+                            className={`navbar__tabs__tab ${
+                                location.pathname === tab.route
+                                    ? "navbar__tabs__tab--selected"
+                                    : ""
+                            }`}
+                            to={tab.route}
+                        >
+                            {tab.name}
+                        </Link>
+                    )
+                )}
             </div>
         </nav>
     );
