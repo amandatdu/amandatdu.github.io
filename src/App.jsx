@@ -1,3 +1,4 @@
+import { ParallaxProvider } from "react-scroll-parallax";
 import { NavBar, ROUTES } from "./components/NavBar";
 import { HomePage } from "./pages/HomePage";
 import "./App.css";
@@ -11,18 +12,20 @@ import { DiaryPage } from "./pages/DiaryPage";
 function App() {
     return (
         <div className="app">
-            <NavBar />
-            <Routes>
-                <Route path={ROUTES.work} element={<HomePage />} />
-                <Route path={ROUTES.more} element={<MorePage />} />
-                <Route path={ROUTES.intuit} element={<IntuitPage />} />
-                <Route path={ROUTES.diary} element={<DiaryPage />} />
-                <Route
-                    path="*"
-                    element={<Navigate to={ROUTES.work} replace />}
-                />
-            </Routes>
-            <Footer />
+            <ParallaxProvider>
+                <NavBar />
+                <Routes>
+                    <Route path={ROUTES.work} element={<HomePage />} />
+                    <Route path={ROUTES.more} element={<MorePage />} />
+                    <Route path={ROUTES.intuit} element={<IntuitPage />} />
+                    <Route path={ROUTES.diary} element={<DiaryPage />} />
+                    <Route
+                        path="*"
+                        element={<Navigate to={ROUTES.work} replace />}
+                    />
+                </Routes>
+                <Footer />
+            </ParallaxProvider>
         </div>
     );
 }

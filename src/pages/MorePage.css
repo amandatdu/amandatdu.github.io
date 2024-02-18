@@ -11,12 +11,16 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: var(--page-banner-height);
+    min-height: var(--page-banner-height);
     width: 100%;
     text-align: center;
 
     h1 {
         text-shadow: 2px 4px 30px rgba(255, 255, 255, 0.4);
+    }
+    
+    > * {
+        padding-inline: var(--spacing--margin)
     }
 }
 
@@ -57,4 +61,14 @@
     gap: 60px;
 
     width: calc(100% - 2 * var(--spacing--margin));
+}
+
+@media only screen and (max-width: 1096px) {
+    .morePage__starterhacks {
+        flex-wrap: wrap;
+    }
+
+    .morePage__starterhacks__graphic {
+        width: 100%;
+    }
 }

@@ -1,20 +1,12 @@
-import { HighlightCard } from "../components/HighlightCard";
-import "./HomePage.css";
-import { HeartSVG } from "../assets/HeartSVG";
-import { StarBlock } from "../components/StarBlock";
 import { ArrowIcon } from "../assets/ArrowIcon";
+import { HeartSVG } from "../assets/HeartSVG";
+import { HighlightCard } from "../components/HighlightCard";
+import { ROUTES } from "../components/NavBar";
 import { StarBanner } from "../components/StarBanner";
+import { StarBlock } from "../components/StarBlock";
+import "./HomePage.css";
 
 export const HomePage = () => {
-    const fallbackImage = (
-        <div
-            style={{
-                background: "red",
-                width: "200px",
-                height: "360px",
-            }}
-        />
-    );
     return (
         <div className="homepage">
             <div className="homepage__banner">
@@ -60,16 +52,18 @@ export const HomePage = () => {
                         decisions and still gave them a confident experience?
                     </>
                 }
-                image={
-                    <>
-                        <img src="/home/iphone.png" alt="iPhone" />
+                link={ROUTES.intuit}
+                imageData={{
+                    src: "/home/iphone.png",
+                    alt: "iPhone",
+                    background: (
                         <HeartSVG
                             id="turbotax"
                             className="blueToPink"
                             style={{ left: "50px" }}
                         />
-                    </>
-                }
+                    ),
+                }}
             />
             <HighlightCard
                 subtitle="Product designer for NPO – 2021"
@@ -86,20 +80,20 @@ export const HomePage = () => {
                     </>
                 }
                 textPlacement="right"
-                image={
-                    <>
-                        <img
-                            src="/home/macbook-pro.png"
-                            alt="Macbook Pro"
-                            style={{ marginLeft: "-65%" }}
-                        />
+                imageData={{
+                    src: "/home/macbook-pro.png",
+                    alt: "Macbook Pro",
+                    background: (
                         <HeartSVG
                             id="tpc"
                             className="greenToBlue"
                             style={{ left: "50px" }}
                         />
-                    </>
-                }
+                    ),
+                    style: {
+                        marginLeft: "-30%",
+                    },
+                }}
             />
             <HighlightCard
                 subtitle="UX/UI Designer Co-op – 2021"
@@ -116,29 +110,32 @@ export const HomePage = () => {
                         feedback.
                     </>
                 }
-                image={
-                    <>
-                        {fallbackImage}
-                        <HeartSVG
-                            id="lcbo"
-                            className="greenToBlue"
-                            style={{
-                                right: "-50%",
-                                bottom: "-25%",
-                                width: "248px",
-                            }}
-                        />
-                        <HeartSVG
-                            id="lcbo"
-                            className="greenToBlue"
-                            style={{
-                                left: "-50%",
-                                top: "-50%",
-                                width: "248px",
-                            }}
-                        />
-                    </>
-                }
+                imageData={{
+                    src: "/home/iphone.png",
+                    alt: "iPhone",
+                    background: (
+                        <>
+                            <HeartSVG
+                                id="lcbo"
+                                className="greenToBlue"
+                                style={{
+                                    right: "-50%",
+                                    bottom: "-25%",
+                                    width: "248px",
+                                }}
+                            />
+                            <HeartSVG
+                                id="lcbo"
+                                className="greenToBlue"
+                                style={{
+                                    left: "-50%",
+                                    top: "-50%",
+                                    width: "248px",
+                                }}
+                            />
+                        </>
+                    ),
+                }}
             />
             <HighlightCard
                 subtitle="Product designer for NPO – 2021"
@@ -159,16 +156,20 @@ export const HomePage = () => {
                     </>
                 }
                 textPlacement="right"
-                image={
-                    <>
-                        {fallbackImage}
+                imageData={{
+                    src: "/home/macbook-pro.png",
+                    alt: "Macbook Pro",
+                    background: (
                         <HeartSVG
                             id="mom"
                             className="magentaToFade"
                             style={{ left: "-35%" }}
                         />
-                    </>
-                }
+                    ),
+                    style: {
+                        marginRight: "50%",
+                    },
+                }}
             />
         </div>
     );
