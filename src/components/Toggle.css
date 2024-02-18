@@ -59,7 +59,7 @@
     position: absolute;
     border-radius: var(--long-line-width);
     background-color: var(--vanilla-strawberry);
-    animation-duration: 1s;
+    animation-duration: 0.75s;
     animation-fill-mode: forwards;
     animation-delay: var(--theme-transition-duration);
 
@@ -77,10 +77,10 @@
 
 @keyframes lineleft {
     0% {
-        width: 0px;
         left: 0px;
+        width: 0px;
     }
-    45%, 55% {
+    50% {
         left: calc(-1 * var(--long-line-length));
         width: var(--long-line-length);
     }
@@ -92,9 +92,10 @@
 
 @keyframes lineright {
     0% {
+        left: calc(var(--toggle-width));
         width: 0px;
     }
-    45%, 55% {
+    50% {
         left: calc(var(--toggle-width));
         width: var(--long-line-length);
     }
@@ -109,7 +110,7 @@
         top: 0;
         height: 0px;
     }
-    45%, 55% {
+    50% {
         top: calc(-1 * var(--long-line-length));
         height: var(--long-line-length);
     }
@@ -121,9 +122,10 @@
 
 @keyframes linedown {
     0% {
+        top: 0px;
         height: 0px;
     }
-    45%, 55% {
+    50% {
         top: 0px;
         height: var(--long-line-length);
     }

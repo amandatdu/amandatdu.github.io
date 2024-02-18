@@ -3,9 +3,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding-inline: 120px;
-
-    height: 72px;
+    padding-inline: var(--spacing--margin);
+    min-height: 72px;
 }
 
 .navbar__logo {
@@ -13,7 +12,7 @@
     text-decoration: none;
 }
 
-.navbar__tabs {
+.navbar__home, .navbar__tabs {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -23,7 +22,9 @@
 .navbar__tabs__tab {
     color: var(--vanilla-chocolate);
     text-decoration: none;
+    white-space: nowrap;
     font-size: 16px;
+    padding-block: 8px;
 }
 
 .navbar__tabs__tab--selected {
@@ -31,4 +32,23 @@
     font-weight: 700;
     font-style: italic;
     font-size: 20px;
+}
+
+
+@media only screen and (max-width: 708px) {
+    .navbar {
+        flex-direction: column;
+        padding-block: 16px;
+        gap: 8px;
+    }
+
+    navbar__home
+    .navbar__logo {
+        display: none;
+    }
+
+    .navbar__tabs {
+        width: 100%;
+        justify-content: space-evenly;
+    }
 }

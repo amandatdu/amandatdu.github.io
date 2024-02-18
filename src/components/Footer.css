@@ -9,7 +9,7 @@
     / 1fr 1fr;
 
     gap: 16px;
-    padding: 72px 120px 24px;
+    padding: 72px var(--spacing--margin) 24px;
 }
 
 .footer__title {

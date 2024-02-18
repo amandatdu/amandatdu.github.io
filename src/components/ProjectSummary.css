@@ -16,3 +16,9 @@
 .projectSummary__description {
     max-width: 544px;
 }
+
+@media only screen and (max-width: 1096px) {
+    .projectSummary__description {
+        max-width: none;
+    }
+}
