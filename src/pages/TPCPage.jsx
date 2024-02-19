@@ -1,3 +1,4 @@
+import ProgressBar from "react-scroll-progress-bar";
 import { CaseStudy } from "../components/CaseStudy";
 import { CaseIntro } from "../components/CaseStudy";
 import { SkipButton } from "../components/CaseStudy";
