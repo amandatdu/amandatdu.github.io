@@ -39,15 +39,6 @@ export const LCBOPage = () => {
         Due to NDA purposes, my case study can be found on the LCBOnext website.
       </CaseIntro>
 
-
-
-
-
-
-
-
-
-
     </div>
     </>
   );

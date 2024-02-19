@@ -425,7 +425,7 @@ export const IntuitPage = () => {
 
         <CaseStudy
           image={
-            <video autoplay muted loop oncanplay="this.muted=true">
+            <video controls autoPlay loop>
               <source src="intuit/usproductaudit.mov" type="video/mp4" />
               Your browser does not support HTML video.
             </video>
