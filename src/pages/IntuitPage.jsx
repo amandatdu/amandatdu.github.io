@@ -110,7 +110,7 @@ export const IntuitPage = () => {
                 display: "flex",
                 flexDirection: "row",
                 justifyContent: "space-around",
-                flexWrap: "wrap",
+                flexWrap: "noWrap"
               }}
             >
               <SkipButton
@@ -135,7 +135,7 @@ export const IntuitPage = () => {
             <div
               style={{
                 height: "1px",
-                width: "100%",
+                width: "811px",
                 backgroundColor: `${textColor}`,
               }}
             />

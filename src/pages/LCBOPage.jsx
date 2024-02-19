@@ -1,5 +1,5 @@
 import ProgressBar from "react-scroll-progress-bar";
-import { CaseStudy, CaseHeader, CaseIntro, SkipButton } from "../components/CaseStudy";
+import { CaseStudy, CaseHeader, CaseIntro, LinkButton } from "../components/CaseStudy";
 import "./LCBOPage.css";
 
 export const LCBOPage = () => {
@@ -28,6 +28,7 @@ export const LCBOPage = () => {
           </>
         }
         team="LCBOnext Innovation"
+        textColor={textColor}
       >
         <h3>
           This was my first UX/UI internship ever! All I wanted to do was find problems I could help solve.
@@ -39,6 +40,38 @@ export const LCBOPage = () => {
         Due to NDA purposes, my case study can be found on the LCBOnext website.
       </CaseIntro>
 
+      <CaseStudy
+       buttonBar={true}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              width: "100%",
+              marginTop: "-20%"
+            }}
+          >
+          <LinkButton
+            targetUrl="https://www.lcbonext.com/copy-of-inline-spotlight"
+            buttonText="Read my case study"
+            buttonColour={textColor}
+          />
+        
+        <br />
+          <br />
+          <br />
+          <img
+            src="lcbo/logo.png"
+            alt="<LCBO desk logo>"
+            style={{width:"60%"}}
+          />
+          <br />
+          <br />
+          <br />
+          </div>
+          <div style={{height: "1px", width: "811px", backgroundColor: `${textColor}`, gap:"90px"}} />
+          </CaseStudy>
 
 
 

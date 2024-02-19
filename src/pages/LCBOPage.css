@@ -1,8 +1,8 @@
-.intuitPage {
+.lcboPage {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 240px
+    gap: 90px
 }

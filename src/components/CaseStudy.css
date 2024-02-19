@@ -78,12 +78,12 @@
 
 
 .caseIntro {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 89px;
-    text-align: left;
-    max-width: 835px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 89px;
+  text-align: left;
+  max-width: 835px;
 }
 
 .caseContext {
