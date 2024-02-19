@@ -8,6 +8,7 @@ import {
 import "./IntuitPage.css";
 
 export const IntuitPage = () => {
+  const textColor = "#236CFF";
   return (
     <>
       <ProgressBar bgcolor="#FF6EA2" />
@@ -17,6 +18,7 @@ export const IntuitPage = () => {
           logo=<img src="intuit/logo.png" alt="<Intuit logo>" />
           title="Redesigning the tax profile"
           children="Product Design intern ☆ Jan 2022 – Aug 2022"
+          textColor={textColor}
         />
 
         <CaseIntro
@@ -32,6 +34,7 @@ export const IntuitPage = () => {
             </>
           }
           team="Intuit Canada TurboTax"
+          textColor={textColor}
         >
           <h3>
             Especially when you’re welcomed by a 220+ questions long quiz about
@@ -53,6 +56,7 @@ export const IntuitPage = () => {
             alt="<Intuit's legacy product vs my redesign>"
           />
           title="Impact"
+          textColor={textColor}
         >
           I am proud to say I <b>reduced the amount of questions by 78%</b>;
           from 220+ to a mere 50. Through{" "}
@@ -73,36 +77,69 @@ export const IntuitPage = () => {
           </b>
         </CaseStudy>
 
-        <div style={{width: "50%",
-            textAlign: 'center'}}>
-          This case is a lengthy read, so in case you don’t want to scroll, here are some shortcuts :)
-          <br />
-          <br />
-          <br />
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-around",
-          }}
+        <CaseStudy
+          image=<img
+            src="intuit/sneakpeak.png"
+            alt="<Intuit sneak peak>"
+          />
+          buttonBar={true}
         >
-          <SkipButton
-            targetId="productThinking"
-            buttonText="See my product thinking"
-            buttonColour="pink"
-          />
-          <SkipButton
-            targetId="visualDesign"
-            buttonText="View my visual design"
-            buttonColour="pink"
-          />
-          <SkipButton
-            targetId="finalProduct"
-            buttonText="Skip to final product"
-            buttonColour="pink"
-          />
-        </div>
-        </div>
+          <div
+            style={{
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <p
+              style={{
+                marginRight: "15%",
+                marginLeft: "15%",
+                textAlign: "center",
+                color: `${textColor}`,
+              }}
+            >
+              {
+                "This case is a lengthy read, so in case you don’t want to scroll, here are some shortcuts :)"
+              }
+            </p>
+            <br />
+            <br />
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-around",
+                flexWrap: "wrap",
+              }}
+            >
+              <SkipButton
+                targetId="productThinking"
+                buttonText="See my product thinking"
+                buttonColour={textColor}
+              />
+              <SkipButton
+                targetId="visualDesign"
+                buttonText="View my visual design"
+                buttonColour={textColor}
+              />
+              <SkipButton
+                targetId="finalProduct"
+                buttonText="Skip to final product"
+                buttonColour={textColor}
+              />
+            </div>
+            <br />
+            <br />
+            <br />
+            <div
+              style={{
+                height: "1px",
+                width: "100%",
+                backgroundColor: `${textColor}`,
+              }}
+            />
+          </div>
+        </CaseStudy>
 
         <CaseStudy
           image=<img
@@ -110,6 +147,7 @@ export const IntuitPage = () => {
             alt="<Legacy designs>"
           />
           title="Problem Space"
+          textColor={textColor}
         >
           One of Intuit’s core principles is customer obsession.{" "}
           <b>
@@ -137,6 +175,7 @@ export const IntuitPage = () => {
         <CaseStudy
           image=<img src="intuit/successmetrics.png" alt="<Project goals>" />
           title="Success Metrics"
+          textColor={textColor}
         >
           To better align my goals, I came up with quantifiable challenges.
           These are the success metrics what I came up with:
@@ -193,6 +232,7 @@ export const IntuitPage = () => {
         <CaseStudy
           image=<img src="intuit/intuitprocess.png" alt="<Design process>" />
           title="Project process"
+          textColor={textColor}
         >
           This was the process I followed. Design wise, this was a lot to
           handle. To make it more digestible, I decided to break down the design
@@ -209,6 +249,7 @@ export const IntuitPage = () => {
             alt="<WIPS of my content design work>"
           />
           title="Content strategy"
+          textColor={textColor}
         >
           One of the biggest issues in this experience is the number of
           questions users are forced to answer.{" "}
@@ -236,6 +277,7 @@ export const IntuitPage = () => {
             alt="<Information hiearchy of my questions>"
           />
           title="What to ask the user"
+          textColor={textColor}
         >
           While working closely with my tax expert and my content strategist, we
           noticed a pattern in some of the questions, and determined that there
@@ -268,6 +310,7 @@ export const IntuitPage = () => {
             alt="<WIP of all product flows I created>"
           />
           title="Tax payer's journey"
+          textColor={textColor}
         >
           Once I sorted through the content, I approached this from a product
           design perspective.{" "}
@@ -300,6 +343,7 @@ export const IntuitPage = () => {
             alt="<Final user path>"
           />
           title="Main and mini profiles"
+          textColor={textColor}
         >
           After my exploration, I settled on this idea of having a Main tax
           profile and mini tax profiles.
@@ -324,6 +368,7 @@ export const IntuitPage = () => {
             alt="<Screenshots of products I took inspiration from>"
           />
           title="Outside in research"
+          textColor={textColor}
         >
           I really got creative with the type of products I looked at for visual
           inspiration. I wanted to focus on products that had an intensive
@@ -348,6 +393,7 @@ export const IntuitPage = () => {
           />
           isFullImage={true}
           title="Pivoting from our plan"
+          textColor={textColor}
         >
           In the midst of my excitement for new visual designs, I was hit with
           more requirements from our stakeholders.
@@ -377,6 +423,7 @@ export const IntuitPage = () => {
           }
           imageClass="videoBorder"
           title="Pivoting from our plan"
+          textColor={textColor}
         >
           I wanted to understand the US product more. Here’s a video of me
           analyzing the it, I saw that there was a big flaw in its design.
@@ -397,6 +444,7 @@ export const IntuitPage = () => {
             alt="<Visualization of my segmented experience>"
           />
           title="Segmented design"
+          textColor={textColor}
         >
           I knew the “see more” button was poor design, so I came up with a new
           design to accommodate. My idea is to present multi select options in
@@ -418,6 +466,7 @@ export const IntuitPage = () => {
           />
           isFullImage={true}
           title="UI decision making"
+          textColor={textColor}
         >
           Despite not loving the ‘see more’ design, the multi select buttons
           used in the US product were really similar to the outside in results;
@@ -438,6 +487,7 @@ export const IntuitPage = () => {
             alt="<Visualization of my segmented experience>"
           />
           title="Data driven pitch"
+          textColor={textColor}
         >
           <b>
             I knew simply pitching my idea to stakeholders wasn’t enough; it
@@ -457,6 +507,7 @@ export const IntuitPage = () => {
             alt="<Results of my AB testing>"
           />
           title="Data driven pitch"
+          textColor={textColor}
         >
           <b>I conducted AB tests with 20 Canadian participants. </b>Each
           participant was given a made up tax situation, and they had to file
@@ -502,6 +553,8 @@ export const IntuitPage = () => {
           />
           isFullImage={true}
           title="Final product"
+          idName="finalProduct"
+          textColor={textColor}
         >
           I reimagined a tedious questionnaire to a visually delightful and
           frictionless process for users to provide information about their tax
@@ -523,6 +576,7 @@ export const IntuitPage = () => {
           />
           isFullImage={true}
           title="Mobile first designs"
+          textColor={textColor}
         >
           Turbotax is usually used on a desktop device – however we still wanted
           to design mobile first for best practices, so most of our designs are
@@ -530,9 +584,6 @@ export const IntuitPage = () => {
           ergonomically friendly for mobile users!
         </CaseStudy>
 
-        <div id="productThinking" />
-        <div id="visualDesign" />
-        <div id="finalProduct" />
         <CaseStudy
           image=<img
             src="intuit/learningsandtakeaways.png"

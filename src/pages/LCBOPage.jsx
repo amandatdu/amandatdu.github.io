@@ -1,14 +1,20 @@
 import ProgressBar from "react-scroll-progress-bar";
-import { CaseStudy } from "../components/CaseStudy";
-import { CaseIntro } from "../components/CaseStudy";
-import { SkipButton } from "../components/CaseStudy";
+import { CaseStudy, CaseHeader, CaseIntro, SkipButton } from "../components/CaseStudy";
 import "./LCBOPage.css";
 
 export const LCBOPage = () => {
+    const textColor = "#173F35"
   return (
     <>
     <ProgressBar bgcolor="#FF6EA2"/>
-    <div className="intuitPage">
+    <div className="lcboPage">
+    <CaseHeader
+          caseName="lcbo"
+          title="LCBOdesk –
+          streamlining user feedback"
+          children="UX/UI Co-op ☆ May 2021 – Aug 2021"
+          textColor={textColor}
+        />
       <CaseIntro
         title="As the innovation team, its our job to help LCBO evolve."
         collaborators={
