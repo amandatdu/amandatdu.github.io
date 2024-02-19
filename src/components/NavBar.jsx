@@ -8,6 +8,7 @@ export const ROUTES = {
     diary: "/diary",
     resume: "/resume",
     intuit: "/work/intuit",
+    tpc: "work/tpc"
 };
 
 export const NavBar = () => {

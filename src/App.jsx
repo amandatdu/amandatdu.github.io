@@ -18,6 +18,7 @@ function App() {
                     <Route path={ROUTES.work} element={<HomePage />} />
                     <Route path={ROUTES.more} element={<MorePage />} />
                     <Route path={ROUTES.intuit} element={<IntuitPage />} />
+                    <Route path={ROUTES.tpc} element={<TPCPage />} />
                     <Route path={ROUTES.diary} element={<DiaryPage />} />
                     <Route
                         path="*"
