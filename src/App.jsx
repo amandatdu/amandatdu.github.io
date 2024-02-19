@@ -6,6 +6,7 @@ import "./styles.css";
 import { Navigate, Route, Routes } from "react-router-dom";
 import { MorePage } from "./pages/MorePage";
 import { IntuitPage } from "./pages/IntuitPage";
+import { TPCPage } from "./pages/TPCPage";
 import { Footer } from "./components/Footer";
 import { DiaryPage } from "./pages/DiaryPage";
 
