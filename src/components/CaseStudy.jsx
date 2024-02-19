@@ -1,6 +1,6 @@
 import "./CaseStudy.css";
 
-export const CaseHeader = ({ title, caseName, logo, children }) => {
+export const CaseHeader = ({ title, caseName, logo, children, textColor }) => {
   return (
     <div className={"caseHeader " + caseName}>
       <div
@@ -8,12 +8,13 @@ export const CaseHeader = ({ title, caseName, logo, children }) => {
           flexDirection: "column",
           width: "434px",
           textAlign: "center",
-          padding: "180px",
+          padding: "160px",
+          color: `${textColor}`
         }}
       >
-        {logo ? logo : null}
+        <div>{logo ? logo : null}</div>
         <h1> {title} </h1>
-        <p> {children} </p>
+        <p style={{color: `${textColor}`}}> {children} </p>
       </div>
     </div>
   );
@@ -41,9 +42,12 @@ export const CaseStudy = ({
   image,
   isFullImage,
   imageClass,
+  idName,
+  textColor,
+  buttonBar
 }) => {
   return (
-    <div className="caseStudy">
+    <div className="caseStudy" id={idName ? `${idName}` : ""}>
       <div
         className={`caseImage ${imageClass ? imageClass : ""}${
           isFullImage ? "full" : ""
@@ -51,28 +55,28 @@ export const CaseStudy = ({
       >
         {image}
       </div>
-      <div className="caseContent">
-        <h1> {title} </h1>
+      <div className={"caseContent" + `${buttonBar ? " buttons" : ""}`}>
+        <h1 style={{color: `${textColor}`}}> {title} </h1>
         <p> {children} </p>
       </div>
     </div>
   );
 };
 
-export const CaseIntro = ({ title, children, collaborators, team }) => {
+export const CaseIntro = ({ title, children, collaborators, team, textColor }) => {
   return (
     <div className="caseIntro">
       <div>
-        <h2> {title} </h2>
+        <h2 style={{color: `${textColor}`}}> {title} </h2>
         <p> {children} </p>
       </div>
       <div className="caseContext">
         <div>
-          <h3> Collaborators </h3>
+          <h3 style={{color: `${textColor}`}}> Collaborators </h3>
           <p> {collaborators} </p>
         </div>
         <div>
-          <h3> Team</h3>
+          <h3 style={{color: `${textColor}`}}> Team</h3>
           <p> {team} </p>
         </div>
       </div>
@@ -94,12 +98,18 @@ export const SkipButton = ({ buttonText, targetId, buttonColour }) => {
       style={{
         backgroundColor: `${buttonColour}`,
         borderRadius: "30px",
-        padding: "2%",
-        maxWidth: "25%",
+        padding: "15px",
         textAlign: "center",
+        justifyContent: "center",
+        alignItems: "center",
+        whiteSpace: "nowrap",
+        margin: "2%",
+        color:"white"
       }}
     >
+      <div>
       {buttonText}
+      </div>
     </div>
   );
   // return (

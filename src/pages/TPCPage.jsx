@@ -1,12 +1,19 @@
 import ProgressBar from "react-scroll-progress-bar";
-import { CaseStudy } from "../components/CaseStudy";
-import { CaseIntro } from "../components/CaseStudy";
-import { SkipButton } from "../components/CaseStudy";
+import { CaseStudy, CaseHeader, CaseIntro, SkipButton } from "../components/CaseStudy";
 import "./TPCPage.css";
 
 export const TPCPage = () => {
+    const textColor = "#007E8F";
     return (
+        <>
+        <ProgressBar bgcolor="#FF6EA2" />
         <div className="tpcPage">
+            <CaseHeader
+          caseName="tpc"
+          title="Streamlining a digital donation process"
+          children="UW Blueprint design ☆ May 2021 – Aug 2021"
+          textColor={textColor}
+        />
         <CaseIntro
             title="I love designing for social good."
             collaborators={<>
@@ -17,6 +24,7 @@ export const TPCPage = () => {
               3 Product designers
               </>}
             team="UW Blueprint student team"
+            textColor="#007E8F"
         >
           <h3>The Pregnancy Centre is a non-profit organization that supports people experiencing unplanned pregnancies.</h3>
           The Pregnancy Centre came to us with a problem: <b>families weren’t getting the items they need due to the messy nature of manually facilitating donations.</b>
@@ -28,6 +36,7 @@ export const TPCPage = () => {
           <CaseStudy
               image= <img src="tpc/impact.png" alt="<My impact of our product>"/>
               title="Impact"
+              textColor={textColor}
           >
           <b>The Care Hub was released in August 2021</b> and is currently used by The Pregnancy Centre staff.
           <br/>
@@ -37,15 +46,40 @@ export const TPCPage = () => {
 
           <CaseStudy
               image= <img src="tpc/sneakpeek.png" alt="<This is a quick peek of my final product>"/>
-
-              title="null"
+              buttonBar={true}
           >
-          null
+          <div>
+          <p style={{marginRight: "15%", marginLeft: "15%", textAlign:"center", color: "#007E8F"}}>
+            {"This case is a lengthy read, so in case you don’t want to scroll, here are some shortcuts :)"}
+            </p>
+          <br />
+          <br />
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              justifyContent: "center",
+            }}
+          >
+          <SkipButton
+            targetId="finalProduct"
+            buttonText="Skip to final product"
+            buttonColour={textColor}
+          />
+        </div>
+        <br />
+          <br />
+          <br />
+          <div style={{height: "1px", width: "100%", backgroundColor: `${textColor}`}} />
+          </div>
           </CaseStudy>
+
+          
 
           <CaseStudy
               image= <img src="tpc/problemspace.png" alt="<Diagram of The Pregnancy center's problems>"/>
               title="Problem space"
+              textColor={textColor}
           >
           <b>The Pregnancy Center staff manually facilitates the donation process.</b> This would involve a ton of channels – from social media, all the way to their own database. As one can imagine, <b>things got really messy, really fast </b>– messages kept getting lost in translation.
           <br /><br />
@@ -57,6 +91,7 @@ export const TPCPage = () => {
           <CaseStudy
               image= <img src="tpc/talkingthroughthecarehub.png" alt="<Image of MVP with a button that says 'email us'>"/>
               title="Communicating via Care Hub"
+              textColor={textColor}
           >
           When I joined, <b>the Care hub did not have any means for donors to communicate with the staff.</b> To let them know they have an item, donors would have to email the The Pregnancy Centre staff - which means they would have to communicate via another channel, which we want to avoid.
           <br/> <br/>
@@ -70,6 +105,7 @@ export const TPCPage = () => {
               image= <img src="tpc/Process.png" alt="<How my project went>"/>
               title="Project process"
               isFullImage={true}
+              textColor={textColor}
           >
           A lesson I learned from this project was the importance of highlighting my process.
           <br/> <br/>
@@ -79,6 +115,7 @@ export const TPCPage = () => {
           <CaseStudy
               image= <img src="tpc/understandingthedonors.png" alt="<User profiles>"/>
               title="Understanding the donors"
+              textColor={textColor}
           >
           User empathy is so important when it comes to user experience design.  I collaborated with the product manager and to understand who I'm designing for. I quickly learned that there are three distinct user groups who I need to empathize with.
           <br/> <br/>
@@ -88,6 +125,7 @@ export const TPCPage = () => {
           <CaseStudy
               image= <img src="tpc/modulevsfullscreen.png" alt="<WIP of all product flows I created>"/>
               title="Module vs full screen"
+              textColor={textColor}
           >
           I moved onto visual design once I understood who I was designing for.
           <br/> <br/>
@@ -101,6 +139,7 @@ export const TPCPage = () => {
           <CaseStudy
               image= <img className="caseImage" src="tpc/developerlimitations.png" alt="<WIP of the dvelopers and I whiteboarding possible development issues>"/>
               title="Development limitations"
+              textColor={textColor}
           >
           One of the challenges I faced was learning to work with developers. In the midst of my design efforts, we were interrupted by a frantic call from our developers. They wanted to warn us about the problem with inventory.
           <br/> <br/>
@@ -111,6 +150,7 @@ export const TPCPage = () => {
           <CaseStudy
               image= <img className="caseImage" src="tpc/whichwaywillwego.png" alt="<Video>"/>
               title="Which way will we go?"
+              textColor={textColor}
           >
           When I hopped back to designing, the next question I asked was: <b>Which way do I want the user to navigate? </b>
           <br/> <br/>
@@ -127,6 +167,7 @@ export const TPCPage = () => {
           <CaseStudy
               image= <img src="tpc/thebattleofthesteppers.png" alt="<Horizontal stepper criticism>"/>
               title="The battle of the steppers"
+              textColor={textColor}
           >
           We debated between a horizontal vs vertical stepper. I conducted a ton of outside in research to really validate my decision. A horizontal stepper visually works very well if we want users to scroll while filling out the form. It’s also very common for forms to have a horizontal stepper when there are a lot of questions.
           <br/> <br/>
@@ -136,6 +177,7 @@ export const TPCPage = () => {
           <CaseStudy
               image= <img src="tpc/verticalstepperwins.png" alt="<Vertical stepper UI and feedback>"/>
               title="Vertical stepper wins"
+              textColor={textColor}
           >
           <b>The vertical stepper was the winner!</b>
           <br/> <br/>
@@ -145,6 +187,7 @@ export const TPCPage = () => {
           <CaseStudy
               image= <img src="tpc/formuidesign.png" alt="<UI example of how I designed my forms>"/>
               title="Form UI design"
+              textColor={textColor}
           >
           When it came to designing this form, it was key to understand what information The Pregnancy centre needed from its donors. <b>Through bi-weekly syncs with our client, we were able to get a good understand of the key information they need from the donors: </b>
           <ul
@@ -165,6 +208,7 @@ export const TPCPage = () => {
           <CaseStudy
               image= <img src="tpc/searchfuncitionality.png" alt="<video>"/>
               title="Search Funcitionality"
+              textColor={textColor}
           >
           <b>An example of a form field that required a lot of consideration was the item field.</b>
           <br /><br />
@@ -180,6 +224,7 @@ export const TPCPage = () => {
           <CaseStudy
               image= <img src="intuit/resultsabtesting.png" alt="<video>"/>
               title="Prototyping"
+              textColor={textColor}
           >
           <b>At this point I wanted to gather feedback from donors. I prototyped the MVP and got it ready for user testing. </b>
           <br /><br />
@@ -189,6 +234,7 @@ export const TPCPage = () => {
           <CaseStudy
               image= <img src="tpc/testingresults.png" alt="<Findings from my user testing sessions>"/>
               title="Testing results"
+              textColor={textColor}
           >
           Overall, the donors were able to get through the experience without any visible frustration. However, users had a lot of trouble understanding that they must ‘Add  item’ in order to move forward.
           <br /><br />
@@ -198,16 +244,18 @@ export const TPCPage = () => {
           <CaseStudy
               image= <img src="tpc/finaliteration.png" alt="<Mock up of the final iteration I made based on the testing resultsn>"/>
               title="Final iteration"
+              textColor={textColor}
           >
           I took the feedback from testing and creating the final iteration.
           <br /><br />
           A lot of the confusion was content related; the language used in the design was not clear. For instance, instead of naming the button 'Add item', I changed it to 'Save item'. Now users know that hitting the button was mandatory in the experience.
           <br /><br />
           The biggest change was adding a counter in the bottom left corner. This small detail provided instant feedback for the user, thus providing more reassurance throughout the experience.          </CaseStudy>
-
           <CaseStudy
+              idName="finalProduct"
               image= <img src="tpc/finaliteration.png" alt="<Final product part 1>"/>
               title="Final product"
+              textColor={textColor}
           >
           I am so proud to have simplified such a messy experience into this. My final design consisted of a 3 step form that allowed users to first input their contact information, the item(s) they wished to donate, and lastly a review section.
           <br /><br />
@@ -217,6 +265,7 @@ export const TPCPage = () => {
           <CaseStudy
               image= <img src="tpc/finaliteration.png" alt="<Final product part 2>"/>
               title="A familiar experience"
+              textColor={textColor}
           >
           The main area I focussed on was making this experience as familiar as possible for my users. Since donating items isn't an experience that people go through on a day to day – I created an experience that mirrored what online shopping would look like.
             <br /><br />
@@ -228,6 +277,7 @@ export const TPCPage = () => {
           <CaseStudy
               image= <img src="tpc/finaliteration.png" alt="<Final product part 3>"/>
               title="Forgiving product design"
+              textColor={textColor}
           >
           Lastly, to add forgiveness in our product, I created a review section where users are able to double check their entries. Due to development limitations, if users wanted to edit anything they inputted, they would need to press the back button.
           <br /><br />
@@ -239,6 +289,7 @@ export const TPCPage = () => {
           <CaseStudy
               image= <img src="tpc/aftermath.png" alt="<Having fun with team making really difficult puzzle virtually>"/>
               title="Aftermath"
+              textColor={textColor}
           >
           Although all of the design work was done, I knew my job as a designer wasn’t over – it was time for dev design collaboration! I created design specification documents for our developers to refer to and prepared for my design review meeting.
           <br /><br />
@@ -255,6 +306,7 @@ export const TPCPage = () => {
           <CaseStudy
               image= <img src="tpc/learningsandtakeaways.png" alt="<the friends i met along the way>"/>
               title="Learnings & Takeaways"
+              textColor={textColor}
           >
           Learning to work cross functionally was a dream. I was able to learn the limitations of development, and how I should design to avoid that. Through this I was constantly able to adapt my designs and really challenge my skills in order to make my developer’s lives easier.
           <br /><br />
@@ -263,6 +315,7 @@ export const TPCPage = () => {
           </CaseStudy>
 
         </div>
+        </>
 
     );
 };
