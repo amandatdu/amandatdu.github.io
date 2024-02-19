@@ -34,15 +34,17 @@ export const NavBar = () => {
                 <Toggle onChange={onClick} />
             </div>
             <div className="navbar__tabs">
-                {TABS.map((tab) =>
-                    tab.isExternal ? (
+                {TABS.map((tab) => {
+                    const className = `navbar__tabs__tab ${
+                        location.pathname.includes(tab.route)
+                            ? "navbar__tabs__tab--selected"
+                            : ""
+                    }`;
+
+                    return tab.isExternal ? (
                         <a
                             key={tab.name}
-                            className={`navbar__tabs__tab ${
-                                location.pathname === tab.route
-                                    ? "navbar__tabs__tab--selected"
-                                    : ""
-                            }`}
+                            className={className}
                             href={tab.route}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -52,17 +54,13 @@ export const NavBar = () => {
                     ) : (
                         <Link
                             key={tab.name}
-                            className={`navbar__tabs__tab ${
-                                location.pathname === tab.route
-                                    ? "navbar__tabs__tab--selected"
-                                    : ""
-                            }`}
+                            className={className}
                             to={tab.route}
                         >
                             {tab.name}
                         </Link>
-                    )
-                )}
+                    );
+                })}
             </div>
         </nav>
     );
