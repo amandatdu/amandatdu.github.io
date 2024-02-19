@@ -24,6 +24,15 @@
 
 }
 
+.caseHMW {
+    padding-top: 88px;
+    padding-bottom: 88px;
+    flex-direction: column;
+    gap: 88px;
+    text-align: center;
+    max-width: 100%;
+}
+
 .caseStudy {
     display: flex;
     flex-direction: column;
@@ -56,7 +65,6 @@
     width: 100%;
   }
 }
-
 
 
 .caseIntro {

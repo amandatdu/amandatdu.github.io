@@ -19,6 +19,22 @@ export const CaseHeader = ({ title, caseName, logo, children }) => {
   );
 };
 
+
+export const CaseHMW = ({HMWstatement, title, backgroundColor}) => {
+  return (
+    <div className="caseHMW" style={{backgroundColor: `${backgroundColor}`}}>
+      <div maxWidth="80%">
+        <h3 style={{
+          paddingBottom: "24px",
+        }}> {title} </h3>
+        <h2> {HMWstatement} </h2>
+        </div>
+    </div>
+  );
+};
+
+
+
 export const CaseStudy = ({
   title,
   children,

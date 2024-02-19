@@ -4,6 +4,7 @@ import {
   CaseHeader,
   CaseStudy,
   SkipButton,
+  CaseHMW,
 } from "../components/CaseStudy";
 import "./IntuitPage.css";
 
@@ -133,6 +134,14 @@ export const IntuitPage = () => {
           </b>
           That needed to change.
         </CaseStudy>
+
+        <CaseHMW
+          backgroundColor="#236CFF"
+          title="DESIGN CHALLENGE"
+          HMWstatement="How might we create a delightful and frictionless tax profile experience so drop off rates and customer satisfaction are improved?"
+
+          />
+
 
         <CaseStudy
           image=<img src="intuit/successmetrics.png" alt="<Project goals>" />
