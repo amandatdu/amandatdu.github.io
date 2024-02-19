@@ -15,11 +15,11 @@
     }
 
     &.tpc {
-      
+
     }
 
     &.lcbo {
-      
+
     }
 
 }
@@ -47,7 +47,7 @@
   align-items: center;
   /* width: calc(100% - 2 * var(--spacing--margin)); */
 
-  img, 
+  img,
   video {
     width: calc(100% - 5.7 * var(--spacing--margin));
   }

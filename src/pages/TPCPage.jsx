@@ -35,11 +35,15 @@ export const TPCPage = () => {
           </CaseStudy>
 
           <CaseStudy
-              image= <img src="tpc/sneakpeek.png" alt="<This is a quick peek of my final product>"/>>
+              image= <img src="tpc/sneakpeek.png" alt="<This is a quick peek of my final product>"/>
+
+              title="null"
+          >
+          null
           </CaseStudy>
 
           <CaseStudy
-              image= <img src="intuit/problemspace.png" alt="<Diagram of The Pregnancy center's problems>"/>
+              image= <img src="tpc/problemspace.png" alt="<Diagram of The Pregnancy center's problems>"/>
               title="Problem space"
           >
           <b>The Pregnancy Center staff manually facilitates the donation process.</b> This would involve a ton of channels – from social media, all the way to their own database. As one can imagine, <b>things got really messy, really fast </b>– messages kept getting lost in translation.
@@ -51,7 +55,7 @@ export const TPCPage = () => {
 
           <CaseStudy
               image= <img src="tpc/talkingthroughthecarehub.png" alt="<Image of MVP with a button that says 'email us'>"/>
-              title="Project process"
+              title="Communicating via Care Hub"
           >
           When I joined, <b>the Care hub did not have any means for donors to communicate with the staff.</b> To let them know they have an item, donors would have to email the The Pregnancy Centre staff - which means they would have to communicate via another channel, which we want to avoid.
           <br/> <br/>
@@ -64,6 +68,7 @@ export const TPCPage = () => {
           <CaseStudy
               image= <img src="tpc/Process.png" alt="<How my project went>"/>
               title="Project process"
+              isFullImage={true}
           >
           A lesson I learned from this project was the importance of highlighting my process.
           <br/> <br/>
@@ -119,8 +124,7 @@ export const TPCPage = () => {
           </CaseStudy>
 
           <CaseStudy
-              image= <img src="thebattleofthesteppers.png" alt="<Horizontal stepper criticism>"/>
-              isFullImage={true}
+              image= <img src="tpc/thebattleofthesteppers.png" alt="<Horizontal stepper criticism>"/>
               title="The battle of the steppers"
           >
           We debated between a horizontal vs vertical stepper. I conducted a ton of outside in research to really validate my decision. A horizontal stepper visually works very well if we want users to scroll while filling out the form. It’s also very common for forms to have a horizontal stepper when there are a lot of questions.
@@ -157,9 +161,6 @@ export const TPCPage = () => {
           Each piece of information had its own constraints, so I spent a lot of time thinking about how each information should be collected; what kind of form fields should we use for each question?
           </CaseStudy>
 
-
-
-
           <CaseStudy
               image= <img src="tpc/searchfuncitionality.png" alt="<video>"/>
               title="Search Funcitionality"
@@ -167,7 +168,8 @@ export const TPCPage = () => {
           <b>An example of a form field that required a lot of consideration was the item field.</b>
           <br /><br />
           We can’t have people donating random items that mothers don’t need. Like mugs or video games - you can give them to me instead ☺!
-          We decided to limit users by giving them items to choose from a pre-regenerated list created directly from The Pregnancy centre’s database.
+          <br /><br />
+          <b>We decided to limit users by giving them items to choose from a pre-regenerated list created directly from The Pregnancy centre’s database.</b>
           <br /><br />
           The drop down menu will appear before the user starts typing. The order of which items show up will be alphabetical. When a donor types in what they want to donate, the drop down list will change to match the donor’s input.
           <br /><br />
@@ -175,92 +177,91 @@ export const TPCPage = () => {
           </CaseStudy>
 
           <CaseStudy
-              image= <img src="intuit/resultsabtesting.png" alt="<Results of my AB testing>"/>
-              title="Data driven pitch"
+              image= <img src="intuit/resultsabtesting.png" alt="<video>"/>
+              title="Prototyping"
           >
-          <b>I conducted AB tests with 20 Canadian participants. </b>Each participant was given a made up tax situation, and they had to file according to the profile. I made sure to have an even number of male and female participants. I switched the order of the prototypes for half of the tests to ensure that there was no order bias in the results. The KPIs I was measure were the following:
+          <b>At this point I wanted to gather feedback from donors. I prototyped the MVP and got it ready for user testing. </b>
           <br /><br />
-        <b>Accuracy </b>
-          <ul
-              style={{
-                  paddingLeft: "24px",
-              }}
-          >
-              <li className="p">Did the users input the correct tiles?</li>
-          </ul>
-          <br /><br />
-        <b>User emotions</b>
-          <ul
-              style={{
-                  paddingLeft: "24px",
-              }}
-          >
-              <li className="p">Did they feel confident using our product?</li>
-          </ul>
-          <br /><br />
-        <b>Preference</b>
-          <ul
-              style={{
-                  paddingLeft: "24px",
-              }}
-          >
-              <li className="p">Which of the two design did they prefer?</li>
-          </ul>
-          <br /><br />
-          <b>Safe to say the segmented tiles are a winner!</b>
+          This was by far one of the most creative usability tests I've run. We wanted to simulate a realistic donation process; we created this environment by sending our testers images of baby images, and then asked them to donate it through the prototype.
           </CaseStudy>
 
           <CaseStudy
-              image= <img src="intuit/desktopfinal.png" alt="<Final mockups of my desktop design>"/>
-              isFullImage={true}
+              image= <img src="tpc/testingresults.png" alt="<Findings from my user testing sessions>"/>
+              title="Testing results"
+          >
+          Overall, the donors were able to get through the experience without any visible frustration. However, users had a lot of trouble understanding that they must ‘Add  item’ in order to move forward.
+          <br /><br />
+          This process is meant to super straightforward – this is an issue we needed to solve..
+          </CaseStudy>
+
+          <CaseStudy
+              image= <img src="tpc/finaliteration.png" alt="<Mock up of the final iteration I made based on the testing resultsn>"/>
+              title="Final iteration"
+          >
+          I took the feedback from testing and creating the final iteration.
+          <br /><br />
+          A lot of the confusion was content related; the language used in the design was not clear. For instance, instead of naming the button 'Add item', I changed it to 'Save item'. Now users know that hitting the button was mandatory in the experience.
+          <br /><br />
+          The biggest change was adding a counter in the bottom left corner. This small detail provided instant feedback for the user, thus providing more reassurance throughout the experience.          </CaseStudy>
+
+          <CaseStudy
+              image= <img src="tpc/finaliteration.png" alt="<Final product part 1>"/>
               title="Final product"
           >
-          I reimagined a tedious questionnaire to a visually delightful and frictionless process for users to provide information about their tax situation.
+          I am so proud to have simplified such a messy experience into this. My final design consisted of a 3 step form that allowed users to first input their contact information, the item(s) they wished to donate, and lastly a review section.
           <br /><br />
-          <b>I reduced a 220+ question form into 50 question form – a 78% decrease.</b> Readability, comprehension, and drop off rates are predicted to be severely improved as well. I am so proud to say I have created such an impact.
+          After having several design dev meetings, I also designed a ton of edge cases to ensure all possibilities have been covered.
           </CaseStudy>
 
           <CaseStudy
-              image= <img src="intuit/mobilefirstfinal.png" alt="<Final mockups of mobile design>"/>
-              isFullImage={true}
-              title="Mobile first designs"
+              image= <img src="tpc/finaliteration.png" alt="<Final product part 2>"/>
+              title="A familiar experience"
           >
-          Turbotax is usually used on a desktop device – however we still wanted to design mobile first for best practices, so most of our designs are iterated on mobile screen. I’m happy to say my experience is ergonomically friendly for mobile users!
+          The main area I focussed on was making this experience as familiar as possible for my users. Since donating items isn't an experience that people go through on a day to day – I created an experience that mirrored what online shopping would look like.
+            <br /><br />
+          When a user requests to donate an item, they enter the details and save the item. Once they do, the stepper goes up and gives immediate feedback – similar to a shopping cart. A bold green 'donate another item' CTA is right below the added item if donors want to give more.
+
+          </CaseStudy>
+
+
+          <CaseStudy
+              image= <img src="tpc/finaliteration.png" alt="<Final product part 3>"/>
+              title="Forgiving product design"
+          >
+          Lastly, to add forgiveness in our product, I created a review section where users are able to double check their entries. Due to development limitations, if users wanted to edit anything they inputted, they would need to press the back button.
+          <br /><br />
+
+          Once the form is submitted, next steps are provided so the user knows what to expect. An email confirmation will also be sent.
+
           </CaseStudy>
 
           <CaseStudy
-              image= <img src="intuit/learningsandtakeaways.png" alt="<the friends i met along the way>"/>
+              image= <img src="tpc/aftermath.png" alt="<Having fun with team making really difficult puzzle virtually>"/>
+              title="Aftermath"
+          >
+          Although all of the design work was done, I knew my job as a designer wasn’t over – it was time for dev design collaboration! I created design specification documents for our developers to refer to and prepared for my design review meeting.
+          <br /><br />
+
+          This helped me learn how to speak the same language as the developers and learn to look out for developer specific edge cases.
+          <br /><br />
+
+          OH I even left comments on the PR to ensure accurate designs!
+          <br /><br />
+
+          (this is a photo of our team making a puzzle. yes it was very difficult, we were very proud.)
+          </CaseStudy>
+
+          <CaseStudy
+              image= <img src="tpc/learningsandtakeaways.png" alt="<the friends i met along the way>"/>
               title="Learnings & Takeaways"
           >
-          <h3><b>The use of success metrics</b></h3>
-        <br /><br />
-
-          I got a taste of how to use success metrics when designing, and now I feel way more intentional when I design.
-
-          I've always interpreted “good UI” as a qualitative measure – as long as my users are happier using my interface then I have succeed. I’ve learned that being able to constantly measure your work adds so much more value and purpose to your actions.
+          Learning to work cross functionally was a dream. I was able to learn the limitations of development, and how I should design to avoid that. Through this I was constantly able to adapt my designs and really challenge my skills in order to make my developer’s lives easier.
           <br /><br />
-
-
-          <h3><b>Being creative with product strategy</b></h3>
-          <br /><br />
-
-          Coming from a graphic design background, I've always thought the only place a product designer can be creative is with the visuals. From this experience, I’ve learned the power of being creative during the product thinking phase.
-
-          When I was tasked with the onboarding redesign project, I took the opportunity to explore different ways of approaching it: rather than redesigning it, I thought I could reorganize or even reimagine the flows.
-          <br /><br />
-
-
-          <h3><b>Constant usability testing</b></h3>
-          <br /><br />
-
-          At my previous experiences, user testing was a luxury. I was never given the opportunity to test my work as I go; it was usually something we used to ‘double check’ our solution. When making decisions in the past, I would rely on secondary research. At Intuit, I was lucky enough to take advantage of a ton of user testing; having your designs validated by real time users is so fulfilling.
+          If time wasn’t a barrier, I would have loved to iterate more on this project, and come up with more creative solutions. I went with a very safe route where I followed common design trends so users are familiar with my interface. Next time I wish to explore more interesting ways to prompt the user and fulfill my clients needs!
 
           </CaseStudy>
 
         </div>
-
-
-
 
     );
 };
