@@ -83,6 +83,10 @@
         grid-template-columns: minmax(224px, 1fr) 2fr;
         gap: 24px;
 
+        .h1 {
+            margin-block: 36px 24px;
+        }
+
         
         .diarypage__resume__entry {
             grid-column: 1;
@@ -101,10 +105,15 @@
 @media only screen and (max-width: 544px) {
     .diarypage__resume {
         grid-template-columns: 1fr;
-        gap: 24px;
+        gap: 0px;
 
         .diarypage__resume__description {
             grid-column: 1;
+            margin-bottom: 24px;
+        }
+        
+        h3 {
+            font-size: 18px;
         }
     }
 }
