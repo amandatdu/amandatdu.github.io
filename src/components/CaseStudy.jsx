@@ -1,15 +1,17 @@
 import "./CaseStudy.css";
 
-export const CaseHeader = ({
-  title,
-  caseName,
-  logo,
-  children
-}) => {
+export const CaseHeader = ({ title, caseName, logo, children }) => {
   return (
     <div className={"caseHeader " + caseName}>
-      <div style={{flexDirection: "column", width: "434px", textAlign: "center", padding: "180px"}}>
-      {logo ? logo : null}
+      <div
+        style={{
+          flexDirection: "column",
+          width: "434px",
+          textAlign: "center",
+          padding: "180px",
+        }}
+      >
+        {logo ? logo : null}
         <h1> {title} </h1>
         <p> {children} </p>
       </div>
@@ -26,7 +28,11 @@ export const CaseStudy = ({
 }) => {
   return (
     <div className="caseStudy">
-      <div className={`caseImage ${imageClass ? imageClass : ""}${isFullImage ? "full" : ""}`}>
+      <div
+        className={`caseImage ${imageClass ? imageClass : ""}${
+          isFullImage ? "full" : ""
+        }`}
+      >
         {image}
       </div>
       <div className="caseContent">
@@ -58,11 +64,32 @@ export const CaseIntro = ({ title, children, collaborators, team }) => {
   );
 };
 
-export const SkipButton = ({ copy, buttoncolour }) => {
+export const SkipButton = ({ buttonText, targetId, buttonColour }) => {
+  const handleClick = () => {
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
-    <div className="buttonStyle">
-      background-color: {buttoncolour};
-      <button onClick={() => console.log("Button clicked")}>{copy}</button>
+    <div
+      onClick={handleClick}
+      style={{
+        backgroundColor: `${buttonColour}`,
+        borderRadius: "30px",
+        padding: "2%",
+        maxWidth: "25%",
+        textAlign: "center",
+      }}
+    >
+      {buttonText}
     </div>
   );
+  // return (
+  //   <div className="buttonStyle">
+  //     background-color: {buttoncolour};
+  //     <button onClick={() => console.log("Button clicked")}>{copy}</button>
+  //   </div>
+  // );
 };

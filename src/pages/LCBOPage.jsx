@@ -2,9 +2,9 @@ import ProgressBar from "react-scroll-progress-bar";
 import { CaseStudy } from "../components/CaseStudy";
 import { CaseIntro } from "../components/CaseStudy";
 import { SkipButton } from "../components/CaseStudy";
-import "./TPCPage.css";
+import "./LCBOPage.css";
 
-export const TPCPage = () => {
+export const LCBOPage = () => {
   return (
     <>
     <ProgressBar bgcolor="#FF6EA2"/>
