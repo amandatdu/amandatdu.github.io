@@ -99,6 +99,8 @@ export const SkipButton = ({ buttonText, targetId, buttonColour }) => {
         backgroundColor: `${buttonColour}`,
         borderRadius: "30px",
         padding: "15px",
+        paddingRight: "30px",
+        paddingLeft: "30px",
         textAlign: "center",
         justifyContent: "center",
         alignItems: "center",
@@ -112,10 +114,34 @@ export const SkipButton = ({ buttonText, targetId, buttonColour }) => {
       </div>
     </div>
   );
-  // return (
-  //   <div className="buttonStyle">
-  //     background-color: {buttoncolour};
-  //     <button onClick={() => console.log("Button clicked")}>{copy}</button>
-  //   </div>
-  // );
 };
+
+export const LinkButton = ({ buttonText, targetUrl, buttonColour }) => {
+  const handleClick = () => {
+    window.open(targetUrl, '_blank');
+  };
+
+  return (
+    <div
+      onClick={handleClick}
+      style={{
+        backgroundColor: `${buttonColour}`,
+        borderRadius: "30px",
+        padding: "15px",
+        paddingRight: "30px",
+        paddingLeft: "30px",
+        textAlign: "center",
+        justifyContent: "center",
+        alignItems: "center",
+        whiteSpace: "nowrap",
+        margin: "2%",
+        color:"white"
+      }}
+    >
+      <div>
+      {buttonText}
+      </div>
+    </div>
+  );
+};
+

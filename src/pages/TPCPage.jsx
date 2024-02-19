@@ -24,7 +24,7 @@ export const TPCPage = () => {
               3 Product designers
               </>}
             team="UW Blueprint student team"
-            textColor="#007E8F"
+            textColor={textColor}
         >
           <h3>The Pregnancy Centre is a non-profit organization that supports people experiencing unplanned pregnancies.</h3>
           The Pregnancy Centre came to us with a problem: <b>families weren’t getting the items they need due to the messy nature of manually facilitating donations.</b>
@@ -70,7 +70,7 @@ export const TPCPage = () => {
         <br />
           <br />
           <br />
-          <div style={{height: "1px", width: "100%", backgroundColor: `${textColor}`}} />
+          <div style={{height: "1px", width: "811px", backgroundColor: `${textColor}`}} />
           </div>
           </CaseStudy>
 
