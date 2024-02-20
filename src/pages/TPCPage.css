@@ -4,5 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 180px
+    gap: 180px;
+    
+    --case-theme: var(--lcbo-green);
 }

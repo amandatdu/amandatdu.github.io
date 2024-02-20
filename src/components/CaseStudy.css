@@ -36,7 +36,10 @@
     flex-direction: column;
     gap: 88px;
     text-align: center;
-    max-width: 100%;
+    width: 100%;
+
+    background-color: var(--case-theme);
+    color: var(--just-white);
 }
 
 .caseStudy {
@@ -53,10 +56,11 @@
     justify-content: space-between;
     gap: 89px;
     text-align: left;
-    max-width: 835px;
+    width: calc(100% - 2 * var(--case-margin));
 
     &.buttons {
-      gap:0px;
+      gap: 0px;
+      justify-content: center;
     }
 }
 
@@ -64,15 +68,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  /* width: calc(100% - 2 * var(--spacing--margin)); */
 
   img,
   video {
-    width: calc(100% - 5.7 * var(--spacing--margin));
+    width: calc(100% - 2 * var(--case-margin));
+    border: 2px var(--case-theme) solid;
+    border-radius: 12px;
+    overflow: clip;
   }
 
   &.full img {
+    border: none;
     width: 100%;
+  }
+
+  &.hideBorder {
+    img, video {
+      border: none;
+    }
   }
 }
 
@@ -83,7 +96,7 @@
   justify-content: space-between;
   gap: 89px;
   text-align: left;
-  max-width: 835px;
+  width: calc(100% - 2 * var(--case-margin));
 }
 
 .caseContext {
@@ -94,10 +107,7 @@
     white-space: nowrap;
 }
 
-.videoBorder {
-  border: 1px var(--masato-blue) solid;
-  border-radius: 12px;
-  overflow: clip;
+.videoBorder > * {
 }
 
 .buttonStyle{
