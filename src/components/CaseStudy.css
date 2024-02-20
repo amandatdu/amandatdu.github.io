@@ -13,7 +13,7 @@
     &.intuit {
       align-items:flex-end;
       justify-content:flex-end;
-      background-image: url('../../public/intuit/intuitheaderdark.png');
+      background-image: url('../../public/intuit/headerimageintuit.png');
     }
 
     &.tpc {

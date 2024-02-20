@@ -265,9 +265,16 @@ export const IntuitPage = () => {
                         <img
                             src="intuit/intuitprocess.png"
                             alt="<Design process>"
+                            style={{
+                                marginLeft: "80px",
+                                marginRight: "80px",
+                            }}
                         />
+
+
                     }
                     title="Project process"
+                    isFullImage={true}
                     textColor={textColor}
                 >
                     This was the process I followed. Design wise, this was a lot
@@ -558,10 +565,13 @@ export const IntuitPage = () => {
 
                 <CaseStudy
                     image={
-                        <img
-                            src="intuit/segmenteddesign.png"
-                            alt="<Visualization of my segmented experience>"
-                        />
+                      <video autoPlay muted loop oncanplay="this.muted=true">
+                          <source
+                              src="intuit/Intuitprototypevid.mp4"
+                              type="video/mp4"
+                          />
+                          Your browser does not support HTML video.
+                      </video>
                     }
                     title="Data driven pitch"
                     textColor={textColor}

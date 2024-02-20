@@ -1,5 +1,5 @@
 import ProgressBar from "react-scroll-progress-bar";
-import { CaseStudy, CaseHeader, CaseIntro, SkipButton } from "../components/CaseStudy";
+import { CaseStudy, CaseHeader, CaseIntro, SkipButton, CaseHMW } from "../components/CaseStudy";
 import "./TPCPage.css";
 
 export const TPCPage = () => {
@@ -45,8 +45,10 @@ export const TPCPage = () => {
           </CaseStudy>
 
           <CaseStudy
-              image= <img src="tpc/sneakpeek.png" alt="<This is a quick peek of my final product>"/>
+              image= <img src="tpc/tpcsneakpeek.png" alt="<This is a quick peek of my final product>"/>
               buttonBar={true}
+              isFullImage={true}
+
           >
           <div>
           <p style={{marginRight: "15%", marginLeft: "15%", textAlign:"center", color: "#007E8F"}}>
@@ -74,7 +76,7 @@ export const TPCPage = () => {
           </div>
           </CaseStudy>
 
-          
+
 
           <CaseStudy
               image= <img src="tpc/problemspace.png" alt="<Diagram of The Pregnancy center's problems>"/>
@@ -100,6 +102,11 @@ export const TPCPage = () => {
 
           </CaseStudy>
 
+          <CaseHMW
+              backgroundColor="#007E8F"
+              title="DESIGN CHALLENGE"
+              HMWstatement="How might we enable donors to accurately communicate with the Pregnancy Centre about their items?"
+          />
 
           <CaseStudy
               image= <img src="tpc/Process.png" alt="<How my project went>"/>
@@ -206,7 +213,13 @@ export const TPCPage = () => {
           </CaseStudy>
 
           <CaseStudy
-              image= <img src="tpc/searchfuncitionality.png" alt="<video>"/>
+          image= <video autoPlay muted loop oncanplay="this.muted=true">
+            <source
+              src="tpc/searchfuncitionality.mov"
+              type="video/mp4"
+            />
+            Your browser does not support HTML video.
+          </video>
               title="Search Funcitionality"
               textColor={textColor}
           >
@@ -253,7 +266,13 @@ export const TPCPage = () => {
           The biggest change was adding a counter in the bottom left corner. This small detail provided instant feedback for the user, thus providing more reassurance throughout the experience.          </CaseStudy>
           <CaseStudy
               idName="finalProduct"
-              image= <img src="tpc/finaliteration.png" alt="<Final product part 1>"/>
+              image= <video autoPlay muted loop oncanplay="this.muted=true">
+                <source
+                  src="tpc/finalproductdonorinformation.mov"
+                  type="video/mp4"
+                />
+                Your browser does not support HTML video.
+              </video>
               title="Final product"
               textColor={textColor}
           >
@@ -263,7 +282,13 @@ export const TPCPage = () => {
           </CaseStudy>
 
           <CaseStudy
-              image= <img src="tpc/finaliteration.png" alt="<Final product part 2>"/>
+              image= <video autoPlay muted loop oncanplay="this.muted=true">
+                <source
+                  src="tpc/finalproductitemdetails.mov"
+                  type="video/mp4"
+                />
+                Your browser does not support HTML video.
+              </video>
               title="A familiar experience"
               textColor={textColor}
           >
@@ -275,7 +300,13 @@ export const TPCPage = () => {
 
 
           <CaseStudy
-              image= <img src="tpc/finaliteration.png" alt="<Final product part 3>"/>
+              image= <video autoPlay muted loop oncanplay="this.muted=true">
+                <source
+                  src="tpc/finalproductreview.mov"
+                  type="video/mp4"
+                />
+                Your browser does not support HTML video.
+              </video>
               title="Forgiving product design"
               textColor={textColor}
           >

@@ -23,8 +23,10 @@ export const CaseHeader = ({ title, caseName, logo, children, textColor }) => {
 
 export const CaseHMW = ({HMWstatement, title, backgroundColor}) => {
   return (
-    <div className="caseHMW" style={{backgroundColor: `${backgroundColor}`}}>
-      <div maxWidth="80%">
+    <div className="caseHMW" style={{backgroundColor: `${backgroundColor}`, alignItems: "center", justifyContent:"center", display:"flex"}}>
+      <div style={{
+        width:"80%",
+      }}>
         <h3 style={{
           paddingBottom: "24px",
         }}> {title} </h3>
@@ -144,4 +146,3 @@ export const LinkButton = ({ buttonText, targetUrl, buttonColour }) => {
     </div>
   );
 };
-
