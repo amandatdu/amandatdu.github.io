@@ -46,11 +46,11 @@
     margin-block: 64px;
 
     svg {
-        animation: arrowPulse .5s infinite alternate ease-in-out;
+        animation: arrowPulseDown .5s infinite alternate ease-in-out;
     }
 }
 
-@keyframes arrowPulse {
+@keyframes arrowPulseDown {
     from {
         transform: rotate(90deg) translateX(0);
     }
