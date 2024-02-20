@@ -1,5 +1,7 @@
+import { useContext } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Toggle } from "./Toggle";
+import { ThemeContext } from "../utils/ThemeContext";
 import "./NavBar.css";
 
 export const ROUTES = {
@@ -11,6 +13,9 @@ export const ROUTES = {
 };
 
 export const NavBar = () => {
+    const { toggleLightMode } = useContext(ThemeContext);
+    const location = useLocation();
+
     const TABS = [
         { name: "work!", route: ROUTES.work },
         { name: "& more", route: ROUTES.more },
@@ -23,10 +28,8 @@ export const NavBar = () => {
     ];
 
     const onClick = () => {
-        document.body.classList.toggle("lightTheme");
+        toggleLightMode();
     };
-
-    const location = useLocation();
 
     return (
         <nav className="navbar">

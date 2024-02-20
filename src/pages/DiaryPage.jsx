@@ -1,13 +1,19 @@
-import { StarBlock } from "../components/StarBlock";
+import { useContext } from "react";
+import { HeartSVG } from "../assets/HeartSVG";
 import { StarBanner } from "../components/StarBanner";
+import { StarBlock } from "../components/StarBlock";
+import { ThemeContext } from "../utils/ThemeContext";
 import "./DiaryPage.css";
 
 export const DiaryPage = () => {
+    const { isLightMode } = useContext(ThemeContext);
+
     const formatCategory = (name) => (
         <div className="h1">
             <i>{name}</i>
         </div>
     );
+
     const formatEntry = (name, start, end, title) => (
         <div className="diarypage__resume__entry">
             <h3 className="color--vanilla-chocolate">
@@ -23,7 +29,7 @@ export const DiaryPage = () => {
     return (
         <div className="diarypage">
             <div className="diarypage__banner">
-                <StarBanner />
+                {isLightMode ? <HeartSVG id="banner" /> : <StarBanner />}
                 <div className="diarypage__banner__wrapper">
                     <img src="/portrait.png" alt="Amanda Du" />
                     <div className="diarypage__banner__content color--vanilla-chocolate">
