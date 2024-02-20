@@ -1,13 +1,19 @@
-import { StarBlock } from "../components/StarBlock";
+import { useContext } from "react";
+import { HeartSVG } from "../assets/HeartSVG";
 import { StarBanner } from "../components/StarBanner";
+import { StarBlock } from "../components/StarBlock";
+import { ThemeContext } from "../utils/ThemeContext";
 import "./DiaryPage.css";
 
 export const DiaryPage = () => {
+    const { isLightMode } = useContext(ThemeContext);
+
     const formatCategory = (name) => (
         <div className="h1">
             <i>{name}</i>
         </div>
     );
+
     const formatEntry = (name, start, end, title) => (
         <div className="diarypage__resume__entry">
             <h3 className="color--vanilla-chocolate">
@@ -23,40 +29,46 @@ export const DiaryPage = () => {
     return (
         <div className="diarypage">
             <div className="diarypage__banner">
-                <StarBanner />
-                <img src="/portrait.png" alt="Amanda Du" />
-                <div className="diarypage__banner__content color--vanilla-chocolate">
-                    <h1 className="color--blueberry-swirl">
-                        <i>hi! nice to meet you! ♡ ⋆｡˚</i>
-                    </h1>
-                    <h3>
-                        I'm Amanda Du, but my friends call me amanda or just du!
-                    </h3>
-                    <h3>
-                        As an <b>ENFP</b>, I really value the
-                        <b> empathy and compassion </b>
-                        that comes with design thinking. I love collaborating
-                        with teams to
-                        <b> create beautiful and thoughtful experiences</b> that
-                        make people happy.
-                    </h3>
-                    <h3>
-                        When I'm not designing, I am hobby-ing. Meaning, I am
-                        either reading, drawing, shopping, on Pinterest, or at
-                        the gym... the list goes on.
-                        <b>
-                            {" "}
-                            I simply love learning and picking up new
-                            information and skills.
-                        </b>
-                    </h3>
-                    <h3>
-                        But if there's one thing you should know about me is
-                        that I am always always trying my best :)
-                    </h3>
-                    <h3>
-                        If you think we'd get along, <b>let's chat</b>!
-                    </h3>
+                {isLightMode ? <HeartSVG id="banner" /> : <StarBanner />}
+                <div className="diarypage__banner__wrapper">
+                    <img src="/portrait.png" alt="Amanda Du" />
+                    <div className="diarypage__banner__content color--vanilla-chocolate">
+                        <h1 className="color--blueberry-swirl">
+                            <i>hi! nice to meet you! ♡ ⋆｡˚</i>
+                        </h1>
+                        <h3>
+                            I'm Amanda Du, but my friends call me amanda or just
+                            du!
+                        </h3>
+                        <h3>
+                            As an <b>ENFP</b>, I really value the
+                            <b> empathy and compassion </b>
+                            that comes with design thinking. I love
+                            collaborating with teams to
+                            <b>
+                                {" "}
+                                create beautiful and thoughtful experiences
+                            </b>{" "}
+                            that make people happy.
+                        </h3>
+                        <h3>
+                            When I'm not designing, I am hobby-ing. Meaning, I
+                            am either reading, drawing, shopping, on Pinterest,
+                            or at the gym... the list goes on.
+                            <b>
+                                {" "}
+                                I simply love learning and picking up new
+                                information and skills.
+                            </b>
+                        </h3>
+                        <h3>
+                            But if there's one thing you should know about me is
+                            that I am always always trying my best :)
+                        </h3>
+                        <h3>
+                            If you think we'd get along, <b>let's chat</b>!
+                        </h3>
+                    </div>
                 </div>
             </div>
             <div className="diarypage__divider">
