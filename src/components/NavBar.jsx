@@ -1,5 +1,7 @@
+import { useContext } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Toggle } from "./Toggle";
+import { ThemeContext } from "../utils/ThemeContext";
 import "./NavBar.css";
 
 export const ROUTES = {
@@ -11,6 +13,9 @@ export const ROUTES = {
 };
 
 export const NavBar = () => {
+    const { toggleLightMode } = useContext(ThemeContext);
+    const location = useLocation();
+
     const TABS = [
         { name: "work!", route: ROUTES.work },
         { name: "& more", route: ROUTES.more },
@@ -23,10 +28,8 @@ export const NavBar = () => {
     ];
 
     const onClick = () => {
-        document.body.classList.toggle("lightTheme");
+        toggleLightMode();
     };
-
-    const location = useLocation();
 
     return (
         <nav className="navbar">
@@ -34,15 +37,17 @@ export const NavBar = () => {
                 <Toggle onChange={onClick} />
             </div>
             <div className="navbar__tabs">
-                {TABS.map((tab) =>
-                    tab.isExternal ? (
+                {TABS.map((tab) => {
+                    const className = `navbar__tabs__tab ${
+                        location.pathname.includes(tab.route)
+                            ? "navbar__tabs__tab--selected"
+                            : ""
+                    }`;
+
+                    return tab.isExternal ? (
                         <a
                             key={tab.name}
-                            className={`navbar__tabs__tab ${
-                                location.pathname === tab.route
-                                    ? "navbar__tabs__tab--selected"
-                                    : ""
-                            }`}
+                            className={className}
                             href={tab.route}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -52,17 +57,13 @@ export const NavBar = () => {
                     ) : (
                         <Link
                             key={tab.name}
-                            className={`navbar__tabs__tab ${
-                                location.pathname === tab.route
-                                    ? "navbar__tabs__tab--selected"
-                                    : ""
-                            }`}
+                            className={className}
                             to={tab.route}
                         >
                             {tab.name}
                         </Link>
-                    )
-                )}
+                    );
+                })}
             </div>
         </nav>
     );

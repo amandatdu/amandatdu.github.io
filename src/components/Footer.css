@@ -39,3 +39,24 @@
 
     font-size: 12px;
 }
+
+@media only screen and (max-width: 544px) {
+    .footer {
+        grid-template:
+        "title" max-content
+        "message" max-content
+        "contact" max-content
+        "credits" max-content
+        / 1fr;
+    
+        text-align: center;
+    }
+
+    .footer__contact {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+}
