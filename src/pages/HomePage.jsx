@@ -83,6 +83,7 @@ export const HomePage = () => {
                     </>
                 }
                 textPlacement="right"
+                link={ROUTES.tpc}
                 imageData={{
                     src: "/home/macbook-pro.png",
                     alt: "Macbook Pro",
@@ -113,6 +114,7 @@ export const HomePage = () => {
                         feedback.
                     </>
                 }
+                link={ROUTES.lcbo}
                 imageData={{
                     src: "/home/iphone.png",
                     alt: "iPhone",

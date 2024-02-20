@@ -72,7 +72,7 @@ export const CaseStudy = ({
             </div>
             <div className={`caseContent ${buttonBar ? " buttons" : ""}`}>
                 <h1 className={`color--${theme}`}> {title} </h1>
-                <p> {children} </p>
+                <div className="p"> {children} </div>
             </div>
         </div>
     );
@@ -83,7 +83,7 @@ export const CaseIntro = ({ title, children, collaborators, team, theme }) => {
         <div className={`caseIntro color--${theme}`}>
             <div>
                 <h2> {title} </h2>
-                <p> {children} </p>
+                <div className="p"> {children} </div>
             </div>
             <div className="caseContext">
                 <div>

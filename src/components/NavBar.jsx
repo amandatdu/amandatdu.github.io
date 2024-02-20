@@ -10,8 +10,8 @@ export const ROUTES = {
     diary: "/diary",
     resume: "/resume",
     intuit: "/work/intuit",
-    tpc: "work/tpc",
-    lcbo: "work/lcbo"
+    tpc: "/work/tpc",
+    lcbo: "/work/lcbo",
 };
 
 export const NavBar = () => {
