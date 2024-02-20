@@ -1,13 +1,8 @@
-import { useContext } from "react";
-import { HeartSVG } from "../assets/HeartSVG";
-import { StarBanner } from "../components/StarBanner";
+import { BannerBackground } from "../components/BannerBackground";
 import { StarBlock } from "../components/StarBlock";
-import { ThemeContext } from "../utils/ThemeContext";
 import "./DiaryPage.css";
 
 export const DiaryPage = () => {
-    const { isLightMode } = useContext(ThemeContext);
-
     const formatCategory = (name) => (
         <div className="h1">
             <i>{name}</i>
@@ -29,7 +24,7 @@ export const DiaryPage = () => {
     return (
         <div className="diarypage">
             <div className="diarypage__banner">
-                {isLightMode ? <HeartSVG id="banner" /> : <StarBanner />}
+                <BannerBackground />
                 <div className="diarypage__banner__wrapper">
                     <img src="/portrait.png" alt="Amanda Du" />
                     <div className="diarypage__banner__content color--vanilla-chocolate">

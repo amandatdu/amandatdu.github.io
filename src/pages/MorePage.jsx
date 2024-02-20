@@ -1,18 +1,13 @@
-import { useContext } from "react";
-import { HeartSVG } from "../assets/HeartSVG";
+import { BannerBackground } from "../components/BannerBackground";
 import { ImageCaption } from "../components/ImageCaption";
 import { ProjectSummary } from "../components/ProjectSummary";
-import { StarBanner } from "../components/StarBanner";
-import { ThemeContext } from "../utils/ThemeContext";
 import "./MorePage.css";
 
 export const MorePage = () => {
-    const { isLightMode } = useContext(ThemeContext);
-
     return (
         <div className="morePage">
             <div className="morePage__banner">
-                {isLightMode ? <HeartSVG id="banner" /> : <StarBanner />}
+                <BannerBackground />
                 <h1 className="h1--display color--acai-bowl">
                     <i className="color--blueberry-swirl">product designer</i>{" "}
                     by day

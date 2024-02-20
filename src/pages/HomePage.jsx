@@ -1,20 +1,16 @@
-import { useContext } from "react";
 import { ArrowIcon } from "../assets/ArrowIcon";
 import { HeartSVG } from "../assets/HeartSVG";
+import { BannerBackground } from "../components/BannerBackground";
 import { HighlightCard } from "../components/HighlightCard";
 import { ROUTES } from "../components/NavBar";
-import { StarBanner } from "../components/StarBanner";
 import { StarBlock } from "../components/StarBlock";
-import { ThemeContext } from "../utils/ThemeContext";
 import "./HomePage.css";
 
 export const HomePage = () => {
-    const { isLightMode } = useContext(ThemeContext);
-
     return (
         <div className="homepage">
             <div className="homepage__banner">
-                {isLightMode ? <HeartSVG id="banner" /> : <StarBanner />}
+                <BannerBackground />
                 <h3 className="color--vanilla-chocolate">
                     hi hello! thank you for visiting!
                 </h3>
