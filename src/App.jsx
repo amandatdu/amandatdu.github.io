@@ -6,7 +6,7 @@ import { Navigate, Route, Routes, useLocation } from "react-router-dom";
 import { MorePage } from "./pages/MorePage";
 import { IntuitPage } from "./pages/IntuitPage";
 import { TPCPage } from "./pages/TPCPage";
-import { LCBOPage } from "./pages/LCBOPage"
+import { LCBOPage } from "./pages/LCBOPage";
 import { Footer } from "./components/Footer";
 import { DiaryPage } from "./pages/DiaryPage";
 import { ThemeContext } from "./utils/ThemeContext";
@@ -34,8 +34,16 @@ function App() {
         prev.current = !prevValue;
     }, []);
 
+    const setMode = useCallback((newIsLightMode) => {
+        setIsLightMode(newIsLightMode);
+        document.body.classList.toggle("lightTheme", newIsLightMode);
+        prev.current = newIsLightMode;
+    }, []);
+
     return (
-        <ThemeContext.Provider value={{ isLightMode, toggleLightMode }}>
+        <ThemeContext.Provider
+            value={{ isLightMode, toggleLightMode, setMode }}
+        >
             <ScrollToTop>
                 <div className="app">
                     <ParallaxProvider>

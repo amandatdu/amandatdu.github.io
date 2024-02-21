@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import { ArrowIcon } from "../assets/ArrowIcon";
 import "./HighlightCard.css";
 import { Parallax, useParallaxController } from "react-scroll-parallax";
-import { useEffect, useRef, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
+import { ThemeContext } from "../utils/ThemeContext";
 
 function Image(props) {
     const parallaxController = useParallaxController();
@@ -42,6 +43,7 @@ export const HighlightCard = ({
     const { src, alt, background, style } = imageData;
     const placementProp = textPlacement ?? "left";
 
+    const { setMode } = useContext(ThemeContext);
     const ref = useRef();
     const [targetElement, setElement] = useState(null);
     useEffect(() => {
@@ -66,7 +68,7 @@ export const HighlightCard = ({
             {placementProp === "right" && imageElement}
             <div className="highlightcard__content">
                 <h3 className="h3--subheading color--strawberry">{subtitle}</h3>
-                <Link to={link}>
+                <Link to={link} onClick={() => setMode(true)}>
                     <h1>
                         {title}&nbsp;
                         <ArrowIcon />
