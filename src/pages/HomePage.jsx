@@ -110,8 +110,8 @@ export const HomePage = () => {
                     </>
                 }
                 imageData={{
-                    src: "/home/iphone.png",
-                    alt: "iPhone",
+                    src: "/home/lcbo-devices.png",
+                    alt: "iPhone and Macbook with LCBO case study on the screens",
                     background: (
                         <>
                             <HeartSVG
@@ -134,6 +134,9 @@ export const HomePage = () => {
                             />
                         </>
                     ),
+                    style: {
+                        marginLeft: "30%",
+                    },
                 }}
             />
             <HighlightCard
