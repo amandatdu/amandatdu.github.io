@@ -115,19 +115,11 @@ export const SkipButton = ({ buttonText, targetId, buttonColour }) => {
             onClick={handleClick}
             style={{
                 backgroundColor: `${buttonColour}`,
-                borderRadius: "30px",
-                padding: "15px",
-                paddingRight: "30px",
-                paddingLeft: "30px",
-                textAlign: "center",
-                justifyContent: "center",
-                alignItems: "center",
-                whiteSpace: "nowrap",
-                margin: "2%",
-                color: "white",
             }}
+            className="button"
+            role="button"
         >
-            <div>{buttonText}</div>
+            {buttonText}
         </div>
     );
 };
@@ -142,19 +134,11 @@ export const LinkButton = ({ buttonText, targetUrl, buttonColour }) => {
             onClick={handleClick}
             style={{
                 backgroundColor: `${buttonColour}`,
-                borderRadius: "30px",
-                padding: "15px",
-                paddingRight: "30px",
-                paddingLeft: "30px",
-                textAlign: "center",
-                justifyContent: "center",
-                alignItems: "center",
-                whiteSpace: "nowrap",
-                margin: "2%",
-                color: "white",
             }}
+            className="button"
+            role="button"
         >
-            <div>{buttonText}</div>
+            {buttonText}
         </div>
     );
 };
