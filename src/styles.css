@@ -13,8 +13,9 @@ body {
     --intuit-blue: #236CFF;
     --light-tpc-teal: #06C0D9;
     --tpc-teal: #007E8F;
-    --light-lcbo-green: #40947F;
+    --light-lcbo-green: #7AE1C7;
     --lcbo-green: #173F35;
+    --dull-lcbo-green: #40947F;
 
     --color-background: var(--dark-mode-bg);
     --blueberry-swirl: var(--just-white);
@@ -27,6 +28,8 @@ body {
     --intuit-primary: var(--light-intuit-blue);
     --tpc-primary: var(--light-tpc-teal);
     --lcbo-primary: var(--light-lcbo-green);
+
+    --lcbo-button: var(--dull-lcbo-green);
 
     color: var(--blueberry-swirl);
     background: var(--color-background);
@@ -79,6 +82,7 @@ body.lightTheme {
     --intuit-primary: var(--intuit-blue);
     --tpc-primary: var(--tpc-teal);
     --lcbo-primary: var(--lcbo-green);
+    --lcbo-button: var(--lcbo-green);
 }
 
 /* FONTS */

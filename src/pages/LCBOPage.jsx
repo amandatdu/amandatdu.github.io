@@ -6,10 +6,12 @@ import {
     LinkButton,
 } from "../components/CaseStudy";
 import "./LCBOPage.css";
+import { LCBOLogo } from "../assets/LCBOLogo";
 
 export const LCBOPage = () => {
     const pageName = "lcbo";
     const themeColor = "var(--lcbo-primary)";
+    const buttonThemeColor = "var(--lcbo-button)";
 
     return (
         <>
@@ -68,26 +70,16 @@ export const LCBOPage = () => {
                         <LinkButton
                             targetUrl="https://www.lcbonext.com/copy-of-inline-spotlight"
                             buttonText="Read my case study"
-                            buttonColour={themeColor}
+                            buttonColour={buttonThemeColor}
                         />
 
-                        <br />
-                        <br />
-                        <br />
-                        <img
-                            src="lcbo/logo.png"
-                            alt="<LCBO desk logo>"
-                            style={{ width: "60%" }}
-                        />
-                        <br />
-                        <br />
-                        <br />
+                        <LCBOLogo style={{ marginBlock: "56px" }} />
                     </div>
                     <div
                         style={{
                             height: "1px",
                             width: "811px",
-                            backgroundColor: themeColor,
+                            backgroundColor: buttonThemeColor,
                             gap: "90px",
                         }}
                     />
