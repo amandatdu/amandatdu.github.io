@@ -39,12 +39,32 @@
     will-change: transform;
 }
 
+.highlightcard__content a:hover {
+    svg {
+        animation: arrowPulseRight .5s infinite alternate ease-in-out;
+    }
+}
+
+@keyframes arrowPulseRight {
+    from {
+        transform: translateX(0);
+    }
+    
+    to {
+        transform: translateX(25%);
+    }
+}
+
 @media only screen and (max-width: 1096px) {
     .highlightcard {
-        grid-template-columns: minmax(64px, 1fr) 1fr;
+        grid-template-columns: 1fr minmax(64px, 1fr);
         align-items: center;
         justify-items: center;
         gap: 24px;
+    }
+    
+    .highlightcard.right {
+        grid-template-columns: minmax(64px, 1fr) 1fr;
     }
 
     .highlightcard__content {

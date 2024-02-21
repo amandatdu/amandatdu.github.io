@@ -1,28 +1,28 @@
-import { useContext } from "react";
 import { ArrowIcon } from "../assets/ArrowIcon";
 import { HeartSVG } from "../assets/HeartSVG";
+import { LongUnderline } from "../assets/Underline";
+import { BannerBackground } from "../components/BannerBackground";
 import { HighlightCard } from "../components/HighlightCard";
 import { ROUTES } from "../components/NavBar";
-import { StarBanner } from "../components/StarBanner";
 import { StarBlock } from "../components/StarBlock";
-import { ThemeContext } from "../utils/ThemeContext";
 import "./HomePage.css";
 
 export const HomePage = () => {
-    const { isLightMode } = useContext(ThemeContext);
-
     return (
         <div className="homepage">
             <div className="homepage__banner">
-                {isLightMode ? <HeartSVG id="banner" /> : <StarBanner />}
+                <BannerBackground />
                 <h3 className="color--vanilla-chocolate">
                     hi hello! thank you for visiting!
                 </h3>
                 <h1 className="h1--display color--acai-bowl">
                     <i className="color--blueberry-swirl">Amanda Du</i> is a
                     <i className="color--blueberry-swirl"> product designer </i>
-                    <br /> all about designing experiences <br /> that make
-                    people happy
+                    <br /> all about designing experiences <br />
+                    <span style={{ position: "relative" }}>
+                        that make people happy.
+                        <LongUnderline />
+                    </span>
                 </h1>
             </div>
             <div className="homepage__banner__footer">
@@ -116,8 +116,8 @@ export const HomePage = () => {
                 }
                 link={ROUTES.lcbo}
                 imageData={{
-                    src: "/home/iphone.png",
-                    alt: "iPhone",
+                    src: "/home/lcbo-devices.png",
+                    alt: "iPhone and Macbook with LCBO case study on the screens",
                     background: (
                         <>
                             <HeartSVG
@@ -140,6 +140,9 @@ export const HomePage = () => {
                             />
                         </>
                     ),
+                    style: {
+                        marginLeft: "30%",
+                    },
                 }}
             />
             <HighlightCard

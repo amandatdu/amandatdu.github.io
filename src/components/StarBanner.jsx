@@ -1,5 +1,4 @@
 import { SparkleIcon } from "../assets/SparkleIcon";
-import "./StarBanner.css";
 
 export const StarBanner = () => {
     return (

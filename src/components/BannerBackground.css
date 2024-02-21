@@ -1,0 +1,50 @@
+.starBanner {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    /* Keep the banner in the background */
+    z-index: -1;
+
+    animation: backgroundZoom 20s ease-in-out both infinite alternate;
+}
+
+@keyframes backgroundZoom {
+    from {
+        transform: scale(1);
+    }
+    
+    to {
+        transform: scale(1.25);
+    }
+}
+
+.heartBanner {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    /* Keep the banner in the background */
+    z-index: -1;
+
+    .heartSVG {
+        animation: pulse 10s calc(var(--theme-transition-duration)) ease-in-out infinite;
+        will-change: transform;
+    }
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    
+    45%, 55% {
+        transform: scale(1.5);
+    }
+    
+    to {
+        transform: scale(1);
+    }
+}
+
+
