@@ -29,6 +29,7 @@ body {
     --tpc-primary: var(--light-tpc-teal);
     --lcbo-primary: var(--light-lcbo-green);
 
+    --intuit-button: var(--intuit-blue);
     --tpc-button: var(--tpc-teal);
     --lcbo-button: var(--dull-lcbo-green);
 
@@ -84,6 +85,7 @@ body.lightTheme {
     --tpc-primary: var(--tpc-teal);
     --lcbo-primary: var(--lcbo-green);
 
+    --intuit-button: var(--intuit-blue);
     --tpc-button: var(--tpc-teal);
     --lcbo-button: var(--lcbo-green);
 }

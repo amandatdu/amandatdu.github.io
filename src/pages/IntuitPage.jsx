@@ -13,6 +13,7 @@ import "./IntuitPage.css";
 export const IntuitPage = () => {
     const pageName = "intuit";
     const themeColor = "var(--intuit-primary)";
+    const buttonThemeColor = "var(--intuit-button)";
     const { isLightMode } = useContext(ThemeContext);
 
     return (
@@ -114,8 +115,8 @@ export const IntuitPage = () => {
                                 marginRight: "15%",
                                 marginLeft: "15%",
                                 textAlign: "center",
+                                color: themeColor,
                             }}
-                            className={`color--${pageName}`}
                         >
                             {
                                 "This case is a lengthy read, so in case you don’t want to scroll, here are some shortcuts :)"
@@ -134,17 +135,17 @@ export const IntuitPage = () => {
                             <SkipButton
                                 targetId="productThinking"
                                 buttonText="See my product thinking"
-                                buttonColour={themeColor}
+                                buttonColour={buttonThemeColor}
                             />
                             <SkipButton
                                 targetId="visualDesign"
                                 buttonText="View my visual design"
-                                buttonColour={themeColor}
+                                buttonColour={buttonThemeColor}
                             />
                             <SkipButton
                                 targetId="finalProduct"
                                 buttonText="Skip to final product"
-                                buttonColour={themeColor}
+                                buttonColour={buttonThemeColor}
                             />
                         </div>
                         <br />
@@ -154,7 +155,7 @@ export const IntuitPage = () => {
                             style={{
                                 height: "1px",
                                 width: "100%",
-                                backgroundColor: themeColor,
+                                backgroundColor: buttonThemeColor,
                             }}
                         />
                     </div>
@@ -198,6 +199,7 @@ export const IntuitPage = () => {
                 </CaseStudy>
 
                 <CaseHMW
+                    backgroundColor="var(--intuit-blue)"
                     title="DESIGN CHALLENGE"
                     HMWstatement="How might we create a delightful and frictionless tax profile experience so drop off rates and customer satisfaction are improved?"
                 />
