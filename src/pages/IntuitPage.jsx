@@ -17,7 +17,7 @@ export const IntuitPage = () => {
 
     return (
         <>
-            <ProgressBar bgcolor="#FF6EA2" />
+            <ProgressBar bgcolor="var(--syo-pink)" />
             <div className="intuitPage" style={{ "--case-theme": themeColor }}>
                 <CaseHeader
                     caseName="intuit"
@@ -564,13 +564,13 @@ export const IntuitPage = () => {
 
                 <CaseStudy
                     image={
-                      <video autoPlay muted loop>
-                          <source
-                              src="intuit/Intuitprototypevid.mov"
-                              type="video/mp4"
-                          />
-                          Your browser does not support HTML video.
-                      </video>
+                        <video autoPlay muted loop>
+                            <source
+                                src="intuit/Intuitprototypevid.mov"
+                                type="video/mp4"
+                            />
+                            Your browser does not support HTML video.
+                        </video>
                     }
                     title="Data driven pitch"
                     theme={pageName}

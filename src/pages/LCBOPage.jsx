@@ -15,7 +15,7 @@ export const LCBOPage = () => {
 
     return (
         <>
-            <ProgressBar bgcolor="#FF6EA2" />
+            <ProgressBar bgcolor="var(--syo-pink)" />
             <div className="lcboPage" style={{ "--case-theme": themeColor }}>
                 <CaseHeader
                     caseName="lcbo"

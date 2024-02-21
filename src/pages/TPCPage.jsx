@@ -13,11 +13,12 @@ import "./TPCPage.css";
 export const TPCPage = () => {
     const pageName = "tpc";
     const themeColor = "var(--tpc-primary)";
+    const buttonThemeColor = "var(--tpc-button)";
     const { isLightMode } = useContext(ThemeContext);
 
     return (
         <>
-            <ProgressBar bgcolor="#FF6EA2" />
+            <ProgressBar bgcolor="var(--syo-pink)" />
             <div className="tpcPage" style={{ "--case-theme": themeColor }}>
                 <CaseHeader
                     caseName="tpc"
@@ -90,7 +91,7 @@ export const TPCPage = () => {
                                 marginRight: "15%",
                                 marginLeft: "15%",
                                 textAlign: "center",
-                                color: "#007E8F",
+                                color: themeColor,
                             }}
                         >
                             {
@@ -109,7 +110,7 @@ export const TPCPage = () => {
                             <SkipButton
                                 targetId="finalProduct"
                                 buttonText="Skip to final product"
-                                buttonColour={themeColor}
+                                buttonColour={buttonThemeColor}
                             />
                         </div>
                         <br />
@@ -119,7 +120,7 @@ export const TPCPage = () => {
                             style={{
                                 height: "1px",
                                 width: "811px",
-                                backgroundColor: themeColor,
+                                backgroundColor: buttonThemeColor,
                             }}
                         />
                     </div>
@@ -180,7 +181,7 @@ export const TPCPage = () => {
                 </CaseStudy>
 
                 <CaseHMW
-                    backgroundColor="#007E8F"
+                    backgroundColor="var(--tpc-teal)"
                     title="DESIGN CHALLENGE"
                     HMWstatement="How might we enable donors to accurately communicate with the Pregnancy Centre about their items?"
                 />
