@@ -82,3 +82,15 @@
         fill: url(#sparkleIcon-light-theme);
     }
 }
+
+.longunderline {
+    position: absolute;
+    bottom: -1px;
+    right: -18px;
+}
+
+@media only screen and (max-width: 708px) {
+    .longunderline {
+        display: none;
+    }
+}

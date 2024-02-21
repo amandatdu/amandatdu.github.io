@@ -1,5 +1,6 @@
 import { ArrowIcon } from "../assets/ArrowIcon";
 import { HeartSVG } from "../assets/HeartSVG";
+import { LongUnderline } from "../assets/Underline";
 import { BannerBackground } from "../components/BannerBackground";
 import { HighlightCard } from "../components/HighlightCard";
 import { ROUTES } from "../components/NavBar";
@@ -17,8 +18,11 @@ export const HomePage = () => {
                 <h1 className="h1--display color--acai-bowl">
                     <i className="color--blueberry-swirl">Amanda Du</i> is a
                     <i className="color--blueberry-swirl"> product designer </i>
-                    <br /> all about designing experiences <br /> that make
-                    people happy
+                    <br /> all about designing experiences <br />
+                    <span style={{ position: "relative" }}>
+                        that make people happy.
+                        <LongUnderline />
+                    </span>
                 </h1>
             </div>
             <div className="homepage__banner__footer">
