@@ -12,7 +12,7 @@ import "./TPCPage.css";
 
 export const TPCPage = () => {
     const pageName = "tpc";
-    const themeColor = "var(--tpc-teal)";
+    const themeColor = "var(--tpc-primary)";
     const { isLightMode } = useContext(ThemeContext);
 
     return (

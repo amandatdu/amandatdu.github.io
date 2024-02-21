@@ -12,7 +12,7 @@ import "./IntuitPage.css";
 
 export const IntuitPage = () => {
     const pageName = "intuit";
-    const themeColor = "var(--intuit-blue)";
+    const themeColor = "var(--intuit-primary)";
     const { isLightMode } = useContext(ThemeContext);
 
     return (
@@ -153,8 +153,8 @@ export const IntuitPage = () => {
                         <div
                             style={{
                                 height: "1px",
-                                width: "811px",
-                                backgroundColor: { themeColor },
+                                width: "100%",
+                                backgroundColor: themeColor,
                             }}
                         />
                     </div>

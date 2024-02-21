@@ -9,7 +9,7 @@ import "./LCBOPage.css";
 
 export const LCBOPage = () => {
     const pageName = "lcbo";
-    const themeColor = "var(--lcbo-green)";
+    const themeColor = "var(--lcbo-primary)";
 
     return (
         <>
