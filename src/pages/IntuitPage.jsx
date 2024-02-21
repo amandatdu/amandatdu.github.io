@@ -265,10 +265,6 @@ export const IntuitPage = () => {
                         <img
                             src="intuit/intuitprocess.png"
                             alt="<Design process>"
-                            style={{
-                                marginLeft: "80px",
-                                marginRight: "80px",
-                            }}
                         />
 
 
@@ -567,7 +563,7 @@ export const IntuitPage = () => {
                     image={
                       <video autoPlay muted loop oncanplay="this.muted=true">
                           <source
-                              src="intuit/Intuitprototypevid.mp4"
+                              src="intuit/Intuitprototypevid.mov"
                               type="video/mp4"
                           />
                           Your browser does not support HTML video.
@@ -596,7 +592,7 @@ export const IntuitPage = () => {
                             alt="<Results of my AB testing>"
                         />
                     }
-                    title="Data driven pitch"
+                    title="AB testing results"
                     textColor={textColor}
                 >
                     <b>I conducted AB tests with 20 Canadian participants. </b>

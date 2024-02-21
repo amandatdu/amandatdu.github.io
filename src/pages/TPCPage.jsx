@@ -155,7 +155,13 @@ export const TPCPage = () => {
           </CaseStudy>
 
           <CaseStudy
-              image= <img className="caseImage" src="tpc/whichwaywillwego.png" alt="<Video>"/>
+          image= <video autoPlay muted loop oncanplay="this.muted=true">
+            <source
+              src="tpc/whichwaywillwego.mov"
+              type="video/mp4"
+            />
+            Your browser does not support HTML video.
+          </video>
               title="Which way will we go?"
               textColor={textColor}
           >
@@ -235,8 +241,8 @@ export const TPCPage = () => {
           </CaseStudy>
 
           <CaseStudy
-              image= <img src="intuit/resultsabtesting.png" alt="<video>"/>
-              title="Prototyping"
+              image= <img src="tpc/donortesting.png" alt="<The images we used to simulate a donor process so we can test how donors will react to our product>"/>
+              title="Donor testing"
               textColor={textColor}
           >
           <b>At this point I wanted to gather feedback from donors. I prototyped the MVP and got it ready for user testing. </b>
