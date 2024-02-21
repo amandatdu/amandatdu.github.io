@@ -75,7 +75,7 @@
   video {
     width: calc(100% - 2 * var(--case-margin));
     border: 2px var(--case-theme) solid;
-    border-radius: 12px;
+    border-radius: 16px;
     overflow: clip;
   }
 
