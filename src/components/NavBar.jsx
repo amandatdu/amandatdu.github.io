@@ -1,9 +1,7 @@
-import { useContext } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Toggle } from "./Toggle";
-import { ThemeContext } from "../utils/ThemeContext";
-import "./NavBar.css";
 import { Underline } from "../assets/Underline";
+import "./NavBar.css";
 
 export const ROUTES = {
     work: "/work",
@@ -16,7 +14,6 @@ export const ROUTES = {
 };
 
 export const NavBar = () => {
-    const { toggleLightMode } = useContext(ThemeContext);
     const location = useLocation();
 
     const TABS = [
@@ -30,14 +27,10 @@ export const NavBar = () => {
         },
     ];
 
-    const onClick = () => {
-        toggleLightMode();
-    };
-
     return (
         <nav className="navbar">
             <div className="navbar__home">
-                <Toggle onChange={onClick} />
+                <Toggle />
             </div>
             <div className="navbar__tabs">
                 {TABS.map((tab) => {

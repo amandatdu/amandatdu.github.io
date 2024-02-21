@@ -1,5 +1,6 @@
-import { useRef, useState } from "react";
+import { useContext, useRef } from "react";
 import { restartAnimations } from "../utils/helper";
+import { ThemeContext } from "../utils/ThemeContext";
 import "./Toggle.css";
 
 const Star = () => (
@@ -34,19 +35,18 @@ const Heart = () => (
     </svg>
 );
 
-export const Toggle = ({ onChange }) => {
-    const [isOn, setIsOn] = useState(false);
+export const Toggle = ({}) => {
+    const { isLightMode, toggleLightMode } = useContext(ThemeContext);
     const ref = useRef();
 
     const onClick = () => {
-        setIsOn(!isOn);
-        onChange();
+        toggleLightMode();
         if (ref.current) {
             restartAnimations(ref.current);
         }
     };
 
-    const verticalLineHorizontalOffset = isOn
+    const verticalLineHorizontalOffset = isLightMode
         ? "calc(var(--toggle-width) - var(--icon-size) / 2 - var(--icon-gap) - var(--long-line-width) / 2)"
         : "calc(var(--icon-size) / 2 + var(--icon-gap) - var(--long-line-width) / 2)";
 
@@ -60,7 +60,7 @@ export const Toggle = ({ onChange }) => {
             <div
                 className="long horizontal"
                 style={{
-                    ...(isOn && {
+                    ...(isLightMode && {
                         transform: `translateX(calc(${horizontalLineHorizontalOffset}))`,
                     }),
                     animationName: "lineleft",
@@ -69,7 +69,7 @@ export const Toggle = ({ onChange }) => {
             <div
                 className="long horizontal"
                 style={{
-                    ...(!isOn && {
+                    ...(!isLightMode && {
                         transform: `translateX(calc(-1 * (${horizontalLineHorizontalOffset})))`,
                     }),
                     animationName: "lineright",
