@@ -55,10 +55,12 @@ export const TPCPage = () => {
                 </CaseIntro>
 
                 <CaseStudy
-                    image=<img
-                        src="tpc/impact.png"
-                        alt="<My impact of our product>"
-                    />
+                    image={
+                        <img
+                            src="tpc/impact.png"
+                            alt="<My impact of our product>"
+                        />
+                    }
                     title="Impact"
                     theme={pageName}
                 >
@@ -73,10 +75,12 @@ export const TPCPage = () => {
                 </CaseStudy>
 
                 <CaseStudy
-                    image=<img
-                        src="tpc/tpcsneakpeek.png"
-                        alt="<This is a quick peek of my final product>"
-                    />
+                    image={
+                        <img
+                            src="tpc/tpcsneakpeek.png"
+                            alt="<This is a quick peek of my final product>"
+                        />
+                    }
                     buttonBar={true}
                     isFullImage={true}
                 >
@@ -122,10 +126,12 @@ export const TPCPage = () => {
                 </CaseStudy>
 
                 <CaseStudy
-                    image=<img
-                        src="tpc/problemspace.png"
-                        alt="<Diagram of The Pregnancy center's problems>"
-                    />
+                    image={
+                        <img
+                            src="tpc/problemspace.png"
+                            alt="<Diagram of The Pregnancy center's problems>"
+                        />
+                    }
                     title="Problem space"
                     theme={pageName}
                 >
@@ -151,10 +157,12 @@ export const TPCPage = () => {
                 </CaseStudy>
 
                 <CaseStudy
-                    image=<img
-                        src="tpc/talkingthroughthecarehub.png"
-                        alt="<Image of MVP with a button that says 'email us'>"
-                    />
+                    image={
+                        <img
+                            src="tpc/talkingthroughthecarehub.png"
+                            alt="<MVP with a button that says 'email us'>"
+                        />
+                    }
                     title="Communicating via Care Hub"
                     theme={pageName}
                 >
@@ -178,10 +186,12 @@ export const TPCPage = () => {
                 />
 
                 <CaseStudy
-                    image=<img
-                        src="tpc/Process.png"
-                        alt="<How my project went>"
-                    />
+                    image={
+                        <img
+                            src="tpc/Process.png"
+                            alt="<How my project went>"
+                        />
+                    }
                     title="Project process"
                     isFullImage={true}
                     theme={pageName}
@@ -198,10 +208,12 @@ export const TPCPage = () => {
                 </CaseStudy>
 
                 <CaseStudy
-                    image=<img
-                        src="tpc/understandingthedonors.png"
-                        alt="<User profiles>"
-                    />
+                    image={
+                        <img
+                            src="tpc/understandingthedonors.png"
+                            alt="<User profiles>"
+                        />
+                    }
                     title="Understanding the donors"
                     theme={pageName}
                 >
@@ -221,10 +233,12 @@ export const TPCPage = () => {
                 </CaseStudy>
 
                 <CaseStudy
-                    image=<img
-                        src="tpc/modulevsfullscreen.png"
-                        alt="<WIP of all product flows I created>"
-                    />
+                    image={
+                        <img
+                            src="tpc/modulevsfullscreen.png"
+                            alt="<WIP of all product flows I created>"
+                        />
+                    }
                     title="Module vs full screen"
                     theme={pageName}
                 >
@@ -246,11 +260,13 @@ export const TPCPage = () => {
                 </CaseStudy>
 
                 <CaseStudy
-                    image=<img
-                        className="caseImage"
-                        src="tpc/developerlimitations.png"
-                        alt="<WIP of the dvelopers and I whiteboarding possible development issues>"
-                    />
+                    image={
+                        <img
+                            className="caseImage"
+                            src="tpc/developerlimitations.png"
+                            alt="<WIP of the dvelopers and I whiteboarding possible development issues>"
+                        />
+                    }
                     title="Development limitations"
                     theme={pageName}
                 >
@@ -269,13 +285,15 @@ export const TPCPage = () => {
                 </CaseStudy>
 
                 <CaseStudy
-                    image=<video autoPlay muted loop>
-                        <source
-                            src="tpc/whichwaywillwego.mov"
-                            type="video/mp4"
-                        />
-                        Your browser does not support HTML video.
-                    </video>
+                    image={
+                        <video autoPlay muted loop>
+                            <source
+                                src="tpc/whichwaywillwego.mov"
+                                type="video/mp4"
+                            />
+                            Your browser does not support HTML video.
+                        </video>
+                    }
                     title="Which way will we go?"
                     theme={pageName}
                 >
@@ -301,10 +319,12 @@ export const TPCPage = () => {
                 </CaseStudy>
 
                 <CaseStudy
-                    image=<img
-                        src="tpc/thebattleofthesteppers.png"
-                        alt="<Horizontal stepper criticism>"
-                    />
+                    image={
+                        <img
+                            src="tpc/thebattleofthesteppers.png"
+                            alt="<Horizontal stepper criticism>"
+                        />
+                    }
                     title="The battle of the steppers"
                     theme={pageName}
                 >
@@ -325,10 +345,12 @@ export const TPCPage = () => {
                 </CaseStudy>
 
                 <CaseStudy
-                    image=<img
-                        src="tpc/verticalstepperwins.png"
-                        alt="<Vertical stepper UI and feedback>"
-                    />
+                    image={
+                        <img
+                            src="tpc/verticalstepperwins.png"
+                            alt="<Vertical stepper UI and feedback>"
+                        />
+                    }
                     title="Vertical stepper wins"
                     theme={pageName}
                 >
@@ -348,10 +370,12 @@ export const TPCPage = () => {
                 </CaseStudy>
 
                 <CaseStudy
-                    image=<img
-                        src="tpc/formuidesign.png"
-                        alt="<UI example of how I designed my forms>"
-                    />
+                    image={
+                        <img
+                            src="tpc/formuidesign.png"
+                            alt="<UI example of how I designed my forms>"
+                        />
+                    }
                     title="Form UI design"
                     theme={pageName}
                 >
@@ -393,13 +417,15 @@ export const TPCPage = () => {
                 </CaseStudy>
 
                 <CaseStudy
-                    image=<video autoPlay muted loop>
-                        <source
-                            src="tpc/searchfuncitionality.mov"
-                            type="video/mp4"
-                        />
-                        Your browser does not support HTML video.
-                    </video>
+                    image={
+                        <video autoPlay muted loop>
+                            <source
+                                src="tpc/searchfuncitionality.mov"
+                                type="video/mp4"
+                            />
+                            Your browser does not support HTML video.
+                        </video>
+                    }
                     title="Search Funcitionality"
                     theme={pageName}
                 >
@@ -435,10 +461,12 @@ export const TPCPage = () => {
                 </CaseStudy>
 
                 <CaseStudy
-                    image=<img
-                        src="tpc/donortesting.png"
-                        alt="<The images we used to simulate a donor process so we can test how donors will react to our product>"
-                    />
+                    image={
+                        <img
+                            src="tpc/donortesting.png"
+                            alt="<The images we used to simulate a donor process so we can test how donors will react to our product>"
+                        />
+                    }
                     title="Donor testing"
                     theme={pageName}
                 >
@@ -456,10 +484,12 @@ export const TPCPage = () => {
                 </CaseStudy>
 
                 <CaseStudy
-                    image=<img
-                        src="tpc/testingresults.png"
-                        alt="<Findings from my user testing sessions>"
-                    />
+                    image={
+                        <img
+                            src="tpc/testingresults.png"
+                            alt="<Findings from my user testing sessions>"
+                        />
+                    }
                     title="Testing results"
                     theme={pageName}
                 >
@@ -474,10 +504,12 @@ export const TPCPage = () => {
                 </CaseStudy>
 
                 <CaseStudy
-                    image=<img
-                        src="tpc/finaliteration.png"
-                        alt="<Mock up of the final iteration I made based on the testing resultsn>"
-                    />
+                    image={
+                        <img
+                            src="tpc/finaliteration.png"
+                            alt="<Mock up of the final iteration I made based on the testing resultsn>"
+                        />
+                    }
                     title="Final iteration"
                     theme={pageName}
                 >
