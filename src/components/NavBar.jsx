@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Toggle } from "./Toggle";
 import { ThemeContext } from "../utils/ThemeContext";
 import "./NavBar.css";
+import { Underline } from "../assets/Underline";
 
 export const ROUTES = {
     work: "/work",
@@ -38,10 +39,9 @@ export const NavBar = () => {
             </div>
             <div className="navbar__tabs">
                 {TABS.map((tab) => {
+                    const isSelected = location.pathname.includes(tab.route);
                     const className = `navbar__tabs__tab ${
-                        location.pathname.includes(tab.route)
-                            ? "navbar__tabs__tab--selected"
-                            : ""
+                        isSelected ? "navbar__tabs__tab--selected" : ""
                     }`;
 
                     return tab.isExternal ? (
@@ -53,6 +53,7 @@ export const NavBar = () => {
                             rel="noopener noreferrer"
                         >
                             {tab.name}
+                            {isSelected && <Underline />}
                         </a>
                     ) : (
                         <Link
@@ -61,6 +62,7 @@ export const NavBar = () => {
                             to={tab.route}
                         >
                             {tab.name}
+                            {isSelected && <Underline />}
                         </Link>
                     );
                 })}

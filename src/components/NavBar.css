@@ -25,6 +25,9 @@
     white-space: nowrap;
     font-size: 16px;
     padding-block: 8px;
+
+    display: flex;
+    flex-direction: column;
 }
 
 .navbar__tabs__tab--selected {
