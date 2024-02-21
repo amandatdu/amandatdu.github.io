@@ -14,7 +14,7 @@ body {
     --light-tpc-teal: #62979E;
     --tpc-teal: #007E8F;
     --light-lcbo-green: #40947F;
-    --lcbo-173F35: #173F35;
+    --lcbo-green: #173F35;
 
     --color-background: var(--dark-mode-bg);
     --blueberry-swirl: var(--just-white);
@@ -43,10 +43,22 @@ body {
         color: var(--marshallow-cinnamon);
     }
 
+    .color--intuit {
+        color: var(--intuit-blue);
+    }
+
+    .color--tpc {
+        color: var(--tpc-teal);
+    }
+    
+    .color--lcbo {
+        color: var(--lcbo-green);
+    }
+
     /* Spacing */
     --spacing--margin: 120px;
-
     --page-banner-height: 576px;
+    --case-margin: 20vw;
 
     /* Animation */
     --theme-transition-duration: 0.25s;
@@ -139,5 +151,6 @@ p, .p {
 @media only screen and (max-width: 708px) {
     body {
         --spacing--margin: 24px;
+        --case-margin: 5vw;
     }
 }

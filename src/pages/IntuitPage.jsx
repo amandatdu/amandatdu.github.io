@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import ProgressBar from "react-scroll-progress-bar";
 import {
     CaseIntro,
@@ -6,20 +7,24 @@ import {
     SkipButton,
     CaseHMW,
 } from "../components/CaseStudy";
+import { ThemeContext } from "../utils/ThemeContext";
 import "./IntuitPage.css";
 
 export const IntuitPage = () => {
-    const textColor = "#236CFF";
+    const pageName = "intuit";
+    const themeColor = "var(--intuit-blue)";
+    const { isLightMode } = useContext(ThemeContext);
+
     return (
         <>
             <ProgressBar bgcolor="#FF6EA2" />
-            <div className="intuitPage">
+            <div className="intuitPage" style={{ "--case-theme": themeColor }}>
                 <CaseHeader
                     caseName="intuit"
-                    logo=<img src="intuit/logo.png" alt="<Intuit logo>" />
+                    logo={<img src="intuit/logo.png" alt="<Intuit logo>" />}
                     title="Redesigning the tax profile"
                     children="Product Design intern ☆ Jan 2022 – Aug 2022"
-                    textColor={textColor}
+                    theme={pageName}
                 />
 
                 <CaseIntro
@@ -35,7 +40,7 @@ export const IntuitPage = () => {
                         </>
                     }
                     team="Intuit Canada TurboTax"
-                    textColor={textColor}
+                    theme={pageName}
                 >
                     <h3>
                         Especially when you’re welcomed by a 220+ questions long
@@ -61,7 +66,7 @@ export const IntuitPage = () => {
                         />
                     }
                     title="Impact"
-                    textColor={textColor}
+                    theme={pageName}
                 >
                     I am proud to say I{" "}
                     <b>reduced the amount of questions by 78%</b>; from 220+ to
@@ -95,6 +100,8 @@ export const IntuitPage = () => {
                         />
                     }
                     buttonBar={true}
+                    theme={pageName}
+                    hideBorder
                 >
                     <div
                         style={{
@@ -107,8 +114,8 @@ export const IntuitPage = () => {
                                 marginRight: "15%",
                                 marginLeft: "15%",
                                 textAlign: "center",
-                                color: `${textColor}`,
                             }}
+                            className={`color--${pageName}`}
                         >
                             {
                                 "This case is a lengthy read, so in case you don’t want to scroll, here are some shortcuts :)"
@@ -127,17 +134,17 @@ export const IntuitPage = () => {
                             <SkipButton
                                 targetId="productThinking"
                                 buttonText="See my product thinking"
-                                buttonColour={textColor}
+                                buttonColour={themeColor}
                             />
                             <SkipButton
                                 targetId="visualDesign"
                                 buttonText="View my visual design"
-                                buttonColour={textColor}
+                                buttonColour={themeColor}
                             />
                             <SkipButton
                                 targetId="finalProduct"
                                 buttonText="Skip to final product"
-                                buttonColour={textColor}
+                                buttonColour={themeColor}
                             />
                         </div>
                         <br />
@@ -147,7 +154,7 @@ export const IntuitPage = () => {
                             style={{
                                 height: "1px",
                                 width: "811px",
-                                backgroundColor: `${textColor}`,
+                                backgroundColor: { themeColor },
                             }}
                         />
                     </div>
@@ -161,7 +168,7 @@ export const IntuitPage = () => {
                         />
                     }
                     title="Problem Space"
-                    textColor={textColor}
+                    theme={pageName}
                 >
                     One of Intuit’s core principles is customer obsession.{" "}
                     <b>
@@ -191,7 +198,6 @@ export const IntuitPage = () => {
                 </CaseStudy>
 
                 <CaseHMW
-                    backgroundColor="#236CFF"
                     title="DESIGN CHALLENGE"
                     HMWstatement="How might we create a delightful and frictionless tax profile experience so drop off rates and customer satisfaction are improved?"
                 />
@@ -204,7 +210,7 @@ export const IntuitPage = () => {
                         />
                     }
                     title="Success Metrics"
-                    textColor={textColor}
+                    theme={pageName}
                 >
                     To better align my goals, I came up with quantifiable
                     challenges. These are the success metrics what I came up
@@ -266,12 +272,10 @@ export const IntuitPage = () => {
                             src="intuit/intuitprocess.png"
                             alt="<Design process>"
                         />
-
-
                     }
                     title="Project process"
                     isFullImage={true}
-                    textColor={textColor}
+                    theme={pageName}
                 >
                     This was the process I followed. Design wise, this was a lot
                     to handle. To make it more digestible, I decided to break
@@ -293,7 +297,7 @@ export const IntuitPage = () => {
                         />
                     }
                     title="Content strategy"
-                    textColor={textColor}
+                    theme={pageName}
                 >
                     One of the biggest issues in this experience is the number
                     of questions users are forced to answer.{" "}
@@ -324,7 +328,7 @@ export const IntuitPage = () => {
                         />
                     }
                     title="What to ask the user"
-                    textColor={textColor}
+                    theme={pageName}
                 >
                     While working closely with my tax expert and my content
                     strategist, we noticed a pattern in some of the questions,
@@ -363,7 +367,7 @@ export const IntuitPage = () => {
                         />
                     }
                     title="Tax payer's journey"
-                    textColor={textColor}
+                    theme={pageName}
                 >
                     Once I sorted through the content, I approached this from a
                     product design perspective.{" "}
@@ -401,7 +405,7 @@ export const IntuitPage = () => {
                         />
                     }
                     title="Main and mini profiles"
-                    textColor={textColor}
+                    theme={pageName}
                 >
                     After my exploration, I settled on this idea of having a
                     Main tax profile and mini tax profiles.
@@ -429,7 +433,7 @@ export const IntuitPage = () => {
                         />
                     }
                     title="Outside in research"
-                    textColor={textColor}
+                    theme={pageName}
                 >
                     I really got creative with the type of products I looked at
                     for visual inspiration. I wanted to focus on products that
@@ -458,7 +462,7 @@ export const IntuitPage = () => {
                     }
                     isFullImage={true}
                     title="Pivoting from our plan"
-                    textColor={textColor}
+                    theme={pageName}
                 >
                     In the midst of my excitement for new visual designs, I was
                     hit with more requirements from our stakeholders.
@@ -484,7 +488,7 @@ export const IntuitPage = () => {
 
                 <CaseStudy
                     image={
-                        <video autoPlay muted loop oncanplay="this.muted=true">
+                        <video autoPlay muted loop>
                             <source
                                 src="intuit/usproductaudit.mov"
                                 type="video/mp4"
@@ -492,9 +496,8 @@ export const IntuitPage = () => {
                             Your browser does not support HTML video.
                         </video>
                     }
-                    imageClass="videoBorder"
                     title="Pivoting from our plan"
-                    textColor={textColor}
+                    theme={pageName}
                 >
                     I wanted to understand the US product more. Here’s a video
                     of me analyzing the it, I saw that there was a big flaw in
@@ -518,7 +521,7 @@ export const IntuitPage = () => {
                         />
                     }
                     title="Segmented design"
-                    textColor={textColor}
+                    theme={pageName}
                 >
                     I knew the “see more” button was poor design, so I came up
                     with a new design to accommodate. My idea is to present
@@ -544,7 +547,7 @@ export const IntuitPage = () => {
                     }
                     isFullImage={true}
                     title="UI decision making"
-                    textColor={textColor}
+                    theme={pageName}
                 >
                     Despite not loving the ‘see more’ design, the multi select
                     buttons used in the US product were really similar to the
@@ -561,7 +564,7 @@ export const IntuitPage = () => {
 
                 <CaseStudy
                     image={
-                      <video autoPlay muted loop oncanplay="this.muted=true">
+                      <video autoPlay muted loop>
                           <source
                               src="intuit/Intuitprototypevid.mov"
                               type="video/mp4"
@@ -570,7 +573,8 @@ export const IntuitPage = () => {
                       </video>
                     }
                     title="Data driven pitch"
-                    textColor={textColor}
+                    theme={pageName}
+                    hideBorder={isLightMode}
                 >
                     <b>
                         I knew simply pitching my idea to stakeholders wasn’t
@@ -593,7 +597,7 @@ export const IntuitPage = () => {
                         />
                     }
                     title="AB testing results"
-                    textColor={textColor}
+                    theme={pageName}
                 >
                     <b>I conducted AB tests with 20 Canadian participants. </b>
                     Each participant was given a made up tax situation, and they
@@ -649,7 +653,7 @@ export const IntuitPage = () => {
                     isFullImage={true}
                     title="Final product"
                     idName="finalProduct"
-                    textColor={textColor}
+                    theme={pageName}
                 >
                     I reimagined a tedious questionnaire to a visually
                     delightful and frictionless process for users to provide
@@ -673,7 +677,7 @@ export const IntuitPage = () => {
                     }
                     isFullImage={true}
                     title="Mobile first designs"
-                    textColor={textColor}
+                    theme={pageName}
                 >
                     Turbotax is usually used on a desktop device – however we
                     still wanted to design mobile first for best practices, so
