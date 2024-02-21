@@ -9,12 +9,12 @@ body {
     --hot-chocolate-brown: #533030;
     --just-white: #FFFFFF;
     --salt-and-pepper: #D7D7D7;
-    --light-intuit-blue: #577ECD;
+    --light-intuit-blue: #74A2FF;
     --intuit-blue: #236CFF;
-    --light-tpc-teal: #62979E;
+    --light-tpc-teal: #06C0D9;
     --tpc-teal: #007E8F;
     --light-lcbo-green: #40947F;
-    --lcbo-173F35: #173F35;
+    --lcbo-green: #173F35;
 
     --color-background: var(--dark-mode-bg);
     --blueberry-swirl: var(--just-white);
@@ -23,6 +23,10 @@ body {
     --vanilla-chocolate: var(--just-white);
     --marshallow-cinnamon: var(var(--salt-and-pepper));
     --vanilla-strawberry: var(--just-white);
+
+    --intuit-primary: var(--light-intuit-blue);
+    --tpc-primary: var(--light-tpc-teal);
+    --lcbo-primary: var(--light-lcbo-green);
 
     color: var(--blueberry-swirl);
     background: var(--color-background);
@@ -43,10 +47,20 @@ body {
         color: var(--marshallow-cinnamon);
     }
 
+    .color--intuit {
+        color: var(--intuit-primary);
+    }
+    .color--tpc {
+        color: var(--tpc-primary);
+    }
+    .color--lcbo {
+        color: var(--lcbo-primary);
+    }
+
     /* Spacing */
     --spacing--margin: 120px;
-
     --page-banner-height: 576px;
+    --case-margin: 20vw;
 
     /* Animation */
     --theme-transition-duration: 0.25s;
@@ -61,6 +75,10 @@ body.lightTheme {
     --vanilla-chocolate: var(--brownie-brown);
     --marshallow-cinnamon: var(--hot-chocolate-brown);
     --vanilla-strawberry: var(--syo-pink);
+    
+    --intuit-primary: var(--intuit-blue);
+    --tpc-primary: var(--tpc-teal);
+    --lcbo-primary: var(--lcbo-green);
 }
 
 /* FONTS */
@@ -139,5 +157,6 @@ p, .p {
 @media only screen and (max-width: 708px) {
     body {
         --spacing--margin: 24px;
+        --case-margin: 5vw;
     }
 }
