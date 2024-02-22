@@ -45,9 +45,9 @@ function App() {
             value={{ isLightMode, toggleLightMode, setMode }}
         >
             <ScrollToTop>
+                <NavBar />
                 <div className="app">
                     <ParallaxProvider>
-                        <NavBar />
                         <Routes>
                             <Route path={ROUTES.work} element={<HomePage />} />
                             <Route path={ROUTES.more} element={<MorePage />} />

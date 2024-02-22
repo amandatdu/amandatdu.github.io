@@ -35,7 +35,7 @@ const Heart = () => (
     </svg>
 );
 
-export const Toggle = ({}) => {
+export const Toggle = () => {
     const { isLightMode, toggleLightMode } = useContext(ThemeContext);
     const ref = useRef();
 

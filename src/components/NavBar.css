@@ -5,6 +5,11 @@
     align-items: center;
     padding-inline: var(--spacing--margin);
     min-height: 72px;
+
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    background: var(--color-background);
 }
 
 .navbar__logo {
