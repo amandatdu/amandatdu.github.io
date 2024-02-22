@@ -54,34 +54,18 @@ export const LCBOPage = () => {
                     LCBOnext website.
                 </CaseIntro>
 
-                <CaseStudy theme={pageName} buttonBar={true}>
-                    <div
-                        style={{
-                            display: "flex",
-                            flexDirection: "column",
-                            justifyContent: "center",
-                            alignItems: "center",
-                            width: "100%",
-                            marginTop: "-2%",
-                        }}
-                    >
+                <CaseStudy
+                    theme={pageName}
+                    buttonBar={
                         <LinkButton
                             targetUrl="https://www.lcbonext.com/copy-of-inline-spotlight"
                             buttonText="Read my case study"
                             buttonColour={buttonThemeColor}
                         />
-
-                        <LCBOLogo style={{ marginBlock: "56px" }} />
-                    </div>
-                    <div
-                        style={{
-                            height: "1px",
-                            width: "811px",
-                            backgroundColor: buttonThemeColor,
-                            gap: "90px",
-                        }}
-                    />
-                </CaseStudy>
+                    }
+                    logo={<LCBOLogo />}
+                    buttonThemeColor={buttonThemeColor}
+                ></CaseStudy>
             </div>
         </>
     );
