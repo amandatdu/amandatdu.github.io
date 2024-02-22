@@ -68,12 +68,20 @@ export const HighlightCard = ({
             {placementProp === "right" && imageElement}
             <div className="highlightcard__content">
                 <h3 className="h3--subheading color--strawberry">{subtitle}</h3>
-                <Link to={link} onClick={() => setMode(true)}>
-                    <h1>
-                        {title}&nbsp;
-                        <ArrowIcon />
-                    </h1>
-                </Link>
+                {link ? (
+                    <Link
+                        className={link ? "active" : ""}
+                        {...(link && { to: link })}
+                        onClick={() => setMode(true)}
+                    >
+                        <h1>
+                            {title}&nbsp;
+                            {<ArrowIcon />}
+                        </h1>
+                    </Link>
+                ) : (
+                    <h1>{title}</h1>
+                )}
                 <p>{body}</p>
             </div>
             {placementProp === "left" && imageElement}
