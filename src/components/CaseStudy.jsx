@@ -59,8 +59,11 @@ export const CaseStudy = ({
     idName,
     theme,
     buttonBar,
+    buttonThemeColor,
     hideBorder,
+    logo,
 }) => {
+    const themeClass = `color--${theme}`;
     return (
         <div className="caseStudy" id={idName ? `${idName}` : ""}>
             {image && (
@@ -73,8 +76,28 @@ export const CaseStudy = ({
                 </div>
             )}
             <div className={`caseContent ${buttonBar ? " buttons" : ""}`}>
-                <h1 className={`color--${theme}`}> {title} </h1>
-                <div className="p"> {children} </div>
+                {title && <h1 className={themeClass}> {title} </h1>}
+                {children && (
+                    <div
+                        className={buttonBar ? themeClass : "p"}
+                        style={{ ...(buttonBar && { textAlign: "center" }) }}
+                    >
+                        {children}
+                    </div>
+                )}
+                {buttonBar && (
+                    <>
+                        <div className="buttonBar">{buttonBar}</div>
+                        {logo}
+                        <div
+                            style={{
+                                height: "0px",
+                                width: "100%",
+                                borderTop: `1px solid ${buttonThemeColor}`,
+                            }}
+                        />
+                    </>
+                )}
             </div>
         </div>
     );

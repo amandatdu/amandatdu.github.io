@@ -74,54 +74,25 @@ export const TPCPage = () => {
                 </CaseStudy>
 
                 <CaseStudy
+                    theme={pageName}
                     image={
                         <img
                             src="tpc/tpcsneakpeek.png"
                             alt="<This is a quick peek of my final product>"
                         />
                     }
-                    buttonBar={true}
+                    buttonBar={
+                        <SkipButton
+                            targetId="finalProduct"
+                            buttonText="Skip to final product"
+                            buttonColour={buttonThemeColor}
+                        />
+                    }
+                    buttonThemeColor={buttonThemeColor}
                     isFullImage={true}
                 >
-                    <div>
-                        <p
-                            style={{
-                                marginRight: "15%",
-                                marginLeft: "15%",
-                                textAlign: "center",
-                                color: themeColor,
-                            }}
-                        >
-                            {
-                                "This case is a lengthy read, so in case you don’t want to scroll, here are some shortcuts :)"
-                            }
-                        </p>
-                        <br />
-                        <br />
-                        <div
-                            style={{
-                                display: "flex",
-                                flexDirection: "row",
-                                justifyContent: "center",
-                            }}
-                        >
-                            <SkipButton
-                                targetId="finalProduct"
-                                buttonText="Skip to final product"
-                                buttonColour={buttonThemeColor}
-                            />
-                        </div>
-                        <br />
-                        <br />
-                        <br />
-                        <div
-                            style={{
-                                height: "1px",
-                                width: "811px",
-                                backgroundColor: buttonThemeColor,
-                            }}
-                        />
-                    </div>
+                    This case is a lengthy read, so in case you don’t want to
+                    scroll, here is a shortcut :)
                 </CaseStudy>
 
                 <CaseStudy

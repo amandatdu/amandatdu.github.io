@@ -98,38 +98,8 @@ export const IntuitPage = () => {
                             alt="<Intuit sneak peak>"
                         />
                     }
-                    buttonBar={true}
-                    theme={pageName}
-                    hideBorder
-                >
-                    <div
-                        style={{
-                            justifyContent: "center",
-                            alignItems: "center",
-                        }}
-                    >
-                        <p
-                            style={{
-                                marginRight: "15%",
-                                marginLeft: "15%",
-                                textAlign: "center",
-                                color: themeColor,
-                            }}
-                        >
-                            {
-                                "This case is a lengthy read, so in case you don’t want to scroll, here are some shortcuts :)"
-                            }
-                        </p>
-                        <br />
-                        <br />
-                        <div
-                            style={{
-                                display: "flex",
-                                flexDirection: "row",
-                                justifyContent: "space-around",
-                                flexWrap: "noWrap",
-                            }}
-                        >
+                    buttonBar={
+                        <>
                             <SkipButton
                                 targetId="productThinking"
                                 buttonText="See my product thinking"
@@ -145,18 +115,14 @@ export const IntuitPage = () => {
                                 buttonText="Skip to final product"
                                 buttonColour={buttonThemeColor}
                             />
-                        </div>
-                        <br />
-                        <br />
-                        <br />
-                        <div
-                            style={{
-                                height: "1px",
-                                width: "100%",
-                                backgroundColor: buttonThemeColor,
-                            }}
-                        />
-                    </div>
+                        </>
+                    }
+                    buttonThemeColor={buttonThemeColor}
+                    theme={pageName}
+                    hideBorder
+                >
+                    This case is a lengthy read, so in case you don’t want to
+                    scroll, here are some shortcuts :)
                 </CaseStudy>
 
                 <CaseStudy
