@@ -66,7 +66,12 @@ export const HighlightCard = ({
         <div className={`highlightcard ${placementProp}`}>
             {placementProp === "right" && imageElement}
             <div className="highlightcard__content">
-                <h3 className="h3--subheading color--strawberry">{subtitle}</h3>
+                <h3
+                    className="h3 color--strawberry"
+                    style={{ fontStyle: "italic" }}
+                >
+                    {subtitle}
+                </h3>
                 {link ? (
                     <Link
                         className={link ? "active" : ""}

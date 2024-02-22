@@ -52,7 +52,7 @@ export const HomePage = () => {
                     <>
                         I redesigned <b>TurboTax Canada's</b> onboarding
                         experience. Want to read about how I reduced 78% of user
-                        decisions and still gave them a confident experience?
+                        decisions and instilled confidence?
                     </>
                 }
                 link={ROUTES.intuit}
@@ -165,8 +165,7 @@ export const HomePage = () => {
                         need.
                         <br />
                         <br />
-                        Check out how we tackled this problem with
-                        MomsOverMatter.
+                        This case is still in progress, check back for it soon!
                     </>
                 }
                 textPlacement="right"
