@@ -6,7 +6,7 @@ import "./NavBar.css";
 export const ROUTES = {
     work: "/work",
     more: "/more",
-    diary: "/diary",
+    aboutme: "/aboutme",
     resume: "/resume",
     intuit: "/work/intuit",
     tpc: "/work/tpc",
@@ -19,7 +19,7 @@ export const NavBar = () => {
     const TABS = [
         { name: "work!", route: ROUTES.work },
         { name: "& more", route: ROUTES.more },
-        { name: "my diary", route: ROUTES.diary },
+        { name: "about me", route: ROUTES.aboutme },
         {
             name: "resume",
             isExternal: true,
