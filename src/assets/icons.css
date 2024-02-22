@@ -39,8 +39,7 @@
 
 .sparkleIcon {
     position: absolute;
-
-    fill: url(#sparkleIcon-dark-theme);
+    opacity: 0.75;
 }
 
 .lightTheme {
@@ -76,10 +75,6 @@
             --icon-gradient-low: rgba(230, 132, 167, 0.65);
             --icon-gradient-high: rgba(246, 202, 213, 0.63);
         }
-    }
-    
-    .sparkleIcon {
-        fill: url(#sparkleIcon-light-theme);
     }
 }
 

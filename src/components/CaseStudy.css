@@ -27,19 +27,18 @@
         justify-content: center;
         background-image: url('../../public/lcbo/lcboheader.png');
     }
-
 }
 
 @media only screen and (max-width: 708px) {
     .caseHeader {
         &.intuit {
-        justify-content: center;
-        align-items: center;
-        margin-top: 30px;
-        overflow-wrap: break-word;
-        word-wrap: break-word;
-        background-image: none;
-            }
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            background-image: none;
+        }
         &.tpc {
             justify-content: center;
             align-items: center;
@@ -47,7 +46,7 @@
             overflow-wrap: break-word;
             word-wrap: break-word;
             background-image: none;
-            }
+        }
         &.lcbo {
             justify-content: center;
             align-items: center;
@@ -55,7 +54,7 @@
             overflow-wrap: break-word;
             word-wrap: break-word;
             background-image: none;
-            }
+        }
         .div {
             word-wrap: break-word;
             width: 100%;
@@ -109,7 +108,7 @@
     img,
     video {
         width: calc(100% - 2 * var(--case-margin));
-        border: 2px var(--case-theme) solid;
+        border: 1px var(--case-theme) solid;
         border-radius: 16px;
         overflow: clip;
     }
@@ -121,7 +120,7 @@
 
     &.hideBorder {
         img, video {
-        border: none;
+            border: none;
         }
     }
 }
