@@ -57,8 +57,9 @@ export const HomePage = () => {
                 }
                 link={ROUTES.intuit}
                 imageData={{
-                    src: "/home/iphone.png",
-                    alt: "iPhone",
+                    id: "intuit",
+                    src: "/home/intuit-iphone-x2.png",
+                    alt: "iPhone with Intuit case study on the screen",
                     background: (
                         <HeartSVG
                             id="turbotax"
@@ -66,6 +67,9 @@ export const HomePage = () => {
                             style={{ left: "50px" }}
                         />
                     ),
+                    style: {
+                        height: "600px",
+                    },
                 }}
             />
             <HighlightCard
@@ -85,8 +89,9 @@ export const HomePage = () => {
                 textPlacement="right"
                 link={ROUTES.tpc}
                 imageData={{
-                    src: "/home/macbook-pro.png",
-                    alt: "Macbook Pro",
+                    id: "tpc",
+                    src: "/home/tpc-macbook-x2.png",
+                    alt: "Macbook with TPC case study on the screen",
                     background: (
                         <HeartSVG
                             id="tpc"
@@ -95,7 +100,7 @@ export const HomePage = () => {
                         />
                     ),
                     style: {
-                        marginLeft: "-30%",
+                        height: "600px",
                     },
                 }}
             />
@@ -116,7 +121,7 @@ export const HomePage = () => {
                 }
                 link={ROUTES.lcbo}
                 imageData={{
-                    src: "/home/lcbo-devices.png",
+                    src: "/home/lcbo-devices-x2.png",
                     alt: "iPhone and Macbook with LCBO case study on the screens",
                     background: (
                         <>
@@ -141,6 +146,7 @@ export const HomePage = () => {
                         </>
                     ),
                     style: {
+                        height: "687px",
                         marginLeft: "30%",
                     },
                 }}
@@ -166,7 +172,8 @@ export const HomePage = () => {
                 textPlacement="right"
                 imageData={{
                     id: "mom",
-                    src: "/home/mom-landing-x1.png",
+                    // TODO: Obtain a better quality image!!
+                    src: "/home/mom-landing-x1.5.png",
                     alt: "2 iPhones with MOM case study on the screens and a 'Coming soon!' label",
                     background: (
                         <HeartSVG
@@ -175,6 +182,9 @@ export const HomePage = () => {
                             style={{ left: "-35%" }}
                         />
                     ),
+                    style: {
+                        height: "774px",
+                    },
                 }}
             />
         </div>

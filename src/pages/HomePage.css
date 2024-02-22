@@ -61,15 +61,42 @@
 }
 
 .highlightcard__image {
+    img#tpc {
+        margin-left: -25%;
+    }
+
     img#mom {
-        margin-left: -15%
+        margin-left: -15%;
     }
 }
 
 @media only screen and (max-width: 1096px) {
     .highlightcard__image {
+        img#intuit {
+            margin-left: 15%;
+        }
+
+        img#tpc {
+            margin-left: -32%;
+        }
+
         img#mom {
-            margin-left: -25%
+            margin-left: -25%;
+        }
+    }
+}
+
+@media only screen and (max-width: 708px) {
+    .highlightcard__image {
+        img#intuit {
+            margin-left: auto;
+        }
+    }
+
+    
+    .homepage__divider {
+        svg {
+            height: 16px;
         }
     }
 }
