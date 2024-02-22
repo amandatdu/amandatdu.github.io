@@ -58,7 +58,7 @@ function App() {
                             <Route path={ROUTES.tpc} element={<TPCPage />} />
                             <Route path={ROUTES.lcbo} element={<LCBOPage />} />
                             <Route
-                                path={ROUTES.diary}
+                                path={ROUTES.aboutme}
                                 element={<DiaryPage />}
                             />
                             <Route

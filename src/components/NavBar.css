@@ -4,7 +4,7 @@
     justify-content: space-between;
     align-items: center;
     padding-inline: var(--spacing--margin);
-    min-height: 72px;
+    height: var(--nav-bar-height);
 
     position: fixed;
     z-index: 1;

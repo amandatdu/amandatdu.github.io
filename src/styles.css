@@ -66,6 +66,7 @@ body {
     --spacing--margin: 120px;
     --page-banner-height: 576px;
     --case-margin: 20vw;
+    --nav-bar-height: 72px;
 
     /* Animation */
     --theme-transition-duration: 0.25s;
@@ -171,6 +172,7 @@ p, .p {
     body {
         --spacing--margin: 24px;
         --case-margin: 5vw;
+        --nav-bar-height: 83px;
     }
     p, .p {
         font-size: 15px;
