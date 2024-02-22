@@ -370,6 +370,7 @@ export const IntuitPage = () => {
                     }
                     title="Tax payer's journey"
                     theme={pageName}
+                    idName="productThinking"
                 >
                     Once I sorted through the content, I approached this from a
                     product design perspective.{" "}
@@ -436,6 +437,7 @@ export const IntuitPage = () => {
                     }
                     title="Outside in research"
                     theme={pageName}
+                    idName="visualDesign"
                 >
                     I really got creative with the type of products I looked at
                     for visual inspiration. I wanted to focus on products that

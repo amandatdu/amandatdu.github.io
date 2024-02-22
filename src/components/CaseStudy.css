@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: 88px;
-    height: 881px;
+    height: 60vw;
     width: 100%;
     margin-top: -74px;
     z-index: -1;
@@ -29,6 +29,40 @@
     }
 
 }
+
+@media only screen and (max-width: 708px) {
+    .caseHeader {
+        &.intuit {
+        justify-content: center;
+        align-items: center;
+        margin-top: 30px;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+        background-image: none;
+            }
+        &.tpc {
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            background-image: none;
+            }
+        &.lcbo {
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            background-image: none;
+            }
+        .div {
+            word-wrap: break-word;
+            width: 100%;
+        }
+    }
+}
+
 
 .caseHMW {
     padding-top: 88px;

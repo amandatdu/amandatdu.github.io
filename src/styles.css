@@ -168,4 +168,25 @@ p, .p {
         --spacing--margin: 24px;
         --case-margin: 5vw;
     }
-}
+    p, .p {
+        font-size: 15px;
+    }
+    h3.h3--subheading, .h3--subheading {
+        font-size: 15px;
+    }
+    h3.h3--medium, .h3--medium {
+        font-size: 15px;
+    }
+    h3, .h3 { 
+        font-size: 15px;
+    }
+    h2, .h2 {
+        font-size: 22px;
+    }
+    h1.h1--display, .h1--display {
+        font-size: 22px;
+    }
+    h1, .h1 {
+        font-size: 22px;
+    }
+}   

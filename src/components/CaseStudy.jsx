@@ -6,9 +6,9 @@ export const CaseHeader = ({ title, caseName, logo, children, theme }) => {
             <div
                 style={{
                     flexDirection: "column",
-                    width: "434px",
+                    width: "45vh",
                     textAlign: "center",
-                    padding: "160px",
+                    padding: "150px",
                 }}
                 className={`color--${theme}`}
             >
