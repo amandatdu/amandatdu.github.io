@@ -30,6 +30,8 @@ export const IntuitPage = () => {
 
                 <CaseIntro
                     title="Filing taxes can be scary."
+                    subtitle="Especially when you’re welcomed by a 220+ questions long
+                    quiz about your financial situation!"
                     collaborators={
                         <>
                             Developers
@@ -43,10 +45,6 @@ export const IntuitPage = () => {
                     team="Intuit Canada TurboTax"
                     theme={pageName}
                 >
-                    <h3>
-                        Especially when you’re welcomed by a 220+ questions long
-                        quiz about your financial situation!
-                    </h3>
                     My first project at Intuit was{" "}
                     <b>
                         the end to end redesign of the tax profile experience.

@@ -28,6 +28,8 @@ export const TPCPage = () => {
                 />
                 <CaseIntro
                     title="I love designing for social good."
+                    subtitle="The Pregnancy Centre is a non-profit organization that
+                    supports people experiencing unplanned pregnancies."
                     collaborators={
                         <>
                             1 Product Manager
@@ -39,10 +41,6 @@ export const TPCPage = () => {
                     team="UW Blueprint student team"
                     theme={pageName}
                 >
-                    <h3>
-                        The Pregnancy Centre is a non-profit organization that
-                        supports people experiencing unplanned pregnancies.
-                    </h3>
                     The Pregnancy Centre came to us with a problem:{" "}
                     <b>
                         families weren’t getting the items they need due to the

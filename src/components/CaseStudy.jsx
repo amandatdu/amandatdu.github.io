@@ -63,13 +63,15 @@ export const CaseStudy = ({
 }) => {
     return (
         <div className="caseStudy" id={idName ? `${idName}` : ""}>
-            <div
-                className={`caseImage ${imageClass ? imageClass : ""}${
-                    isFullImage ? "full" : ""
-                } ${hideBorder ? "hideBorder" : ""}`}
-            >
-                {image}
-            </div>
+            {image && (
+                <div
+                    className={`caseImage ${imageClass ? imageClass : ""}${
+                        isFullImage ? "full" : ""
+                    } ${hideBorder ? "hideBorder" : ""}`}
+                >
+                    {image}
+                </div>
+            )}
             <div className={`caseContent ${buttonBar ? " buttons" : ""}`}>
                 <h1 className={`color--${theme}`}> {title} </h1>
                 <div className="p"> {children} </div>
@@ -78,12 +80,20 @@ export const CaseStudy = ({
     );
 };
 
-export const CaseIntro = ({ title, children, collaborators, team, theme }) => {
+export const CaseIntro = ({
+    title,
+    subtitle,
+    children,
+    collaborators,
+    team,
+    theme,
+}) => {
     return (
         <div className={`caseIntro color--${theme}`}>
             <div>
-                <h2> {title} </h2>
-                <div className="p"> {children} </div>
+                <h2 className="bold"> {title} </h2>
+                <h3 style={{ marginBlock: "24px" }}>{subtitle}</h3>
+                <p> {children} </p>
             </div>
             <div className="caseContext">
                 <div>

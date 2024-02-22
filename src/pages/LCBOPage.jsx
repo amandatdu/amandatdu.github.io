@@ -26,6 +26,8 @@ export const LCBOPage = () => {
                 />
                 <CaseIntro
                     title="As the innovation team, its our job to help LCBO evolve."
+                    subtitle="This was my first UX/UI internship ever! All I wanted to
+                    do was find problems I could help solve."
                     collaborators={
                         <>
                             1 Product Manager
@@ -39,10 +41,6 @@ export const LCBOPage = () => {
                     team="LCBOnext Innovation"
                     theme={pageName}
                 >
-                    <h3>
-                        This was my first UX/UI internship ever! All I wanted to
-                        do was find problems I could help solve.
-                    </h3>
                     At the beginning of our term, the team noticed an issue: we
                     rarely seem to receive our customer’s complaints or issues.
                     <br /> <br />
@@ -64,7 +62,7 @@ export const LCBOPage = () => {
                             justifyContent: "center",
                             alignItems: "center",
                             width: "100%",
-                            marginTop: "-20%",
+                            marginTop: "-2%",
                         }}
                     >
                         <LinkButton
