@@ -10,15 +10,15 @@ export const Footer = () => {
                 </h3>
             </div>
             <div className="footer__message color--strawberry">
-                If you like what you see, well you're in luck – I'd love to chat
+                Like what you see? well you're in luck – I'd love to chat
                 and work together!
             </div>
             <div className="footer__contact color--vanilla-chocolate">
                 <div>☆ amandatdu22@gmail.com</div>
-                <div>☆ linkedin.com/atdu</div>
+                <div>☆ linkedin.com/atdu </div>
             </div>
             <p className="footer__credits">
-                Made with &lt;3 by Amanda - special s/o to selina ;u;
+                Made with ❤ by Amanda Du - HUGE s/o to Selina Li ( ´ ▽ ` ).｡ｏ♡
             </p>
             <HeartSVG
                 className="pinkToFade"
