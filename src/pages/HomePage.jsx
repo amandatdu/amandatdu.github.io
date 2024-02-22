@@ -165,8 +165,9 @@ export const HomePage = () => {
                 }
                 textPlacement="right"
                 imageData={{
-                    src: "/home/macbook-pro.png",
-                    alt: "Macbook Pro",
+                    id: "mom",
+                    src: "/home/mom-landing-x1.png",
+                    alt: "2 iPhones with MOM case study on the screens and a 'Coming soon!' label",
                     background: (
                         <HeartSVG
                             id="mom"
@@ -174,9 +175,6 @@ export const HomePage = () => {
                             style={{ left: "-35%" }}
                         />
                     ),
-                    style: {
-                        marginRight: "50%",
-                    },
                 }}
             />
         </div>

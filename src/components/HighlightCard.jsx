@@ -13,6 +13,7 @@ function Image(props) {
 
     return (
         <img
+            id={props.id}
             src={props.src}
             onLoad={handleLoad}
             alt={props.alt}
@@ -21,14 +22,14 @@ function Image(props) {
     );
 }
 
-const ParallaxImage = ({ src, alt, style, deltaY, targetElement }) => (
+const ParallaxImage = ({ id, src, alt, style, deltaY, targetElement }) => (
     <Parallax
         speed={20}
         translateY={[deltaY, -deltaY]}
         targetElement={targetElement}
         easing={[0.5, 0.25, 0.5, 0.75]}
     >
-        <Image src={src} alt={alt} style={style} />
+        <Image id={id} src={src} alt={alt} style={style} />
     </Parallax>
 );
 
@@ -40,7 +41,7 @@ export const HighlightCard = ({
     imageData,
     link,
 }) => {
-    const { src, alt, background, style } = imageData;
+    const { background, ...rest } = imageData;
     const placementProp = textPlacement ?? "left";
 
     const { setMode } = useContext(ThemeContext);
@@ -53,9 +54,7 @@ export const HighlightCard = ({
     const imageElement = (
         <div ref={ref} className="highlightcard__image">
             <ParallaxImage
-                src={src}
-                alt={alt}
-                style={style}
+                {...rest}
                 deltaY={25}
                 targetElement={targetElement}
             />
