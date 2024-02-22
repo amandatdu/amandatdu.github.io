@@ -189,8 +189,16 @@ p, .p {
     }
     h1.h1--display, .h1--display {
         font-size: 22px;
+
+        i {
+            font-size: 26px;
+        }
     }
     h1, .h1 {
         font-size: 22px;
+
+        i {
+            font-size: 26px;
+        }
     }
 }   

@@ -95,4 +95,10 @@
     .highlightcard__image {
         padding-block: 96px;
     }
+    
+    .highlightcard__content {
+        svg {
+            height: 16px;
+        }
+    }
 }
