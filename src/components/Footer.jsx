@@ -15,7 +15,15 @@ export const Footer = () => {
             </div>
             <div className="footer__contact color--vanilla-chocolate">
                 <div>☆ amandatdu22@gmail.com</div>
-                <div>☆ linkedin.com/atdu </div>
+                <div>☆&nbsp;
+                    <a
+                        href="https://www.linkedin.com/in/atdu/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >
+                        linkedin.com/atdu
+                    </a>
+                </div>
             </div>
             <p className="footer__credits">
                 Made with ❤ by Amanda Du - HUGE s/o to Selina Li ( ´ ▽ ` ).｡ｏ♡

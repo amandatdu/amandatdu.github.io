@@ -27,9 +27,14 @@
 
 .footer__contact {
     grid-area: contact;
-    justify-self: center;
+    justify-self: end;
 
     font-size: 16px;
+
+    a {
+      text-decoration: none;
+      color: var(--vanilla-chocolate);
+    }
 }
 
 
@@ -48,7 +53,7 @@
         "contact" max-content
         "credits" max-content
         / 1fr;
-    
+
         text-align: center;
     }
 
@@ -58,5 +63,6 @@
         justify-content: center;
         flex-wrap: wrap;
         gap: 16px;
+
     }
 }

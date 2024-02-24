@@ -33,9 +33,8 @@ export const MorePage = () => {
             <div className="morePage__starterhacks">
                 <ProjectSummary
                     name="Starterhacks"
-                    description="a student club that runs a fashion show for unicef.
-                        here are some showbook designs that I created for the
-                        2020 show."
+                    description="a hackathon made for beginners.
+                        here I was able to bring mascots to life, and create social media content."
                     alignment="start"
                 />
                 <img
@@ -78,7 +77,9 @@ export const MorePage = () => {
                     caption="'summertime sadness'"
                 />
                 <ImageCaption
-                    src="/more/animation.png"
+                    isVideo
+                    style={{ width: "354px"}}
+                    src="more/firstanimation.mp4"
                     alt="Hand drawn animation"
                     caption="my first hand drawn animation"
                 />

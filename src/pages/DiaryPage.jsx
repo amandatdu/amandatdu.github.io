@@ -135,11 +135,8 @@ export const DiaryPage = () => {
                 )}
                 <div className="diarypage__resume__description">
                     <h3>
-                        Led the redesign of <b>TurboTax Canada's</b> onboarding
-                        experience; <b>reducing user decisions by 78%</b>. To
-                        ensure success metrics were met, <b>A/B tests</b> were
-                        conducted and resulted in
-                        <b> 65% preference for my redesign</b>.
+                    Re-architectured the Delivery Pro app, significantly improving shipment tracking across <b>40K+</b> couriers
+                    and <b>optimized the app's physical ergonomics.</b>
                     </h3>
                 </div>
 

@@ -534,7 +534,7 @@ export const IntuitPage = () => {
                     image={
                         <video autoPlay muted loop>
                             <source
-                                src="intuit/Intuitprototypevid.mov"
+                                src="intuit/IntuitPrototypevid.mov"
                                 type="video/mp4"
                             />
                             Your browser does not support HTML video.
