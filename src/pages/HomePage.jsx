@@ -34,7 +34,7 @@ export const HomePage = () => {
                     className="h3--medium color--strawberry"
                     style={{ justifySelf: "start" }}
                 >
-                    <b className="bold">Currently:</b> freelance designing!
+                    <b className="bold">Currently:</b> designing at ∴ Asana!
                 </h3>
             </div>
             <div className="homepage__divider">
