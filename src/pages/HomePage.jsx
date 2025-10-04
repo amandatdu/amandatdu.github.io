@@ -27,14 +27,14 @@ export const HomePage = () => {
             </div>
             <div className="homepage__banner__footer">
                 <h3 className="h3--medium color--strawberry">
-                    <b>Previously:</b> @ Intuit, Purolator, & LCBO
+                    <b>Previously</b> @ Intuit, Purolator, & LCBO
                 </h3>
                 <StarBlock />
                 <h3
                     className="h3--medium color--strawberry"
                     style={{ justifySelf: "start" }}
                 >
-                    <b className="bold">Currently:</b> designing at ∴ Asana!
+                    <b className="bold">Currently</b> designing @ Asana!
                 </h3>
             </div>
             <div className="homepage__divider">
